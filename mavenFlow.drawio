@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-14T16:35:05.969Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="WfxUu2BfZJAi3N5P4XhC" version="14.1.7" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-01-14T16:37:53.220Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="WGMFjYy5HsMEtdzFecoi" version="14.1.7" type="github" pages="4">
   <diagram id="fguTXT12leVRgmFZJoVW" name="Page-1">
     <mxGraphModel dx="868" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -230,7 +230,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="LZjoYWJMCRvkQTcNrqNh" name="IP">
-    <mxGraphModel dx="868" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="482" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="6hoKqMgzk7OeVScKt97f-0" />
         <mxCell id="6hoKqMgzk7OeVScKt97f-1" parent="6hoKqMgzk7OeVScKt97f-0" />
@@ -254,6 +254,21 @@
             <mxPoint x="390" y="280" as="sourcePoint" />
             <mxPoint x="440" y="230" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="6hoKqMgzk7OeVScKt97f-13" value="Veri" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=29;" vertex="1" parent="6hoKqMgzk7OeVScKt97f-1">
+          <mxGeometry x="150" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6hoKqMgzk7OeVScKt97f-14" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/new-year-s-hand-drawn-basic/64/question_mark-128.png;fontSize=29;" vertex="1" parent="6hoKqMgzk7OeVScKt97f-1">
+          <mxGeometry x="190" y="112" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="6hoKqMgzk7OeVScKt97f-15" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.computer;pointerEvents=1;fontSize=29;" vertex="1" parent="6hoKqMgzk7OeVScKt97f-1">
+          <mxGeometry x="158" y="250" width="24" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6hoKqMgzk7OeVScKt97f-16" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.computer;pointerEvents=1;fontSize=29;" vertex="1" parent="6hoKqMgzk7OeVScKt97f-1">
+          <mxGeometry x="308" y="166" width="24" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6hoKqMgzk7OeVScKt97f-17" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.computer;pointerEvents=1;fontSize=29;" vertex="1" parent="6hoKqMgzk7OeVScKt97f-1">
+          <mxGeometry x="308" y="334" width="24" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
