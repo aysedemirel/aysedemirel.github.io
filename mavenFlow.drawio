@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-24T08:47:25.184Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="ysvvTQcO-0Wo0-bBJD4q" version="14.2.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-01-24T13:22:20.128Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="XXrn990twCbo1CuNQwjs" version="14.2.7" type="github" pages="6">
   <diagram id="fguTXT12leVRgmFZJoVW" name="Page-1">
     <mxGraphModel dx="295" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -606,7 +606,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UG6jZST9Bp5vtetq9z_T" name="BROWSERS">
-    <mxGraphModel dx="1422" dy="794" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1021" dy="567" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="yNbI-pvBbcih9D32d08s-0" />
         <mxCell id="yNbI-pvBbcih9D32d08s-1" parent="yNbI-pvBbcih9D32d08s-0" />
@@ -691,25 +691,25 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-0" value="DOM ağacını oluşturmak için HTML ayrıştırılır(parse)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="3" y="736" width="182.5" height="123" as="geometry" />
+          <mxGeometry x="41" y="736" width="182.5" height="123" as="geometry" />
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-1" value="Render ağacı oluşturma" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="216.5" y="736" width="182.5" height="123" as="geometry" />
+          <mxGeometry x="254.5" y="736" width="182.5" height="123" as="geometry" />
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-2" value="Render ağacı düzenlemesi" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="430.5" y="738" width="182.5" height="123" as="geometry" />
+          <mxGeometry x="468.5" y="738" width="182.5" height="123" as="geometry" />
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-3" value="Render ağacı çizilmesi" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="644.5" y="738" width="182.5" height="123" as="geometry" />
+          <mxGeometry x="682.5" y="738" width="182.5" height="123" as="geometry" />
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-4" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#60a917;fontSize=17;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="188.5" y="781" width="24" height="29" as="geometry" />
+          <mxGeometry x="226.5" y="781" width="24" height="29" as="geometry" />
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-5" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#60a917;fontSize=17;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="402.5" y="783" width="24" height="29" as="geometry" />
+          <mxGeometry x="440.5" y="783" width="24" height="29" as="geometry" />
         </mxCell>
         <mxCell id="IJslUJUooSjUXBMnxfsw-6" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#60a917;fontSize=17;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="yNbI-pvBbcih9D32d08s-1">
-          <mxGeometry x="616.5" y="783" width="24" height="29" as="geometry" />
+          <mxGeometry x="654.5" y="783" width="24" height="29" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
