@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<iframe src = "https://aysedemirel.medium.com/" width = "1000" height = "1200">
-         Sorry your browser does not support inline frames.
-      </iframe>
-
+      <nav id="navbar" class="nav">
+            <ul class="nav-list">
+                  <li>
+                        <a href="#home">Home</a>
+                  </li>
+                  <li>
+                        <a href="#about">About</a>
+                  </li>
+                  <li>
+                        <a href="#project">Project</a>
+                  </li>
+                  <li>
+                        <a href="#contact">Contact</a>
+                  </li>
+            </ul>
+            <div id="switch">
+                  <input type="checkbox" class="checkbox" id="chk" />
+                  <label class="label" for="chk">
+                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                        <i class="fa fa-sun-o"></i>
+                        <div class="ball"></div>
+                  </label>
+            </div>
+      </nav>
+      <script src="js/script.js"></script>
+      <script src="https://use.fontawesome.com/de50a042e8.js"></script>
 </body>
+
 </html>
