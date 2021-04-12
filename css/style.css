@@ -225,23 +225,60 @@
 }
 
 /*Search bar*/
-input[type=text] {
-  margin-top: 5%;
-  margin-right: 35%;
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+
+#search {
+  position: relative;
+  font-size: 18px;
+  padding-top: 40px;
+  margin: -30px 10px 0 0;
 }
 
-input[type=text]:focus {
-  width: 100%;
+#search label {
+  position: absolute;
+  left: 17px;
+  top: 45px;
+  color:black;
+}
+
+#search #search-input, #search .hint {
+  padding-left: 43px;
+  padding-right: 43px;
+  border-radius: 23px;
+}
+
+.form-control {
+  display: block;
+  height: 34px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+#search #search-clear {
+  text-decoration: none;
+  position: absolute;
+  right: 18px;
+  top: 49px;
+  color: black;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*Header*/
+.photo{
+  width:15%;
+  border-radius: 200px;
+  margin: auto;
+}
+
+header{
+  margin: auto;
 }
