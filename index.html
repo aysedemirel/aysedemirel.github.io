@@ -56,19 +56,35 @@
       <header>
             <img class="photo" aria-hidden="true" src="./img/photo_1.PNG" alt="photo">
             <h1>Ayşe Demirel</h1>
-            <p>Hello! I'm software engineer based in Ankara,Turkey.I take great satisfaction in successfully building,
+            <p id="summary">Hello! I'm software engineer based in Ankara,Turkey.I take great satisfaction in successfully building,
                   deploying and maintaining quality softwares and love the constant learning and problem
                   solving that comes with it. My main goal as a developer is to write clean code and build useful
                   softwares. I graduated from Ankara University with a computer engineer degree in 2019 and have
                   continuously developed my skills and knowledge as a developer over the years since. </p>
       </header>
-      <!-- main -->
-      <!-- graphic -->
-      <!-- post -->
+      <main>
+            <section id="summary-graph">
+                  <div id="piechart"></div>   
+                  <div id="tag-cloud">
+                        <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
+                              <li><a href="#" data-weight="4">HTTP</a></li>
+                              <li><a href="#" data-weight="8">HTML</a></li>
+                              <li><a href="#" data-weight="8">CSS</a></li>
+                              <li><a href="#" data-weight="9">JavaScript</a></li>
+                              <li><a href="#" data-weight="10">Java</a></li>
+                              <li><a href="#" data-weight="5">Python</a></li>
+                              <li><a href="#" data-weight="6">OOP</a></li>
+                              <li><a href="#" data-weight="4">Clean Code</a></li>
+                            </ul>
+                  </div>
+            </section>
+            <!-- post -->
+      </main>
       <!-- footer -->
-
-      <script src="js/script.js"></script>
+      
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script src="https://use.fontawesome.com/de50a042e8.js"></script>
+      <script src="js/script.js"></script>
 </body>
 
 </html>
