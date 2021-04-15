@@ -396,6 +396,12 @@ main{
   color: rgb(210, 226, 212);
   text-decoration: none;
   transition: color .25s, padding-left .25s;
+  margin-bottom: 3rem;
+}
+
+.post-section:hover {
+  color: #b65923;
+  padding-left: 1rem;
 }
 
 .post-title {
@@ -405,4 +411,16 @@ main{
 .post-date {
   color: rgb(218, 209, 209);
   font-size: 1.8rem;
+}
+
+/*footer*/
+footer {
+  color: rgb(201, 196, 196);
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Lato",-apple-system,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
