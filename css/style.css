@@ -368,3 +368,41 @@ ul.cloud a:hover::before {
 #summary-graph{
   display: flex;
 }
+
+main{
+  margin: auto;
+}
+
+/*Blog*/
+.blog-year {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E8E8E8;
+  color: #00AB72;
+  font-size: 2.15rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.post-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 0.5rem 0;
+  width: 100%;
+  font-family: "Lato",-apple-system,Helvetica,Arial,sans-serif;
+  font-size: 1.95rem;
+  color: rgb(210, 226, 212);
+  text-decoration: none;
+  transition: color .25s, padding-left .25s;
+}
+
+.post-title {
+  font-weight: 500;
+}
+
+.post-date {
+  color: rgb(218, 209, 209);
+  font-size: 1.8rem;
+}
