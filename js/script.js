@@ -1,10 +1,11 @@
+// DARK MODE
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark');
 });
 
-// Load google charts
+//CHART PART
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
@@ -30,4 +31,24 @@ function drawChart() {
 
 function selectHandler(e) {
   alert('A table row was selected');
+}
+
+// SOCIAL MEDIA PART
+var social = document.getElementById("link-list");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    social.style.visibility = "visible";
+    social.style.opacity = "1";
+  } else {
+    social.style.visibility = "hidden";
+    social.style.opacity = "0";
+  }
+}
+
+// TOP BUTTON
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
