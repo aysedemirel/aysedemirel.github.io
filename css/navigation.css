@@ -125,6 +125,13 @@
   .lng:hover{
     cursor: pointer;
   }
+
+  .flag-icon{
+    width:35px;
+    margin:auto;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
   
   /*Search bar*/
   
@@ -248,3 +255,20 @@
     border-style: none;
     color: aliceblue;
 }
+
+.fa:hover
+{
+  font-size: larger;
+}
+
+.fa-2x:hover
+{
+  font-size: xx-large;
+}
+
+@media screen and (max-width: 900px) {
+  #social{
+    margin-right: 8%;
+  }
+}
+

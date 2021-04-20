@@ -133,3 +133,10 @@ footer {
     margin-bottom: 3rem;
     margin-top: 3rem;
   }
+
+  @media screen and (max-width: 900px) {
+    main {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  } 

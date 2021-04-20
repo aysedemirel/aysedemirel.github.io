@@ -1,9 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 /* Custom properties/variables  */
 :root {
     --main-white: #f0f0f0;
     --main-red: #be3144;
     --main-blue: #45567d;
     --main-gray: #303841;
+  }
+  
+  /* Base reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  /* 1200px / 16px = 75em */
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  /* Base styles */
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    background: #292C35;
+    color: var(--main-white);
+  }
+
+  body.dark {
+    background: #292C35;
+  }
+  
+  h1,
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-white);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
   }
 
 /*Header*/
@@ -15,7 +106,6 @@
 
 header{
   margin: auto;
-  width: 80%;
 }
 
 #summary{
@@ -152,8 +242,14 @@ main{
   padding-bottom: 5%;
 }
 
-@media screen and (max-width: 900px) {
-  #summary-graph{
-    display: block;
-  }
+/*footer*/
+footer {
+  color: rgb(201, 196, 196);
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Lato",-apple-system,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
