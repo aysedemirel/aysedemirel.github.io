@@ -5,6 +5,10 @@
   --main-gray: #303841;
   --main-yellow-dark: rgba(161, 145, 0, 0.7);
   --main-yellow: rgba(252, 227, 1, 1);
+  --main-gray-soft: #8a8a8a;
+  --main-red-dark: rgba(133, 32, 28, 1);
+  --main-blue-soft: rgba(1, 151, 171, 1);
+  --main-blue-dark: rgba(0, 63, 71, 1);
 }
 
 /*HEADER*/
@@ -152,7 +156,7 @@ header {
 
 a.red {
   background-color: rgba(239, 57, 50, 1);
-  color: rgba(133, 32, 28, 1);
+  color: var(--main-red-dark);
   border-color: rgba(133, 32, 28, 0.2);
 }
 
@@ -161,13 +165,13 @@ a.red:hover {
 }
 
 a.green {
-  background-color: rgba(1, 151, 171, 1);
-  color: rgba(0, 63, 71, 1);
+  background-color: var(--main-blue-soft);
+  color: var(--main-blue-dark);
   border-color: rgba(0, 63, 71, 0.2);
 }
 
 a.green:hover {
-  color: rgba(1, 151, 171, 1);
+  color: var(--main-blue-soft);
 }
 
 a.yellow {
@@ -259,7 +263,7 @@ a.yellow:hover {
   position: absolute;
   right: 0;
   top: 2px;
-  color: #8a8a8a;
+  color: var(--main-gray-soft);
 }
 .timeline .job-meta {
   position: static;
@@ -274,7 +278,7 @@ a.yellow:hover {
   max-width: 220px;
 }
 .timeline .job-meta .time {
-  color: #8a8a8a;
+  color: var(--main-gray-soft);
 }
 @media screen and (max-width: 767px) {
   .timeline .job-meta .title {
@@ -298,16 +302,96 @@ a.yellow:hover {
 .place {
   margin-left: 50px;
 }
+
+
 /*Education*/
-#education::before,
-#education::after {
+#education::before {
   content: "";
   display: block;
+  position: relative;
+  left: -80px;
   width: 200px;
   height: 2px;
   margin: 0px auto;
   margin-bottom: 30px;
   background-color: #6b6f74;
+}
+#education::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: -80px;
+  width: 200px;
+  height: 2px;
+  margin: 0px auto;
+  margin-top: 30px;
+  background-color: #6b6f74;
+}
+
+#education {
+  margin-left: 280px;
+  margin-right: 10%;
+  margin-top: 50px;
+  border-left: 3px solid var(--main-blue);
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.edu-item {
+  position: relative;
+  margin-left: 45px;
+}
+#education .edu-item:before {
+  content: "";
+  position: absolute;
+  left: -57px;
+  top: 0;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #fff;
+  border: 3px solid var(--main-blue);
+}
+
+.edu-title {
+  display: flex;
+}
+
+.uni-name {
+  font-size: x-large;
+  margin-left: 50px;
+}
+
+.edu-year {
+  font-size: small;
+  color: var(--main-gray-soft);
+}
+
+.edu-detail {
+  list-style: circle;
+}
+.edu-lesson {
+  list-style: square;
+  padding-left: 40px;
+}
+
+.edu-meta {
+  position: absolute;
+  left: -290px;
+}
+
+.edu-meta .edu-name{
+    font-size: 18px;
+    color: var(--main-blue-soft);
+    max-width: 220px;
+}
+
+.fa-graduation-cap{
+  color: var(--main-blue-soft);
 }
 
 /*Knowledge*/
