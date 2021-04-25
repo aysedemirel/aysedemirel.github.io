@@ -285,19 +285,29 @@ a.yellow:hover {
   margin-right: 5px;
 }
 
-.tools
-{
+.tools {
   list-style: circle;
   margin-left: 8%;
 }
 
-.logo{
+.logo {
   width: 30px;
   border-radius: 50px;
   position: absolute;
 }
-.place{
+.place {
   margin-left: 50px;
 }
 /*Education*/
+#education::before,
+#education::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  background-color: #6b6f74;
+}
+
 /*Knowledge*/
