@@ -5,6 +5,7 @@ chk.addEventListener("change", () => {
   document.body.classList.toggle("normal");
 });
 
+
 //CHART PART
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
@@ -63,3 +64,5 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
