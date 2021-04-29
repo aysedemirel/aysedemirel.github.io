@@ -1,58 +1,43 @@
-// Credit to Alan at https://codepen.io/amwill04/pen/NGmjyr
-
-// When on tablet or phone, initially run or restart the pen from under 767px screen width so that the angle of the selected pie slice animates down instead of to the right when the description box is underneath it.
-
 var data = [{
   "Title": "HTML",
-  "Amount": 100,
-  "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum metus vel odio convallis condimentum. Integer ullamcorper ipsum vel dui varius congue. Nulla facilisi. Morbi molestie tortor libero, ac placerat urna mollis ac. Vestibulum id ipsum mauris."
+  "Amount": 5
 }, {
   "Title": "CSS",
-  "Amount": 1000,
-  "Description": "In hac habitasse platea dictumst. Curabitur lacus neque, congue ac quam a, sagittis accumsan mauris. Suspendisse et nisl eros. Fusce nulla mi, tincidunt non faucibus vitae, aliquam vel dolor. Maecenas imperdiet, elit eget condimentum fermentum, sem lorem fringilla felis, vitae cursus lorem elit in risus."
+  "Amount": 10
 }, {
   "Title": "Javascript",
-  "Amount": 1750,
-  "Description": "Aenean faucibus, risus sed eleifend rutrum, leo diam porttitor mauris, a eleifend ipsum ipsum ac ex. Nam scelerisque feugiat augue ac porta. Morbi massa ante, interdum sed nulla nec, finibus cursus augue. Phasellus nunc neque, blandit a nunc ut, mattis elementum arcu."
+  "Amount": 10
 }, {
-  "Title": "JSON",
-  "Amount": 600,
-  "Description": "Laboriosam pariatur recusandae ipsum nisi, saepe doloremque nobis eaque omnis commodi dolor porro? Error, deserunt veritatis officiis porro libero et suscipit ad. Ipsum dolor sit amet consectetur adipisicing elit."
+  "Title": "Java",
+  "Amount": 40
 }, {
-  "Title": "React JSX",
-  "Amount": 2000,
-  "Description": "Sit amet consectetur adipisicing elit. Nemo totam perspiciatis tenetur quod ipsam voluptas et consequatur labore harum obcaecati alias voluptate id sit, praesentium ratione nostrum maxime reprehenderit. Deserunt veritatis officiis porro libero et suscipit ad."
+  "Title": "Python",
+  "Amount": 10
 }, {
-  "Title": "WebGL",
-  "Amount": 100,
-  "Description": "Consectetur adipisicing elit. Architecto illum quidem eligendi, consectetur corporis esse enim eveniet distinctio beatae dignissimos recusandae, ipsam aspernatur labore cupiditate, suscipit corrupti accusantium voluptates laborum."
+  "Title": "Git",
+  "Amount": 20
 }, {
-  "Title": "Express",
-  "Amount": 750,
-  "Description": "Beatae, aperiam voluptas aut atque laborum dolorem fuga. Corporis aperiam, illo nobis suscipit perferendis natus doloremque id ratione modi, veritatis beatae maiores Lorem ipsum dolor sit, amet consectetur."
+  "Title": "C",
+  "Amount": 3
 }, {
-  "Title": "Pug",
-  "Amount": 400,
-  "Description": "Amet consectetur, adipisicing elit. Ipsum perferendis rem illo explicabo voluptate, voluptatum id expedita sapiente magni laboriosam maiores molestiae ut accusamus impedit quos ex excepturi porro voluptates. Nunc dolor metus, aliquam vitae felis id, euismod vulputate metus."
+  "Title": "C++",
+  "Amount": 3
 }, {
-  "Title": "Sass",
-  "Amount": 800,
-  "Description": "Architecto illum quidem eligendi, consectetur corporis esse enim eveniet distinctio beatae dignissimos recusandae, ipsam aspernatur labore cupiditate, suscipit corrupti accusantium voluptates laborum."
+  "Title": "SQL",
+  "Amount": 5
 }, {
-  "Title": "MongoDB",
-  "Amount": 450,
-  "Description": "Dolor sit amet consectetur adipisicing elit. Beatae, aperiam. Voluptas aut atque laborum dolorem fuga? Corporis aperiam, illo nobis suscipit perferendis natus doloremque id ratione modi, veritatis beatae maiores."
+  "Title": "Android",
+  "Amount": 3
 }, {
-  "Title": "Bootstrap",
-  "Amount": 450,
-  "Description": "Recusandae ipsum nisi, saepe doloremque nobis eaque omnis commodi dolor porro? Error, deserunt veritatis officiis porro libero et suscipit ad. Dolor sit amet consectetur adipisicing elit. Nemo totam perspiciatis tenetur quod ipsam voluptas et consequatur labore harum obcaecati alias voluptate."
+  "Title": "UI/UX",
+  "Amount": 25
 }];
 
 var width = parseInt(d3.select('#pieChart').style('width'), 10);
 var height = width;
 var radius = (Math.min(width, height) - 15) / 2;
 
-var total = 0;      // used to calculate %s
+var total = 0;
 data.forEach((d) => {
   total += d.Amount;
 })
@@ -76,16 +61,16 @@ var arcOver = d3.arc()
 var color = d3.scaleOrdinal();
 color.domain(title(data))
   // Comment in/out between ranges below to change colors
-  .range(["#2BDFBB", "#DF2B4F", "#EE6617", "#FFBF00", '#423E6E', '#E24161']);
-//.range(["#FFFFFF", "#0057E7", "#D62D20", "#008744", "#FFA700", "#0057E7"]);
-//.range(["#011F4B", "#03396C", "#005B96", "#6497B1", "#B3CDE0"]);
-//.range(["#B2D8D8", "#66B2B2", "#008080", "#006666", "#004C4C"]);
-//.range(["#DC6900", "#EB8C00", "#E0301E", "#A32020", "#602320"]);
-//.range(["#D11141", "#00B159", "#00AEDB", "#FFC425", "#F37735"]);
-//.range(["#BD0C2F", "#D15238", "#4F283D", "#17263E", "#345999"]);
-//.range(["#FE0000", "#FDFE02", "#0BFF01", "#011EFE", "#FE00F6"]);
-//.range(['#0B00FF', '#0097FF', '#00FFF0', '#00FF74', '#0BFF00', '#FFF900', '#FF5500', '#FF0500', '#FF007F', '#B800FF', '#99FF00']);
-//.range(["#8A76A6", "#54B5BF", "#8EA65B", "#F27B35"]);
+  //.range(["#2BDFBB", "#DF2B4F", "#EE6617", "#FFBF00", '#423E6E', '#E24161']);
+  //.range(["#FFFFFF", "#0057E7", "#D62D20", "#008744", "#FFA700", "#0057E7"]);
+  //.range(["#011F4B", "#03396C", "#005B96", "#6497B1", "#B3CDE0"]);
+  //.range(["#B2D8D8", "#66B2B2", "#008080", "#006666", "#004C4C"]);
+  //.range(["#DC6900", "#EB8C00", "#E0301E", "#A32020", "#602320"]);
+  //.range(["#D11141", "#00B159", "#00AEDB", "#FFC425", "#F37735"]);
+  //.range(["#BD0C2F", "#D15238", "#4F283D", "#17263E", "#345999"]);
+  //.range(["#FE0000", "#FDFE02", "#0BFF01", "#011EFE", "#FE00F6"]);
+  //.range(['#0B00FF', '#0097FF', '#00FFF0', '#00FF74', '#0BFF00', '#FFF900', '#FF5500', '#FF0500', '#FF007F', '#B800FF', '#99FF00']);
+  .range(["#8A76A6", "#54B5BF", "#8EA65B", "#F27B35"]);
 
 // Comment Out Below to Use Diff D3 Color Scheme
 // var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -190,13 +175,9 @@ var g = svg.selectAll("path")
     if (buttonToggle) {
       buttonToggle = false;
       switchToggle();
-
       change(d, this);
 
       var timeline = new TimelineLite();
-
-      //TweenMax.set(".panel", {perspective:800});
-      //TweenMax.set(".content-wrapper", {transformStyle:"preserve-3d"});
 
       timeline.to('.content-wrapper', .5, {
         rotationX: '90deg',
@@ -209,7 +190,6 @@ var g = svg.selectAll("path")
         ease: Linear.easeNone,
         onComplete: () => {
           $('#segmentTitle').replaceWith(`<h1 id="segmentTitle">${d.data.Title} - ${Math.round((d.data.Amount / total) * 1000) / 10}%</h1>`);
-          $('#segmentText').replaceWith('<p id="segmentText">' + d.data.Description + '</p>');
           $('.panel').css('background-color', `${ColorLuminance(color(d.data.Title), -0.3)}`)
         }
       });
@@ -266,6 +246,3 @@ function ColorLuminance(hex, lum) {
 
   return rgb;
 }
-
-
-//document.querySelector('style').textContent += '@media(max-width:767px) {#pieChart { transform: rotate(90deg); transform-origin: 50% 50%; transition: 1s; max-width: 50%; } .text-container { width: 100%; min-height: 0; }} @media(min-width:768px) {#pieChart { transition: 1s;}}'
