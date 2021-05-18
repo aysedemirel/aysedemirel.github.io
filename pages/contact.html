@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ayşe Demirel</title>
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/pieChart.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dancingScript.css" />
+    <link rel="icon" href="../img/favicon.ico" type="../img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayse Demirel about page" />
+    <meta name="twitter:site" content="aysedemirel.github.io">
+    <meta name="twitter:description" content="aysedemirel about page">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="#project">Project</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+        <div id="switch">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                <i class="fa fa-sun-o"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </nav>
+    <div id="lang-search">
+        <div id="language">
+            <a class="lng" id="tr" href="./contact_tr.html">
+                <img class="flag-icon" src="../img/tr.png" alt="TR"></span> TR
+            </a>
+            <a class="lng" id="en" href="./contact.html">
+                <img class="flag-icon" src="../img/us.png" alt="US"> EN
+            </a>
+        </div>
+        <section id="search">
+            <label for="search-input">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search...</span>
+            </label>
+            <input id="search-input" class="form-control" placeholder="Search..." autocomplete="off" spellcheck="false"
+                autocorrect="off" tabindex="1">
+            <a id="search-clear" href="#" class="fa fa-times-circle hide" aria-hidden="true">
+                <span class="sr-only">Clear search</span>
+            </a>
+        </section>
+    </div>
+    <div class="social" id="link-list" orientation="left">
+        <ul class="link">
+            <li>
+                <a href="https://github.com/aysedemirel" rel="noopener noreferrer nofollow" target="_blank"
+                    aria-label="GitHub" variant="secondary" class="social-media">
+                    <i class="fa fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/aysee_demirel" rel="noopener noreferrer nofollow" target="_blank"
+                    aria-label="Twitter" variant="secondary" class="social-media">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/ayse-demirel" rel="noopener noreferrer nofollow" target="_blank"
+                    aria-label="LinkedIn" variant="secondary" class="social-media">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:aysedemirel1996@gmail.com" rel="noopener noreferrer nofollow" variant="secondary"
+                    aria-label="Email" class="social-media">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        <button onclick="topFunction()" id="topBtn" title="Go to top">
+            <i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- HEADER -->
+    <header id="contact-header">
+        <img id="character" src="../img/character.png">
+        <section class="help-table">
+            <p>I can help with the following: </p>
+            <div class="tick-part">
+                <ul>
+                    <!-- TODO: Add project link -->
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">HTML-CSS</a></li>
+                    <li><a href="#">Git-GitHub</a></li>
+                    <li><a href="#">UI/UX</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    <!-- FORM -->
+    <form id="contact-form">
+        <button id="mail-button" class="contact">EMAIL</button>
+        <p class="contact" id="or-text">OR</p>
+        <div class="contact" id="item-form">
+            <input class="form-item" id="name" placeholder="Name" text="Name">
+            <input class="form-item" id="mail" placeholder="Mail" text="Mail">
+            <select name="skills" id="skills">
+                <option disabled selected value>Select topic you need help with</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="git">Git</option>
+                <option value="github">GitHub</option>
+                <option value="ui-ux">UI/UX</option>
+            </select>
+            <textarea id="message" class="input-textarea-message" name="message" placeholder="Enter your message here..."></textarea>
+            <button id="mail-button" class="contact">SEND</button>
+        </div>
+    </form>
+    <footer>
+        © 2021 Ayşe Demirel, unless otherwise stated.
+    </footer>
+    <script src="https://use.fontawesome.com/de50a042e8.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

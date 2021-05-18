@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ayşe Demirel</title>
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/pieChart.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dancingScript.css" />
+    <link rel="icon" href="../img/favicon.ico" type="../img/favicon.ico" />
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <a href="../index_tr.html">Anasayfa</a>
+            </li>
+            <li>
+                <a href="./about_tr.html">Hakkımda</a>
+            </li>
+            <li>
+                <a href="#project">Projeler</a>
+            </li>
+            <li>
+                <a href="./contact_tr.html">İletişim</a>
+            </li>
+        </ul>
+        <div id="switch">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                <i class="fa fa-sun-o"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </nav>
+    <div id="lang-search">
+        <div id="language">
+            <a class="lng" id="tr" href="./contact_tr.html">
+                <img class="flag-icon" src="../img/tr.png" alt="TR"></span> TR
+            </a>
+            <a class="lng" id="en" href="./contact.html">
+                <img class="flag-icon" src="../img/us.png" alt="US"> EN
+            </a>
+        </div>
+        <section id="search">
+            <label for="search-input">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Bul...</span>
+            </label>
+            <input id="search-input" class="form-control" placeholder="Bul.." autocomplete="off" spellcheck="false"
+                autocorrect="off" tabindex="1">
+            <a id="search-clear" href="#" class="fa fa-times-circle hide" aria-hidden="true">
+                <span class="sr-only">Aramayı temizle</span>
+            </a>
+        </section>
+    </div>
+    <div class="social" id="link-list" orientation="left">
+        <ul class="link">
+            <li>
+                <a href="https://github.com/aysedemirel" rel="noopener noreferrer nofollow" target="_blank"
+                    aria-label="GitHub" variant="secondary" class="social-media">
+                    <i class="fa fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/aysee_demirel" rel="noopener noreferrer nofollow" target="_blank"
+                    aria-label="Twitter" variant="secondary" class="social-media">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/ayse-demirel" rel="noopener noreferrer nofollow" target="_blank"
+                    aria-label="LinkedIn" variant="secondary" class="social-media">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:aysedemirel1996@gmail.com" rel="noopener noreferrer nofollow" variant="secondary"
+                    aria-label="Email" class="social-media">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        <button onclick="topFunction()" id="topBtn" title="En başa git">
+            <i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <footer>
+        © 2021 Ayşe Demirel, aksi iddia edilmedikçe.
+    </footer>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://use.fontawesome.com/de50a042e8.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="../js/pieChart.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
