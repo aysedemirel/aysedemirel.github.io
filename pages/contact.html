@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/pieChart.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/dancingScript.css" />
-    <link rel="icon" href="../img/favicon.ico" type="../img/favicon.ico" />
+    <link rel="icon" href="../img/favicon.png" type="../img/favicon.ico" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ayse Demirel about page" />
     <meta name="twitter:site" content="aysedemirel.github.io">
@@ -114,13 +114,13 @@
     </header>
 
     <!-- FORM -->
-    <form id="contact-form">
-        <button id="mail-button" class="contact">EMAIL</button>
+    <form id="contact-form" name="contact-form">
+        <button id="mail-button" class="contact"><a href="mailto:aysedemirel1996@gmail.com">EMAIL</a></button>
         <p class="contact" id="or-text">OR</p>
         <div class="contact" id="item-form">
-            <input class="form-item" id="name" placeholder="Name" text="Name">
-            <input class="form-item" id="mail" placeholder="Mail" text="Mail">
-            <select name="skills" id="skills">
+            <input class="form-item" id="name" name="name" placeholder="Name" text="Name" required>
+            <input id="email" class="form-item" class="form-control" type="email" name="email" placeholder="Enter your email" required>
+            <select name="skills" id="skills" required>
                 <option disabled selected value>Select topic you need help with</option>
                 <option value="java">Java</option>
                 <option value="python">Python</option>
@@ -130,8 +130,8 @@
                 <option value="github">GitHub</option>
                 <option value="ui-ux">UI/UX</option>
             </select>
-            <textarea id="message" class="input-textarea-message" name="message" placeholder="Enter your message here..."></textarea>
-            <button id="mail-button" class="contact">SEND</button>
+            <textarea id="message" class="input-textarea-message" name="message" placeholder="Enter your message here..." required></textarea>
+            <button id="mail-button" class="contact" onclick=" return validateForm()">SEND</button>
         </div>
     </form>
     <footer>

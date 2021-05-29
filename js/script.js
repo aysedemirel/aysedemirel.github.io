@@ -65,4 +65,11 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
+// VALIDATE FORM
+function validateForm() {
+  var message = document.forms["contact-form"]["message"].value;
+  if (message.length < 100) {
+    alert("Please write a message at least 100 character. If your message is shorten than 100 characters, maybe you want to write your ideas about anything :)\nYou should write "+ (100-message.length)+" characters...");
+    return false;
+  }
+}
