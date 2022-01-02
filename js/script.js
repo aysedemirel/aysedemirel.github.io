@@ -66,10 +66,14 @@ function topFunction() {
 }
 
 // VALIDATE FORM
-function validateForm() {
+function validateForm(lang) {
   var message = document.forms["contact-form"]["message"].value;
   if (message.length < 100) {
-    alert("Please write a message at least 100 character. If your message is shorten than 100 characters, maybe you want to write your ideas about anything :)\nYou should write "+ (100-message.length)+" characters...");
-    return false;
+    if (lang == "TR") {
+      alert("En az 100 karakterlik mesaj yazınız. Eğer mesajınız 100 karakterden az ise, herhangi bir şey hakkında fikirlerinizi yazabilirsiniz :)\n Kalan karakter : " + (100 - message.length));
+    }
+    else if (lang == "EN") {
+      alert("Please write a message at least 100 character. If your message is shorten than 100 characters, maybe you want to write your ideas about anything :)\nYou should write " + (100 - message.length) + " characters...");
+    } return false;
   }
 }

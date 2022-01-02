@@ -5,11 +5,15 @@
     <title>Ayşe Demirel</title>
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/pieChart.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/dancingScript.css" />
     <link rel="icon" href="../img/favicon.png" type="../img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayse Demirel contact page" />
+    <meta name="twitter:site" content="aysedemirel.github.io">
+    <meta name="twitter:description" content="aysedemirel contact page">
 </head>
 
 <body>
@@ -90,7 +94,47 @@
             <i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
         </button>
     </div>
+    <!-- HEADER -->
+    <header id="contact-header">
+        <img id="character" src="../img/character.png">
+        <section class="help-table">
+            <p>Şu konularda size yardımcı olabilirim: </p>
+            <div class="tick-part">
+                <ul>
+                    <!-- TODO: Add project link -->
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">HTML-CSS</a></li>
+                    <li><a href="#">Git-GitHub</a></li>
+                    <li><a href="#">UI/UX</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
 
+    <!-- FORM -->
+    <form id="contact-form" name="contact-form">
+        <button id="mail-button" class="contact"><a href="mailto:aysedemirel1996@gmail.com">EMAIL</a></button>
+        <p class="contact" id="or-text">VEYA</p>
+        <div class="contact" id="item-form">
+            <input class="form-item" id="name" name="name" placeholder="İsiminiz" text="İsiminiz" required>
+            <input id="email" class="form-item" class="form-control" type="email" name="email"
+                placeholder="Email adresiniz..." required>
+            <select name="skills" id="skills" required>
+                <option disabled selected value>Mesajınız ne hakkında?</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="git">Git</option>
+                <option value="github">GitHub</option>
+                <option value="ui-ux">UI/UX</option>
+            </select>
+            <textarea id="message" class="input-textarea-message" name="message"
+                placeholder="Mesajınızı buraya girebilirsiniz..." required></textarea>
+            <button id="mail-button" class="contact" onclick=" return validateForm('TR')">GÖNDER</button>
+        </div>
+    </form>
     <footer>
         © 2021 Ayşe Demirel, aksi iddia edilmedikçe.
     </footer>
