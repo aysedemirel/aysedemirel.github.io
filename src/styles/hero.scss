@@ -1,0 +1,78 @@
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1s ease-out;
+
+  .hello-text {
+    font-size: clamp(3rem, 8vw, 7rem);
+    background: linear-gradient(45deg, #f59e0b, #f97316, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .name-container {
+    font-size: clamp(2rem, 6vw, 5rem);
+    margin-bottom: 24px;
+
+    .name-txt {
+      color: #ea580c;
+    }
+  }
+
+  .into-container {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #d1d5db;
+    margin-bottom: 48px;
+    min-height: 64px;
+
+    .into-txt {
+      color: #a855f7;
+      font-weight: 600;
+    }
+
+    .text-cursor {
+      animation: pulse 1s infinite;
+    }
+  }
+
+  .button-area {
+    .about-me {
+      background: linear-gradient(45deg, #a855f7, #ec4899);
+      border: none;
+      height: 48px;
+      padding: 0 32px;
+      font-size: 16px;
+      border-radius: 24px;
+    }
+
+    .contact-me {
+      border-color: #a855f7;
+      color: #a855f7;
+      height: 48px;
+      padding: 0 32px;
+      font-size: 16px;
+      border-radius: 24px;
+      background: transparent;
+    }
+
+    .down-btn-container {
+      margin-top: 64px;
+
+      .down-btn {
+        color: #a855f7;
+        animation: bounce 2s infinite;
+        margin-top: 64px;
+      }
+    }
+  }
+}
