@@ -1,0 +1,55 @@
+.layout-header {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(236, 236, 236, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+
+  .header-title {
+    background: linear-gradient(45deg, #f97316, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+    margin: 0;
+    flex: 1;
+  }
+
+  .header-menu {
+    flex: 2;
+    justify-content: flex-end;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 5%;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    box-shadow: none;
+    border-bottom: none;
+    background: transparent;
+
+    .ant-menu-item-selected {
+      color: #e9f95e !important;
+      border-bottom: #e9f95e solid !important;
+      background-color: transparent !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .layout-header {
+      padding: 0 16px;
+    }
+  }
+}

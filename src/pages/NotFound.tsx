@@ -2,15 +2,14 @@ import opps from '../assets/img/opps.jpg';
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import HeaderComponent from '../components/HeaderComponent';
 
 const NotFound = () => {
   const { t } = useTranslation();
+
   return (
     <div className="container">
-      <section className="first-part">
-        <Header />
-      </section>
+      <HeaderComponent />
       <div className="not-found-container">
         <div className="not-found-txt">
           <h1>{t('oooppss')}</h1>
