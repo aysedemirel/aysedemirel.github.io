@@ -2,103 +2,97 @@ import { Button, Space, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { MailOutlined, DownOutlined, UserOutlined } from '@ant-design/icons';
 import useScrollToSection from '../hooks/useScrollToSection';
+import profilPicture from '../assets/img/profile_img.png';
 
 const { Title, Text } = Typography;
 
 const HeroSection = () => {
   const { scrollToSection } = useScrollToSection();
-  const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState('');
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const roles = [
-    'Web Development',
-    'Frontend Development',
-    'Backend Development',
-    'Desktop App Development',
-    'Mobile App Development'
-  ];
+  const roles = ['Full Stack Developer', 'Mobile App Developer', 'Desktop App Developer'];
 
   useEffect(() => {
-    setIsVisible(true);
+    const currentRole = roles[currentRoleIndex];
+    let typingSpeed = isDeleting ? 50 : 120;
 
-    const typeText = () => {
-      const currentRole = roles[currentRoleIndex];
-      let currentText = '';
-      let i = 0;
-
-      const typeInterval = setInterval(() => {
-        if (i < currentRole.length) {
-          currentText += currentRole[i];
-          setTypedText(currentText);
-          i++;
+    const handleTyping = () => {
+      setTypedText((prev) => {
+        if (isDeleting) {
+          return prev.slice(0, -1);
         } else {
-          clearInterval(typeInterval);
-          setTimeout(() => {
-            const eraseInterval = setInterval(() => {
-              if (currentText.length > 0) {
-                currentText = currentText.slice(0, -1);
-                setTypedText(currentText);
-              } else {
-                clearInterval(eraseInterval);
-                setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-              }
-            }, 50);
-          }, 2000);
+          const updated = currentRole.slice(0, prev.length + 1);
+          return updated;
         }
-      }, 100);
+      });
+
+      if (!isDeleting && typedText === currentRole) {
+        setTimeout(() => setIsDeleting(true), 1500);
+      }
+
+      if (isDeleting && typedText === '') {
+        setIsDeleting(false);
+        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+      }
     };
 
-    typeText();
-    const roleChangeInterval = setInterval(typeText, 4000);
-
-    return () => clearInterval(roleChangeInterval);
-  }, [currentRoleIndex, roles]);
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [typedText, isDeleting, currentRoleIndex]);
 
   return (
     <div
       id="home"
       className="hero-container"
       style={{
-        transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
-        opacity: isVisible ? 1 : 0
+        transform: 'translateY(0)',
+        opacity: 1
       }}>
-      <Title level={1} className="hello-text">
-        Hi There,
-      </Title>
-      <Title level={2} className="name-container">
-        I'm <Text className="name-txt">Ayşe Demirel Deniz</Text>
-      </Title>
+      <div className="hero-content">
+        <div className="hero-text-part">
+          <Title level={1} className="hello-text">
+            Hi There,
+          </Title>
+          <Title level={2} className="name-container">
+            I'm <Text className="name-txt">Ayşe Demirel Deniz</Text>
+          </Title>
 
-      <div className="into-container">
-        I am a <Text className="into-txt">{typedText}</Text>
-        <Text className="text-cursor">|</Text>
+          <div className="into-container">
+            I am a <span className="into-txt">{typedText}</span>
+            <span className="text-cursor">|</span>
+          </div>
+
+          <Space size="large" wrap className="button-area">
+            <Button
+              type="primary"
+              size="large"
+              className="about-me"
+              onClick={() => scrollToSection('about')}
+              icon={<UserOutlined />}>
+              About Me
+            </Button>
+            <Button
+              size="large"
+              onClick={() => scrollToSection('contact')}
+              className="contact-me"
+              icon={<MailOutlined />}>
+              Contact Me
+            </Button>
+          </Space>
+        </div>
+        <div className="hero-img-part">
+          <img src={profilPicture} alt={'profile picture'} />
+        </div>
       </div>
-
-      <Space size="large" wrap className="button-area">
-        <Button
-          type="primary"
-          size="large"
-          className="about-me"
-          onClick={() => scrollToSection('about')}
-          icon={<UserOutlined />}>
-          About Me
-        </Button>
-        <Button
-          size="large"
-          onClick={() => scrollToSection('contact')}
-          className="contact-me"
-          icon={<MailOutlined />}>
-          Contact Me
-        </Button>
-      </Space>
 
       <div className="down-btn-container">
         <Button
           type="text"
           onClick={() => scrollToSection('about')}
           className="down-btn"
-          icon={<DownOutlined style={{ fontSize: '24px' }} />}
+          icon={<DownOutlined style={{ fontSize: '32px' }} />}
         />
       </div>
     </div>
