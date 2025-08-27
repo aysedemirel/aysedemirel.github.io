@@ -1,13 +1,15 @@
 import { Button, Space, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { MailOutlined, DownOutlined, UserOutlined } from '@ant-design/icons';
-import useScrollToSection from '../hooks/useScrollToSection';
 import profilPicture from '../assets/img/profile_img.png';
 
 const { Title, Text } = Typography;
 
-const HeroSection = () => {
-  const { scrollToSection } = useScrollToSection();
+interface Props {
+  scrollToSection: (sectionId: string) => void;
+}
+
+const HeroSection = ({ scrollToSection }: Props) => {
   const [typedText, setTypedText] = useState('');
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

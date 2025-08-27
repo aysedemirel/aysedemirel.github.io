@@ -39,12 +39,6 @@
     box-shadow: none;
     border-bottom: none;
     background: transparent;
-
-    .ant-menu-item-selected {
-      color: #e9f95e !important;
-      border-bottom: #e9f95e solid !important;
-      background-color: transparent !important;
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -52,4 +46,18 @@
       padding: 0 16px;
     }
   }
+}
+
+.ant-menu-light .ant-menu-item-selected {
+  color: #fff !important;
+  background-color: #f5924a !important;
+}
+
+.ant-menu-item:hover {
+  color: #f97316 !important;
+  border-bottom: none !important;
+}
+
+.ant-menu-item-selected::after {
+  border-bottom: none !important;
 }

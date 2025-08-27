@@ -9,7 +9,7 @@ const NotFound = () => {
 
   return (
     <div className="container">
-      <HeaderComponent />
+      <HeaderComponent activeSection="" scrollToSection={() => {}} />
       <div className="not-found-container">
         <div className="not-found-txt">
           <h1>{t('oooppss')}</h1>

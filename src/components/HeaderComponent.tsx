@@ -1,7 +1,6 @@
 import { MenuOutlined } from '@ant-design/icons';
 import { Button, Drawer, Layout, Menu, Typography } from 'antd';
 import { useEffect, useState } from 'react';
-import useScrollToSection from '../hooks/useScrollToSection';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
@@ -19,8 +18,11 @@ const menuItems = [
 
 const MOBILE_WIDTH_THRESHOLD = 1100;
 
-const HeaderComponent = () => {
-  const { activeSection, scrollToSection } = useScrollToSection();
+interface Props {
+  activeSection: string;
+  scrollToSection: (sectionId: string) => void;
+}
+const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= MOBILE_WIDTH_THRESHOLD);
   const [drawerVisible, setDrawerVisible] = useState(false);
 
@@ -69,7 +71,7 @@ const HeaderComponent = () => {
 
   return (
     <AntHeader className="layout-header">
-      <Title className="header-title" level={3}>
+      <Title className="header-title" level={3} onClick={() => scrollToSection('home')}>
         Ayşe Demirel Deniz
       </Title>
       {isMobile ? renderMobile() : renderDesktop()}
