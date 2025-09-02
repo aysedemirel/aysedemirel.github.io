@@ -2,6 +2,7 @@ import { Layout } from 'antd';
 import HeaderComponent from '../components/HeaderComponent';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
+import SkillsSection from '../components/SkillsSection';
 import useScrollToSection from '../hooks/useScrollToSection';
 
 const { Content } = Layout;
@@ -15,6 +16,7 @@ const Home = () => {
       <Content>
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
+        <SkillsSection />
       </Content>
     </Layout>
   );

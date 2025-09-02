@@ -1,0 +1,97 @@
+.skills-container {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px 24px;
+  scroll-margin-top: 50px;
+  justify-items: center;
+  align-items: center;
+
+  .skills-part {
+    max-width: 1200px;
+
+    .skills-title {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: clamp(8px, 2vw, 16px);
+      margin-bottom: clamp(24px, 6vw, 64px);
+
+      .title-icon {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        color: #f97316;
+      }
+
+      .title-txt {
+        background: linear-gradient(45deg, #f97316, #fb923c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        margin-bottom: 0;
+        line-height: 1;
+      }
+    }
+
+    .skills-content {
+      align-items: center;
+
+      .skills-cards {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(12px, 2vw, 20px);
+
+        .skill-card {
+          cursor: pointer;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+          .skill-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(4px, 1vw, 8px);
+            font-size: clamp(12px, 1.2vw, 16px);
+          }
+
+          &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          &.active {
+            border: 2px solid #fb923c;
+            background-color: #faf7f4;
+          }
+        }
+      }
+      .chart-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: auto;
+
+        .chart-container {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          max-width: 500px;
+          max-height: 400px;
+          height: auto;
+
+          @media (min-width: 1024px) {
+            max-width: 600px;
+            max-height: 400px;
+          }
+
+          @media (max-width: 768px) {
+            max-width: 300px;
+            max-height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
