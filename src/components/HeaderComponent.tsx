@@ -9,8 +9,8 @@ const menuItems = [
   { key: 'home', label: 'Home' },
   { key: 'about', label: 'About' },
   { key: 'skills', label: 'Skills' },
-  { key: 'education', label: 'Education' },
   { key: 'experience', label: 'Experience' },
+  { key: 'education', label: 'Education' },
   { key: 'projects', label: 'Projects' },
   { key: 'contact', label: 'Contact' },
   { key: 'blog', label: 'Blog' }

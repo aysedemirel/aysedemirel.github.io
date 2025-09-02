@@ -3,6 +3,7 @@ import HeaderComponent from '../components/HeaderComponent';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
+import ExperienceSection from '../components/ExperienceSection';
 import useScrollToSection from '../hooks/useScrollToSection';
 
 const { Content } = Layout;
@@ -17,6 +18,7 @@ const Home = () => {
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
         <SkillsSection />
+        <ExperienceSection />
       </Content>
     </Layout>
   );
