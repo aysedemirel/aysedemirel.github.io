@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { PieChartOutlined } from '@ant-design/icons';
 import { Pie } from '@ant-design/plots';
 import { Card, Col, Progress, Row, Typography } from 'antd';
-import { SKILLS } from '../constants/skills';
-import { PieConfig } from '../config/SkillPieConfig';
+import { SKILLS } from '../../constants/skills';
+import { PieConfig } from '../../config/SkillPieConfig';
 
 const { Title } = Typography;
 

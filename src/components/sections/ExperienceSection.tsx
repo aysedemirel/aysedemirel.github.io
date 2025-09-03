@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Timeline, Typography } from 'antd';
 import { RocketOutlined } from '@ant-design/icons';
-import { EXPERIENCE } from '../constants/experience';
+import { EXPERIENCE } from '../../constants/experience';
 import { motion } from 'framer-motion';
 
 const { useBreakpoint } = Grid;

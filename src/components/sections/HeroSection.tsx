@@ -1,7 +1,7 @@
 import { Button, Space, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { MailOutlined, DownOutlined, UserOutlined } from '@ant-design/icons';
-import profilPicture from '../assets/img/profile_img.png';
+import profilPicture from '../../assets/img/profile_img.png';
 
 const { Title, Text } = Typography;
 

@@ -7,7 +7,7 @@ import {
   MediumCircleFilled,
   UserOutlined
 } from '@ant-design/icons';
-import profilePicture from '../assets/img/me.jpeg';
+import profilePicture from '../../assets/img/me.jpeg';
 
 const { Title, Paragraph, Link } = Typography;
 

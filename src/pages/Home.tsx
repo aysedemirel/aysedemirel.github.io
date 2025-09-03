@@ -1,10 +1,11 @@
 import { Layout } from 'antd';
 import HeaderComponent from '../components/HeaderComponent';
-import HeroSection from '../components/HeroSection';
-import AboutSection from '../components/AboutSection';
-import SkillsSection from '../components/SkillsSection';
-import ExperienceSection from '../components/ExperienceSection';
+import HeroSection from '../components/sections/HeroSection';
+import AboutSection from '../components/sections/AboutSection';
+import SkillsSection from '../components/sections/SkillsSection';
+import ExperienceSection from '../components/sections/ExperienceSection';
 import useScrollToSection from '../hooks/useScrollToSection';
+import EducationSection from '../components/sections/EducationSection';
 
 const { Content } = Layout;
 
@@ -19,6 +20,7 @@ const Home = () => {
         <AboutSection />
         <SkillsSection />
         <ExperienceSection />
+        <EducationSection />
       </Content>
     </Layout>
   );
