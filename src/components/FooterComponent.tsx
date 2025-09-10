@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, Typography, Row, Col, Space } from 'antd';
 import {
   AndroidOutlined,
@@ -13,11 +12,24 @@ import {
   MessageOutlined,
   TwitterOutlined
 } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const { Footer: AntFooter } = Layout;
 const { Text, Title, Link } = Typography;
 
-const FooterComponent: React.FC = () => {
+interface Props {
+  scrollToSection: (sectionId: string) => void;
+}
+
+const FooterComponent = ({ scrollToSection }: Props) => {
+  const navigate = useNavigate();
+
+  const handleClick = (key: string) => {
+    if (key === 'blog') navigate('/blog');
+    else navigate(`/#${key}`);
+    scrollToSection(key);
+  };
+
   return (
     <AntFooter id="footer" className="footer">
       <Row gutter={[32, 16]} justify="space-between" align="top">
@@ -37,25 +49,25 @@ const FooterComponent: React.FC = () => {
             Quick Links
           </Title>
           <Space direction="vertical" className="content">
-            <Link className="link" href="/#home">
+            <Link className="link" onClick={() => handleClick('home')}>
               Home
             </Link>
-            <Link className="link" href="/#about">
+            <Link className="link" onClick={() => handleClick('about')}>
               About
             </Link>
-            <Link className="link" href="/#skills">
+            <Link className="link" onClick={() => handleClick('skills')}>
               Skills
             </Link>
-            <Link className="link" href="/#experience">
+            <Link className="link" onClick={() => handleClick('experience')}>
               Experience
             </Link>
-            <Link className="link" href="/#education">
+            <Link className="link" onClick={() => handleClick('education')}>
               Education
             </Link>
-            <Link className="link" href="/#projects">
+            <Link className="link" onClick={() => handleClick('projects')}>
               Projects
             </Link>
-            <Link className="link" href="/#contact">
+            <Link className="link" onClick={() => handleClick('contact')}>
               Contact
             </Link>
             <Link className="link" href="/blog">

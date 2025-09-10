@@ -7,13 +7,29 @@ import ProjectsSection from '../components/sections/ProjectsSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import ContactSection from '../components/sections/ContactSection';
 import FooterComponent from '../components/FooterComponent';
-import useScrollToSection from '../hooks/useScrollToSection';
 import EducationSection from '../components/sections/EducationSection';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const { Content } = Layout;
 
-const Home = () => {
-  const { activeSection, scrollToSection } = useScrollToSection();
+interface Props {
+  activeSection: string;
+  scrollToSection: (sectionId: string) => void;
+}
+
+const Home = ({ activeSection, scrollToSection }: Props) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace('#', '');
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <Layout style={{ background: 'linear-gradient(135deg, #ffffff, #fff8f3)' }}>
@@ -28,7 +44,7 @@ const Home = () => {
         <ContactSection />
       </Content>
 
-      <FooterComponent />
+      <FooterComponent scrollToSection={scrollToSection} />
     </Layout>
   );
 };

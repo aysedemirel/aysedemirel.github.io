@@ -1,26 +1,28 @@
 import opps from '../assets/img/opps.jpg';
 import { Button } from 'antd';
-import { useTranslation } from 'react-i18next';
 import HeaderComponent from '../components/HeaderComponent';
 import FooterComponent from '../components/FooterComponent';
 
-const NotFound = () => {
-  const { t } = useTranslation();
+interface Props {
+  activeSection: string;
+  scrollToSection: (sectionId: string) => void;
+}
 
+const NotFound = ({ activeSection, scrollToSection }: Props) => {
   return (
     <div className="container">
-      <HeaderComponent activeSection="" scrollToSection={() => {}} />
+      <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
       <div className="not-found-container">
         <div className="not-found-txt">
-          <h1>{t('oooppss')}</h1>
-          <p>{t('oooppss-txt')}</p>
+          <h1>{'Oooppss!!!'}</h1>
+          <p>{'The page you are looking for does not exists or an other error occured'}</p>
           <Button className="not-found-btn" onClick={() => window.open('/', '_self')}>
-            {t('go-back-to-home')}
+            {'Go Back To Home'}
           </Button>
         </div>
         <img src={opps} className="not-found-img" />
       </div>
-      <FooterComponent />
+      <FooterComponent scrollToSection={scrollToSection} />
     </div>
   );
 };

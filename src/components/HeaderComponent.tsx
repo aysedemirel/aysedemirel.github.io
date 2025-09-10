@@ -1,6 +1,7 @@
 import { MenuOutlined } from '@ant-design/icons';
 import { Button, Drawer, Layout, Menu, Typography } from 'antd';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
@@ -25,6 +26,7 @@ interface Props {
 const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= MOBILE_WIDTH_THRESHOLD);
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,6 +35,17 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const handleClick = ({ key }: { key: string }) => {
+    if (key === 'blog') navigate('/blog');
+    else navigate(`/#${key}`);
+    scrollToSection(key);
+  };
+
+  const handleClickHome = () => {
+    navigate('/#home');
+    scrollToSection('home');
+  };
 
   const renderMobile = () => (
     <>
@@ -46,7 +59,7 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
         <Menu
           selectedKeys={[activeSection]}
           onClick={({ key }) => {
-            scrollToSection(key);
+            handleClick({ key });
             setDrawerVisible(false);
           }}
           className="links"
@@ -61,7 +74,7 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
   const renderDesktop = () => (
     <Menu
       selectedKeys={[activeSection]}
-      onClick={({ key }) => scrollToSection(key)}
+      onClick={handleClick}
       className="header-menu"
       mode={'horizontal'}
       theme={'light'}
@@ -71,7 +84,7 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
 
   return (
     <AntHeader className="layout-header">
-      <Title className="header-title" level={3} onClick={() => scrollToSection('home')}>
+      <Title className="header-title" level={3} onClick={handleClickHome}>
         Ayşe Demirel Deniz
       </Title>
       {isMobile ? renderMobile() : renderDesktop()}
