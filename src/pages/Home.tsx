@@ -5,6 +5,7 @@ import AboutSection from '../components/sections/AboutSection';
 import SkillsSection from '../components/sections/SkillsSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
+import FooterComponent from '../components/FooterComponent';
 import useScrollToSection from '../hooks/useScrollToSection';
 import EducationSection from '../components/sections/EducationSection';
 
@@ -24,6 +25,8 @@ const Home = () => {
         <EducationSection />
         <ProjectsSection />
       </Content>
+
+      <FooterComponent />
     </Layout>
   );
 };

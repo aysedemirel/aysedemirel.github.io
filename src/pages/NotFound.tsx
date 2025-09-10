@@ -1,8 +1,8 @@
 import opps from '../assets/img/opps.jpg';
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
-import Footer from '../components/Footer';
 import HeaderComponent from '../components/HeaderComponent';
+import FooterComponent from '../components/FooterComponent';
 
 const NotFound = () => {
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ const NotFound = () => {
         </div>
         <img src={opps} className="not-found-img" />
       </div>
-      <Footer />
+      <FooterComponent />
     </div>
   );
 };
