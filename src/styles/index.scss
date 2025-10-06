@@ -1,4 +1,5 @@
 @use './about.scss';
+@use './blog.scss';
 @use './contact.scss';
 @use './education.scss';
 @use './experience.scss';
@@ -14,4 +15,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
