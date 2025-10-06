@@ -309,6 +309,59 @@ $border-color: #e5e7eb;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
           display: block;
         }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 32px 0;
+          background: white;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+          thead {
+            background: linear-gradient(135deg, $primary-color, $primary-light);
+
+            tr {
+              th {
+                padding: 16px;
+                text-align: left;
+                font-weight: 600;
+                font-size: 14px;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              border-bottom: 1px solid $border-color;
+              transition: background-color 0.2s ease;
+
+              &:hover {
+                background-color: rgba($primary-color, 0.03);
+              }
+
+              &:last-child {
+                border-bottom: none;
+              }
+
+              td {
+                padding: 16px;
+                color: $text-secondary;
+                font-size: 15px;
+                line-height: 1.6;
+
+                &:first-child {
+                  font-weight: 600;
+                  color: $text-primary;
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -446,6 +499,20 @@ $border-color: #e5e7eb;
 
           h2 {
             margin-top: 32px;
+          }
+
+          table {
+            font-size: 14px;
+
+            thead tr th {
+              padding: 12px 8px;
+              font-size: 12px;
+            }
+
+            tbody tr td {
+              padding: 12px 8px;
+              font-size: 14px;
+            }
           }
         }
       }

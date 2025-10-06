@@ -51,6 +51,21 @@ export const ARTICLE_LIST_TR = [
     ]
   },
   {
+    year: 2021,
+    articles: [
+      {
+        name: 'İnternet nedir, nasıl çalışır? Sahibi kimdir?',
+        contentFile: 'what-is-the-internet',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-03',
+        description: 'İnternet hakkında bir özet…',
+        mediumLink:
+          'https://aysedemirel.medium.com/i%CC%87nternet-nedir-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-sahibi-kimdir-eb2431a5f3ca'
+      }
+    ]
+  },
+  {
     year: 2020,
     articles: [
       {

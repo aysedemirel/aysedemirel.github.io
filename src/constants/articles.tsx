@@ -51,6 +51,21 @@ export const ARTICLE_LIST = [
     ]
   },
   {
+    year: 2021,
+    articles: [
+      {
+        name: 'What is the internet, how does it work? Who owns it?',
+        contentFile: 'what-is-the-internet',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-03',
+        description: 'A summary about the internet...',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/what-is-the-internet-how-does-it?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      }
+    ]
+  },
+  {
     year: 2020,
     articles: [
       {
