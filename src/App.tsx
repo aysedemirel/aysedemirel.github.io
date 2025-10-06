@@ -3,6 +3,7 @@ import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import useScrollToSection from './hooks/useScrollToSection';
 import Blog from './pages/Blog';
+import ArticleDetail from './pages/ArticleDetail';
 
 function App() {
   const { activeSection, scrollToSection } = useScrollToSection();
@@ -19,6 +20,12 @@ function App() {
             <Route
               path="/blog"
               element={<Blog activeSection={activeSection} scrollToSection={scrollToSection} />}
+            />
+            <Route
+              path="/article/:articleName"
+              element={
+                <ArticleDetail activeSection={activeSection} scrollToSection={scrollToSection} />
+              }
             />
             <Route
               path="*"

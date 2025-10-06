@@ -1,100 +1,52 @@
 export const ARTICLE_LIST = [
   {
-    name: 'React',
-    num: 3,
+    year: 2024,
     articles: [
       {
-        name: 'React Hooks ile State Yönetimi',
+        name: 'Understanding React Hooks',
+        contentFile: 'understanding-react-hooks',
         topic: 'React',
         year: 2024,
         date: '2024-03-15',
-        description: 'Modern React uygulamalarında hooks kullanarak state yönetimi'
+        description:
+          'A comprehensive guide to React Hooks and how to use them effectively in modern React applications'
       },
-      {
-        name: 'React Server Components Nedir?',
-        topic: 'React',
-        year: 2024,
-        date: '2024-08-30',
-        description: "React Server Components'e giriş ve kullanım alanları"
-      },
-      {
-        name: 'React Performance İpuçları',
-        topic: 'React',
-        year: 2023,
-        date: '2023-12-05',
-        description: 'React uygulamalarında performans optimizasyonu'
-      }
-    ]
-  },
-  {
-    name: 'Typescript',
-    num: 2,
-    articles: [
       {
         name: 'TypeScript Best Practices',
+        contentFile: 'typescript-best-practices',
         topic: 'TypeScript',
         year: 2024,
-        date: '2024-05-22',
-        description: 'TypeScript projelerinde dikkat edilmesi gereken en iyi pratikler'
+        date: '2024-02-20',
+        description: 'Learn the best practices for writing clean, maintainable TypeScript code'
       },
       {
-        name: 'TypeScript Generic Types',
-        topic: 'TypeScript',
-        year: 2024,
-        date: '2024-04-18',
-        description: "TypeScript'te generic tipler ve kullanım senaryoları"
-      }
-    ]
-  },
-  {
-    name: 'Node.js',
-    num: 1,
-    articles: [
-      {
-        name: 'Node.js Performance Optimization',
-        topic: 'Node.js',
-        year: 2024,
-        date: '2024-07-10',
-        description: 'Node.js uygulamalarında performans iyileştirme teknikleri'
-      }
-    ]
-  },
-  {
-    name: 'CSS',
-    num: 1,
-    articles: [
-      {
-        name: 'CSS Grid Layout Rehberi',
+        name: 'CSS Grid Layout Mastery',
+        contentFile: 'css-grid-layout',
         topic: 'CSS',
-        year: 2023,
-        date: '2023-11-08',
-        description: 'Modern CSS Grid sistemini kullanarak responsive tasarımlar'
-      }
-    ]
-  },
-  {
-    name: 'JavaScript',
-    num: 1,
-    articles: [
-      {
-        name: 'JavaScript ES2024 Yenilikleri',
-        topic: 'JavaScript',
         year: 2024,
-        date: '2024-02-14',
-        description: "JavaScript'in en son sürümünde gelen yeni özellikler"
+        date: '2024-01-10',
+        description: 'Master CSS Grid and create complex layouts with ease'
       }
     ]
   },
   {
-    name: 'DevOps',
-    num: 1,
+    year: 2023,
     articles: [
       {
-        name: 'Docker ile Container Yönetimi',
-        topic: 'DevOps',
+        name: 'Modern JavaScript Features',
+        contentFile: 'modern-javascript-features',
+        topic: 'JavaScript',
         year: 2023,
-        date: '2023-06-12',
-        description: 'Docker kullanarak uygulama containerization'
+        date: '2023-11-05',
+        description: 'Explore the latest JavaScript features and how to use them in your projects'
+      },
+      {
+        name: 'Node.js Performance Tips',
+        contentFile: 'nodejs-performance',
+        topic: 'Node.js',
+        year: 2023,
+        date: '2023-09-22',
+        description: 'Optimize your Node.js applications for better performance'
       }
     ]
   }

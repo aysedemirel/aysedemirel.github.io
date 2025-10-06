@@ -1,7 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FooterComponent from '../components/FooterComponent';
 import HeaderComponent from '../components/HeaderComponent';
-import { ARTICLE_LIST } from '../constants/articles';
 import { Card, Input, Layout, Tag, Typography } from 'antd';
 import {
   CalendarOutlined,
@@ -10,6 +9,8 @@ import {
   SearchOutlined,
   ArrowRightOutlined
 } from '@ant-design/icons';
+import { getTopicColor } from '../utils/blogHelper';
+import { useArticles } from '../hooks/useArticles';
 
 const { Title, Paragraph, Text } = Typography;
 const { Content } = Layout;
@@ -19,81 +20,21 @@ interface Props {
   scrollToSection: (sectionId: string) => void;
 }
 
-interface Article {
-  name: string;
-  topic: string;
-  year: number;
-  date: string;
-  description: string;
-}
-
 const Blog = ({ activeSection, scrollToSection }: Props) => {
-  const [articles] = useState<Article[]>(ARTICLE_LIST.flatMap((article) => article.articles));
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const {
+    articlesByYear,
+    topicData,
+    totalArticles,
+    searchTerm,
+    selectedTopic,
+    setSearchTerm,
+    setSelectedTopic
+  } = useArticles();
 
-  // Topic statistics
-  const topicData = useMemo(() => {
-    const topicCount: { [key: string]: number } = {};
-    articles.forEach((article) => {
-      topicCount[article.topic] = (topicCount[article.topic] || 0) + 1;
-    });
-    return Object.entries(topicCount).map(([name, value]) => ({ name, value }));
-  }, [articles]);
-
-  // Group articles by year
-  const articlesByYear = useMemo(() => {
-    const grouped: { [year: number]: Article[] } = {};
-    let filtered = articles;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (a) =>
-          a.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          a.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    // Filter by selected topic
-    if (selectedTopic) {
-      filtered = filtered.filter((a) => a.topic === selectedTopic);
-    }
-
-    filtered.forEach((article) => {
-      if (!grouped[article.year]) {
-        grouped[article.year] = [];
-      }
-      grouped[article.year].push(article);
-    });
-
-    return Object.entries(grouped)
-      .sort(([a], [b]) => Number(b) - Number(a))
-      .map(([year, articles]) => ({
-        year: Number(year),
-        articles: articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-      }));
-  }, [articles, searchTerm, selectedTopic]);
-
-  const getTopicColor = (topic: string) => {
-    const colors: { [key: string]: string } = {
-      React: 'blue',
-      TypeScript: 'purple',
-      JavaScript: 'gold',
-      'Node.js': 'green',
-      CSS: 'cyan',
-      DevOps: 'magenta',
-      HTML: 'tomato',
-      Python: 'royalblue',
-      Docker: 'deepskyblue',
-      Firebase: 'amber',
-      SQL: 'teal',
-      Git: 'orangered'
-    };
-    return colors[topic] || 'orange';
+  const handleArticleClick = (articleName: string) => {
+    navigate(`/article/${articleName}`);
   };
-
-  const totalArticles = articles.length;
 
   return (
     <div id="blog" className="blog-container">
@@ -177,7 +118,11 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
 
                 <div className="articles-list">
                   {articles.map((article, index) => (
-                    <Card key={`${article.name}-${index}`} className="article-card" hoverable>
+                    <Card
+                      key={`${article.name}-${index}`}
+                      className="article-card"
+                      hoverable
+                      onClick={() => handleArticleClick(article.contentFile)}>
                       <div className="article-content">
                         <div className="article-header">
                           <Tag color={getTopicColor(article.topic)} className="article-topic">
@@ -185,7 +130,6 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
                           </Tag>
                           <Text type="secondary" className="article-date">
                             <ClockCircleOutlined />
-                            {/** FIXME: Lang */}
                             {new Date(article.date).toLocaleDateString(undefined, {
                               day: 'numeric',
                               month: 'long',
@@ -201,9 +145,9 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
                         <Paragraph className="article-description">{article.description}</Paragraph>
 
                         <div className="article-footer">
-                          <a className="read-more">
+                          <span className="read-more">
                             Read article <ArrowRightOutlined />
-                          </a>
+                          </span>
                         </div>
                       </div>
                     </Card>
