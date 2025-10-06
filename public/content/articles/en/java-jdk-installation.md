@@ -65,8 +65,6 @@ The following steps describe the JDK 15 installation on Windows. The procedure i
 
    Open the `C:\Program Files\Java` directory to confirm that the installed version (e.g., `jdk-15.0.1`) appears in the list.
 
-   ![Java](/img/jdk-installation/4.png)
-
 > **Note:** It is normal to have multiple JDK versions in the same directory. The active version is determined by environment variables.
 
 ## Configuring Environment Variables

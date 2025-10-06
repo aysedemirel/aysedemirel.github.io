@@ -1,4 +1,4 @@
-export const ARTICLE_LIST = [
+export const ARTICLE_LIST_TR = [
   {
     year: 2024,
     articles: [
@@ -59,7 +59,8 @@ export const ARTICLE_LIST = [
         topic: 'Java',
         year: 2020,
         date: '2020-11-09',
-        description: 'JDK Nedir ve Neden Kurulması Gerekir? Nasıl Kurulum Yapılır?'
+        description: 'JDK Nedir ve Neden Kurulması Gerekir? Nasıl Kurulum Yapılır?',
+        mediumLink: 'https://aysedemirel.medium.com/jdk-15-kurulumu-c02680d7d9ea'
       }
     ]
   }

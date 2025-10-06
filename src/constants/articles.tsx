@@ -59,7 +59,9 @@ export const ARTICLE_LIST = [
         topic: 'Java',
         year: 2020,
         date: '2020-11-09',
-        description: 'What is JDK and Why Should It Be Installed? How to Install It?'
+        description: 'What is JDK and Why Should It Be Installed? How to Install It?',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/java-development-kit-jdk-installation?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       }
     ]
   }

@@ -5,4 +5,6 @@ export interface Article {
   date: string;
   description: string;
   contentFile: string;
+  mediumLink?: string;
+  substackLink?: string;
 }
