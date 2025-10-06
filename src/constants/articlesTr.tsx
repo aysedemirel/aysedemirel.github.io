@@ -54,12 +54,12 @@ export const ARTICLE_LIST = [
     year: 2020,
     articles: [
       {
-        name: 'Java Development Kit (JDK) Installation Guide',
+        name: 'JDK Kurulum Kılavuzu',
         contentFile: 'java-jdk-installation',
         topic: 'Java',
         year: 2020,
         date: '2020-11-09',
-        description: 'What is JDK and Why Should It Be Installed? How to Install It?'
+        description: 'JDK Nedir ve Neden Kurulması Gerekir? Nasıl Kurulum Yapılır?'
       }
     ]
   }

@@ -51,8 +51,8 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
           return;
         }
         setArticle(foundArticle);
-
-        const response = await fetch(`/content/articles/${foundArticle.contentFile}.md`);
+        // FIXME: en
+        const response = await fetch(`/content/articles/en/${foundArticle.contentFile}.md`);
 
         if (!response.ok) {
           throw new Error(`Failed to load article: ${response.statusText}`);
