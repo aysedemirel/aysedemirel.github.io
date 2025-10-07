@@ -1,0 +1,107 @@
+#projects {
+  max-width: 1200px;
+  min-height: 95vh;
+  margin: 0 auto;
+  padding: 20px 24px;
+  scroll-margin-top: 50px;
+
+  .projects-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: clamp(24px, 6vw, 64px);
+
+    .title-icon {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      color: #f97316;
+    }
+
+    .title-txt {
+      background: linear-gradient(45deg, #f97316, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      margin-bottom: 0;
+      line-height: 1;
+    }
+  }
+
+  .projects-part {
+    display: flex;
+    flex-wrap: wrap;
+
+    .project-col {
+      display: flex;
+
+      .project-motion {
+        display: flex;
+        flex: 1;
+      }
+    }
+  }
+
+  .load-div {
+    text-align: center;
+    margin-top: 24px;
+
+    .load-btn {
+      background-color: #f97316;
+      border-color: #f97316;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
+.project-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+
+    .card-title {
+      color: #1f2937;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+
+    .card-desc {
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+
+    .card-buttons {
+      border-top: 1px solid rgb(240 240 240);
+      padding-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+
+      .btn {
+        color: #c24e00;
+        font-weight: 600;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(249, 115, 22, 0.1); /* turuncu hafif arkaplan */
+          border-radius: 6px; /* hafif yuvarlak köşe */
+          color: #c24e00; /* hover’da da turuncu */
+        }
+      }
+
+      .btn-divider {
+        height: 24px;
+        align-self: center;
+      }
+    }
+  }
+}

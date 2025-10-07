@@ -1,0 +1,23 @@
+@use './about.scss';
+@use './article-detail.scss';
+@use './blog.scss';
+@use './contact.scss';
+@use './education.scss';
+@use './experience.scss';
+@use './footer.scss';
+@use './header.scss';
+@use './hero.scss';
+@use './notfound.scss';
+@use './projects.scss';
+@use './skill.scss';
+
+//* {  outline: 1px solid red; /* Frames every element on the page */}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
