@@ -54,6 +54,36 @@ export const ARTICLE_LIST_TR = [
     year: 2021,
     articles: [
       {
+        name: 'İnternet 101 - Şifreleme ve Güvenlik',
+        contentFile: 'encryption-security',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-08',
+        description: 'Simetrik ve asimetrik şifreleme kavramları, en bilinen siber suçlar…',
+        mediumLink:
+          'https://aysedemirel.medium.com/i%CC%87nternet-101-%C5%9Fifreleme-ve-g%C3%BCvenlik-c5d79b6acbd9'
+      },
+      {
+        name: 'İnternet 101- Veri nasıl iletilir?',
+        contentFile: 'how-to-transfer-data',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-08',
+        description:
+          'Yönlendiriciler, HTML, HTTP, TCP, isteklerin gönderilme şekilleri gibi kavramların özeti…',
+        mediumLink:
+          'https://aysedemirel.medium.com/i%CC%87nternet-101-veri-nas%C4%B1l-iletilir-5553f1103e40'
+      },
+      {
+        name: 'İnternet 101 - IP ve DNS',
+        contentFile: 'ip-dns',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-08',
+        description: 'IP nedir, DNS nedir ? Aralarında ilişkinin kısaca özeti…',
+        mediumLink: 'https://aysedemirel.medium.com/i%CC%87nternet-101-ip-ve-dns-b3610244f4ed'
+      },
+      {
         name: 'İnternet nedir, nasıl çalışır? Sahibi kimdir?',
         contentFile: 'what-is-the-internet',
         topic: 'Internet',
