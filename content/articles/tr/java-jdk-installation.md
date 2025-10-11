@@ -141,11 +141,7 @@ Ortam değişkenleri yapılandırıldıktan sonra kurulumun doğrulanması gerek
 
 ---
 
-Daha fazla Java yazısı için takipte kalın.
-
-👏 ile bu seriyi destekleyebilirsiniz. Eksik/yanlış gördüğünüz kısımları yorumlara yazarak katkı sağlayabilirsiniz.
-
-Sonraki yazılarda görüşmek üzere 👋
+Daha fazla Java yazısı için takipte kalın. Sonraki yazılarda görüşmek üzere 👋
 
 ### Kaynaklar
 
