@@ -54,6 +54,71 @@ export const ARTICLE_LIST = [
     year: 2021,
     articles: [
       {
+        name: 'IP (Internet Protocol)',
+        contentFile: 'internet-protocol',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-22',
+        description: 'A detailed look at the concept of IP...',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/ip-internet-protocol?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
+        name: 'Hosting',
+        contentFile: 'hosting',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-22',
+        description:
+          'What is hosting? Why is it used? What are the hosting options and what are their differences? We will seek answers to these questions in our article.',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/hosting?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
+        name: 'Domain Name',
+        contentFile: 'domain-name',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-22',
+        description:
+          'Why do domain names exist? What is their relationship with IP addresses? Are they absolutely necessary for creating a website? What do the extensions in domain names mean? We will answer these questions in our article...',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/domain-name?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
+        name: 'DNS (Domain Name System)',
+        contentFile: 'domain-name-system',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-11',
+        description:
+          'We will examine how we can browse the internet without memorizing IP addresses.',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/dns-domain-name-system?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
+        name: 'Why should we use Interface?',
+        contentFile: 'why-should-we-use-interface',
+        topic: 'OOP',
+        year: 2021,
+        date: '2021-05-11',
+        description:
+          'In this article, we will examine the concept of interfaces in Java. We will seek answers to the questions: What are they? What are they not? Why should we use them?',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/why-should-we-use-interface?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
+        name: "How do you find a website's IP address?",
+        contentFile: 'how-find-website-ip',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-10',
+        description:
+          "If you know the domain name of the website, let's quickly see how to find the IP address from the command line...",
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/how-do-you-find-a-websites-ip-address?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false'
+      },
+      {
         name: 'Internet 101 - Encryption and Security',
         contentFile: 'encryption-security',
         topic: 'Internet',

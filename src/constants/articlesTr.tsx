@@ -54,6 +54,65 @@ export const ARTICLE_LIST_TR = [
     year: 2021,
     articles: [
       {
+        name: 'IP(Internet Protocol)',
+        contentFile: 'internet-protocol',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-22',
+        description: 'IP kavramına detaylı bir bakış…',
+        mediumLink: 'https://aysedemirel.medium.com/ip-internet-protocol-8417d9f2ea5b'
+      },
+      {
+        name: 'Hosting',
+        contentFile: 'hosting',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-22',
+        description:
+          'Hosting nedir? Neden kullanılır? Hosting seçenekleri nedir ve farkları nedir? Yazımızda bu sorulara cevap arayacağız.',
+        mediumLink: 'https://aysedemirel.medium.com/hosting-ce4d5fa5a20d'
+      },
+      {
+        name: 'Domain Name (Alan Adı)',
+        contentFile: 'domain-name',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-22',
+        description:
+          'Alan adları neden var ? IP adres ile ilişkisi ne? Web sitesi oluşturmak için illa gerekli bir şey mi? Alan adında yer alan uzantıların anlamları neler? Yazımızda bu sorulara cevap vereceğiz…',
+        mediumLink: 'https://aysedemirel.medium.com/domain-name-alan-ad%C4%B1-56a1746871f6'
+      },
+      {
+        name: 'DNS(Domain Name System)',
+        contentFile: 'domain-name-system',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-11',
+        description: 'IP adres ezberlemeden nasıl internette gezinebildiğimizi inceleyeceğiz.',
+        mediumLink: 'https://aysedemirel.medium.com/dns-domain-name-system-c0818a0777af'
+      },
+      {
+        name: 'Neden Interface kullanalım?',
+        contentFile: 'why-should-we-use-interface',
+        topic: 'OOP',
+        year: 2021,
+        date: '2021-05-11',
+        description:
+          'Bu yazımızda Java’da interface kavramını inceleyeceğiz. Nedir, ne değildir, neden kullanmalıyız sorularına cevap arayacağız.',
+        mediumLink: 'https://aysedemirel.medium.com/neden-interface-kullanal%C4%B1m-2852b276bae4'
+      },
+      {
+        name: 'Bir web sitesinin IP adresi nasıl bulunur?',
+        contentFile: 'how-find-website-ip',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-10',
+        description:
+          'Web sitesinin alan adını biliyorsanız, komut satırından IP adres nasıl bulunur hızlıca bakalım…',
+        mediumLink:
+          'https://aysedemirel.medium.com/bir-web-sitesinin-ip-adresi-nas%C4%B1l-bulunur-8f23611ddd2b'
+      },
+      {
         name: 'İnternet 101 - Şifreleme ve Güvenlik',
         contentFile: 'encryption-security',
         topic: 'Internet',
