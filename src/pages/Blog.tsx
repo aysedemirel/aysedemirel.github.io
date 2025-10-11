@@ -7,6 +7,7 @@ import BlogHero from '../components/blog/BlogHero';
 import BlogFilters from '../components/blog/BlogFilters';
 import ArticlesTimeline from '../components/blog/ArticlesTimeline';
 import BackToTop from '../components/BackToTop';
+import { useEffect } from 'react';
 
 const { Content } = Layout;
 
@@ -26,6 +27,10 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
     setSearchTerm,
     setSelectedTopic
   } = useArticles();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const handleArticleClick = (articleName: string) => {
     navigate(`/article/${articleName}`);

@@ -70,7 +70,7 @@ const FooterComponent = ({ scrollToSection }: Props) => {
             <Link className="link" onClick={() => handleClick('contact')}>
               Contact
             </Link>
-            <Link className="link" href="/blog">
+            <Link className="link" onClick={() => handleClick('blog')}>
               Blog
             </Link>
           </Space>
