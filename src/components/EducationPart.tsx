@@ -19,7 +19,12 @@ const EducationPart = () => {
                 viewport={{ once: true }}>
                 {edu.type === 'summary' && (
                   <div className="education-header">
-                    <img src={edu.logo} alt={`${edu.school} Logo`} className="logo" />
+                    <img
+                      src={edu.logo}
+                      alt={`${edu.school} Logo`}
+                      className="logo"
+                      loading="lazy"
+                    />
                     <div>
                       <Title level={3}>{edu.degree}</Title>
                       <Paragraph className="sub">

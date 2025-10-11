@@ -20,7 +20,7 @@ const NotFound = ({ activeSection, scrollToSection }: Props) => {
             {'Go Back To Home'}
           </Button>
         </div>
-        <img src={opps} className="not-found-img" />
+        <img src={opps} className="not-found-img" loading="lazy" />
       </div>
       <FooterComponent scrollToSection={scrollToSection} />
     </div>
