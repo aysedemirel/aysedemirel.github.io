@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import useScrollToSection from './hooks/useScrollToSection';

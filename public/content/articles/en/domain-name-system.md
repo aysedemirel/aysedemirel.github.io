@@ -61,11 +61,11 @@ DNS is one of the Internet’s most vital yet invisible components. It enables u
 
 If you want to gain a deeper understanding of the technical infrastructure and security principles of the internet, you can follow the rest of the series. For more comprehensive information, you can check out the following articles:
 
-- [What is the internet, how does it work? Who owns it?](https://aysedemirel.github.io/article/what-is-the-internet)
-- [Internet 101 — IP and DNS](https://aysedemirel.github.io/article/ip-dns)
-- [Internet 101 - How is data transmitted?](https://aysedemirel.github.io/article/how-to-transfer-data)
-- [Internet 101 — Encryption and Security](https://aysedemirel.github.io/article/encryption-security)
-- [How do you find a website's IP address?](https://aysedemirel.github.io/article/how-find-website-ip)
+- [What is the internet, how does it work? Who owns it?](https://aysedemirel.github.io/#/article/what-is-the-internet)
+- [Internet 101 — IP and DNS](https://aysedemirel.github.io/#/article/ip-dns)
+- [Internet 101 - How is data transmitted?](https://aysedemirel.github.io/#/article/how-to-transfer-data)
+- [Internet 101 — Encryption and Security](https://aysedemirel.github.io/#/article/encryption-security)
+- [How do you find a website's IP address?](https://aysedemirel.github.io/#/article/how-find-website-ip)
 
 For a visual and humorous explanation of the DNS process, the following resource is particularly helpful:
 

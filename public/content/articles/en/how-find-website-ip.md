@@ -58,4 +58,4 @@ See you in the next article 👋
 
 **Further Reading:**
 
-- [Internet 101: What Are IP and DNS?](https://aysedemirel.github.io/article/ip-dns)
+- [Internet 101: What Are IP and DNS?](https://aysedemirel.github.io/#/article/ip-dns)

@@ -42,7 +42,7 @@ Gerçekte internet üzerindeki veri yönlendirme süreci bundan çok daha karma�
 - **IPv4 Örneği:** `192.168.1.1`
 - **IPv6 Örneği:** `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
 
-Bilgisayarınızın IP adresini öğrenmek için bir komut satırı açıp (Windows+R tuşuna basıp gelen ekranda cmd yazabilirsiniz) `ipconfig` komutunu çalıştırabilirsiniz. IP adresi bulmakla ilgili sorularınız için "[Bir web sitesinin IP adresi nasıl bulunur?](http://localhost:5173/article/how-find-website-ip)" yazısına göz atabilirsiniz.
+Bilgisayarınızın IP adresini öğrenmek için bir komut satırı açıp (Windows+R tuşuna basıp gelen ekranda cmd yazabilirsiniz) `ipconfig` komutunu çalıştırabilirsiniz. IP adresi bulmakla ilgili sorularınız için "[Bir web sitesinin IP adresi nasıl bulunur?](https://aysedemirel.github.io/#/article/how-find-website-ip)" yazısına göz atabilirsiniz.
 
 ## IP Protokolünün Özellikleri
 
@@ -64,8 +64,8 @@ Sonuç olarak, IP protokolü internetin temel yapı taşlarından biridir. Her v
 
 İnternetin teknik altyapısı ve güvenlik prensiplerini daha derinlemesine anlamak istiyorsanız, serinin devam yazılarını takip edebilirsiniz. IP ile alakalı diğer yazılar:
 
-- [Bir web sitesinin IP adresi nasıl bulunur?](http://localhost:5173/article/how-find-website-ip)
-- [İnternet 101 — IP ve DNS](http://localhost:5173/article/ip-dns)
+- [Bir web sitesinin IP adresi nasıl bulunur?](https://aysedemirel.github.io/#/article/how-find-website-ip)
+- [İnternet 101 — IP ve DNS](https://aysedemirel.github.io/#/article/ip-dns)
 
 Sonraki yazılarda görüşmek üzere 👋
 
