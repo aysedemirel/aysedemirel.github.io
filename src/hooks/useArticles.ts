@@ -1,16 +1,6 @@
 import { useMemo, useState } from 'react';
 import { ARTICLE_LIST } from '../constants/articles';
-import type { Article } from '../interfaces/Article';
-
-interface TopicData {
-  name: string;
-  value: number;
-}
-
-interface ArticlesByYear {
-  year: number;
-  articles: Article[];
-}
+import type { Article, ArticlesByYear, TopicData } from '../types/blog.types';
 
 export const useArticles = () => {
   const [searchTerm, setSearchTerm] = useState('');

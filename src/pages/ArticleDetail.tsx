@@ -17,7 +17,7 @@ import {
   ClockCircleOutlined
 } from '@ant-design/icons';
 import { getTopicColor } from '../utils/blogHelper';
-import type { Article } from '../interfaces/Article';
+import type { Article } from '../types/blog.types';
 
 const { Title, Paragraph, Text } = Typography;
 const { Content } = Layout;
