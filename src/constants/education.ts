@@ -26,7 +26,8 @@ export const educationData = [
         description: 'Contributed to English education in Nanjing, China through AIESEC.'
       }
     ],
-    coursework: 'Data Structures, Algorithms, Pattern Recognition, Blockchain',
+    coursework:
+      'Data Structures and Algorithms, Object-Oriented Programming (OOP), Operating Systems, Database Management Systems, Computer Architecture, Computer Networks, Discrete Structures, Software Engineering, Information Security, Data Mining, Embedded System Programming, Computer Graphics, Pattern Recognition, Blockchain',
     gpa: '3.6 / 4.0'
   }
 ];
