@@ -8,3 +8,13 @@ export interface Article {
   mediumLink?: string;
   substackLink?: string;
 }
+
+export interface ArticlesByYear {
+  year: number;
+  articles: Article[];
+}
+
+export interface TopicData {
+  name: string;
+  value: number;
+}

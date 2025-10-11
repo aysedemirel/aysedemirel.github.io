@@ -85,7 +85,7 @@ const HeroSection = ({ scrollToSection }: Props) => {
           </Space>
         </div>
         <div className="hero-img-part">
-          <img src={profilPicture} alt={'profile picture'} />
+          <img src={profilPicture} alt={'profile picture'} loading="lazy" />
         </div>
       </div>
 

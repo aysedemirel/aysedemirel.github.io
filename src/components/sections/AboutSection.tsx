@@ -23,7 +23,7 @@ const AboutSection: React.FC = () => {
 
       <div className="about-content">
         <div className="about-img-col">
-          <img src={profilePicture} alt="me" />
+          <img src={profilePicture} alt="me" loading="lazy" />
         </div>
         <div className="about-text-col">
           <Paragraph className="about-name">I'm Ayşe</Paragraph>
