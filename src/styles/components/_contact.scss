@@ -1,0 +1,57 @@
+@use '../base/base' as *;
+
+#contact {
+  @include container;
+  min-height: 95vh;
+  padding: $spacing-lg $spacing-lg;
+  scroll-margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+
+  .contact-title {
+    @include section-title;
+  }
+
+  .contact-card {
+    margin-bottom: $spacing-3xl;
+    justify-content: center;
+    text-align: center;
+
+    .cta-txt {
+      font-size: $spacing-md;
+      text-align: center;
+      padding-bottom: 1rem;
+
+      @include responsive($breakpoint-md) {
+        font-size: $spacing-md;
+        line-height: 1.5;
+      }
+    }
+
+    .email-link {
+      @include link-hover($primary-light);
+      color: #333;
+    }
+
+    .social-icon {
+      margin-right: $spacing-xs;
+      color: $primary-color;
+    }
+  }
+}
+
+#contact-form {
+  width: 80%;
+  margin: 0 auto;
+
+  .contact-img {
+    text-align: center;
+
+    img.cu {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      margin-right: 1rem;
+    }
+  }
+}

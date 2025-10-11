@@ -1,0 +1,109 @@
+@use '../base/base' as *;
+
+.about-section {
+  @include container;
+  min-height: 95vh;
+  padding: 80px $spacing-lg;
+  scroll-margin-top: 50px;
+
+  .about-title {
+    @include section-title;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: clamp($spacing-sm, 5vw, $spacing-2xl);
+
+    .about-img-col {
+      flex: 1;
+      @include flex-center;
+
+      img {
+        width: clamp(160px, 20vw, 320px);
+        height: clamp(160px, 20vw, 320px);
+        border-radius: $radius-full;
+        object-fit: cover;
+        border: 4px solid $primary-color;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .about-text-col {
+      flex: 2;
+
+      .about-name {
+        @include responsive-text(20px, 30px, 20px, 2vw);
+        font-weight: 600;
+        line-height: 1.6;
+        color: $text-primary;
+        margin-bottom: $spacing-md;
+      }
+
+      .about-job {
+        @include responsive-text(18px, 24px, 18px, 1.8vw);
+        font-weight: 500;
+        line-height: 1.6;
+        color: $text-primary;
+        margin-bottom: $spacing-md;
+      }
+
+      .about-me {
+        @include responsive-text(14px, 20px, 14px, 1.6vw);
+        line-height: 1.8;
+        color: $text-primary;
+        margin-bottom: clamp(14px, 1.6vw, $font-size-lg);
+      }
+
+      .about-contact {
+        .about-mail {
+          display: flex;
+          align-items: center;
+          gap: $spacing-xs;
+
+          .mail-icon {
+            color: $primary-color;
+            @include responsive-text($spacing-md, $font-size-2xl, $spacing-md, 1.6vw);
+          }
+
+          .mail-txt {
+            color: $primary-color;
+            @include responsive-text(14px, $spacing-md, 14px, 1.4vw);
+            text-decoration: none;
+            transition: color $transition-base, transform 0.2s ease;
+
+            &:hover {
+              color: #823d0c;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .btn-area {
+          display: flex;
+
+          .social-btn {
+            @include responsive-text($font-size-2xl, 28px, $font-size-2xl, 2.5vw);
+            width: clamp(40px, 5vw, 56px);
+            height: clamp(40px, 5vw, 56px);
+            @include flex-center;
+            border-radius: $radius-full;
+          }
+        }
+      }
+    }
+  }
+
+  @include min-responsive($breakpoint-lg) {
+    scroll-margin-top: 50px;
+  }
+
+  @include responsive($breakpoint-md) {
+    padding: 10px $spacing-md;
+
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

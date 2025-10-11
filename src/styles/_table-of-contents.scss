@@ -1,0 +1,124 @@
+@use 'base/base' as *;
+
+.table-of-contents {
+  position: sticky;
+  top: 100px;
+  background: $bg-white;
+  border-radius: $radius-lg;
+  padding: 20px;
+  box-shadow: $shadow-md;
+  border: 2px solid $border-light;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  @include custom-scrollbar;
+
+  &.desktop-toc {
+    @include responsive($breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  .toc-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $border-light;
+    color: $text-primary;
+    font-size: $font-size-base;
+    font-weight: 600;
+
+    .anticon {
+      font-size: $spacing-md;
+      color: $primary-color;
+    }
+  }
+
+  .ant-anchor {
+    .ant-anchor-link {
+      padding: 6px 10px;
+      border-radius: $radius-md;
+      transition: all $transition-base;
+      border-left: 3px solid transparent;
+
+      &.toc-level-3 {
+        padding-left: $spacing-lg;
+        font-size: $font-size-sm;
+      }
+
+      .ant-anchor-link-title {
+        color: $text-secondary;
+        font-size: $font-size-sm;
+        line-height: 1.5;
+        transition: color $transition-base;
+      }
+
+      &:hover {
+        background: rgba($primary-color, 0.05);
+
+        .ant-anchor-link-title {
+          color: $primary-color;
+        }
+      }
+
+      &.ant-anchor-link-active {
+        background: rgba($primary-color, 0.1);
+
+        .ant-anchor-link-title {
+          color: $primary-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.mobile-toc-toggle {
+  display: none;
+  width: 100%;
+  margin-bottom: $spacing-md;
+  background: $bg-white;
+  border: 2px solid $border-light;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 500;
+  color: $text-primary;
+  transition: all $transition-base;
+
+  @include responsive($breakpoint-lg) {
+    @include flex-center;
+    gap: 10px;
+  }
+
+  &:hover {
+    background: rgba($primary-color, 0.05);
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+
+  .anticon {
+    font-size: $font-size-lg;
+  }
+}
+
+.mobile-toc-card {
+  display: none;
+  margin-bottom: 20px;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+
+  @include responsive($breakpoint-lg) {
+    display: block;
+  }
+
+  .ant-anchor-link {
+    padding: 10px 16px;
+    border-radius: $radius-md;
+    border-left: 3px solid transparent;
+
+    &.toc-level-3 {
+      padding-left: $spacing-xl;
+    }
+  }
+}

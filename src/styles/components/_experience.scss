@@ -1,0 +1,74 @@
+@use '../base/base' as *;
+
+#experience {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px $spacing-lg;
+  scroll-margin-top: 50px;
+  justify-items: center;
+  align-items: center;
+
+  .experience-container {
+    @include container;
+
+    .exp-title {
+      @include section-title;
+    }
+  }
+}
+
+.exp-left-container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+
+  .title {
+    font-weight: bold;
+    color: $primary-color;
+    @include responsive-text(14px, $font-size-2xl, 14px, 1.6vw);
+  }
+
+  .time {
+    color: rgb(93, 93, 93);
+  }
+}
+
+.exp-right-container {
+  @include glass-effect;
+  border-radius: $radius-xl;
+  padding-left: 10px;
+
+  .title-container {
+    @include flex-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-md;
+
+    .company-name {
+      margin: 0;
+      @include responsive-text(14px, $font-size-2xl, 14px, 1.6vw);
+    }
+
+    .location-container {
+      margin-left: $spacing-md;
+
+      .location-icon {
+        color: $text-tertiary;
+      }
+
+      .location {
+        color: $text-tertiary;
+        @include responsive-text(10px, 14px, 10px, 1.2vw);
+        white-space: nowrap;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .description {
+    margin: 0;
+  }
+}
+
+.ant-card .ant-card-body {
+  padding: 0;
+}

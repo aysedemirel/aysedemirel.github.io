@@ -1,3 +1,5 @@
+@use '../base/base' as *;
+
 .back-to-top {
   position: fixed;
   bottom: 40px;
@@ -6,7 +8,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px) scale(0.8);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all $transition-base cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   &.visible {
     opacity: 1;
@@ -17,45 +19,41 @@
   .back-to-top-button {
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, #f97316, #fb923c) !important;
-    border: 2px solid #fff !important;
-    box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+    background: linear-gradient(135deg, $primary-color, $primary-light) !important;
+    border: 2px solid $bg-white !important;
+    box-shadow: 0 4px 20px rgba($primary-color, 0.4);
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+    @include flex-center;
+    transition: all $transition-base;
     position: relative;
     z-index: 2;
 
     .anticon {
-      font-size: 24px;
-      color: white !important;
+      font-size: $spacing-lg;
+      color: $bg-white !important;
     }
 
     &:hover,
     &:focus {
       transform: translateY(-4px) !important;
-      box-shadow: 0 8px 30px rgba(249, 115, 22, 0.8) !important;
-      background: linear-gradient(135deg, #ea580c, #f97316) !important;
-      border-color: #fff !important;
+      box-shadow: 0 8px 30px rgba($primary-color, 0.8) !important;
+      background: linear-gradient(135deg, $primary-dark, $primary-color) !important;
+      border-color: $bg-white !important;
 
       .anticon {
-        color: white !important;
+        color: $bg-white !important;
       }
     }
 
     &:active {
       transform: translateY(-2px) !important;
-      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4) !important;
-      background: linear-gradient(135deg, #c2410c, #ea580c) !important;
+      box-shadow: 0 4px 15px rgba($primary-color, 0.4) !important;
+      background: linear-gradient(135deg, #c2410c, $primary-dark) !important;
     }
   }
 
   .progress-ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include absolute-center;
     transform: translate(-50%, -50%) rotate(-90deg);
     pointer-events: none;
     z-index: 1;
@@ -73,42 +71,40 @@
 @keyframes pulseScale {
   0%,
   100% {
-    box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 4px 20px rgba($primary-color, 0.4);
   }
   50% {
-    box-shadow: 0 4px 30px rgba(249, 115, 22, 0.6);
+    box-shadow: 0 4px 30px rgba($primary-color, 0.6);
   }
 }
 
-// Style 1: Minimal with text
 .back-to-top.minimal-style {
   .back-to-top-button {
     width: auto;
     height: 48px;
-    border-radius: 24px;
-    padding: 0 24px;
-    background: rgba(249, 115, 22, 0.9);
+    border-radius: $radius-2xl;
+    padding: 0 $spacing-lg;
+    background: rgba($primary-color, 0.9);
     backdrop-filter: blur(10px);
 
     &::after {
       content: 'Top';
-      margin-left: 8px;
-      color: white;
+      margin-left: $spacing-xs;
+      color: $bg-white;
       font-weight: 600;
       font-size: 14px;
     }
   }
 }
 
-// Style 2: Floating with glow
 .back-to-top.glow-style {
   .back-to-top-button {
-    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5), 0 0 40px rgba(249, 115, 22, 0.3),
+    box-shadow: 0 0 20px rgba($primary-color, 0.5), 0 0 40px rgba($primary-color, 0.3),
       0 4px 20px rgba(0, 0, 0, 0.2);
     animation: floatBounce 3s ease-in-out infinite;
 
     &:hover {
-      box-shadow: 0 0 30px rgba(249, 115, 22, 0.8), 0 0 60px rgba(249, 115, 22, 0.5),
+      box-shadow: 0 0 30px rgba($primary-color, 0.8), 0 0 60px rgba($primary-color, 0.5),
         0 8px 30px rgba(0, 0, 0, 0.3);
     }
   }
@@ -124,7 +120,6 @@
   }
 }
 
-// Style 3: Rocket ship
 .back-to-top.rocket-style {
   .back-to-top-button {
     &::before {
@@ -155,10 +150,9 @@
   }
 }
 
-// Style 4: Gradient border
 .back-to-top.gradient-border-style {
   .back-to-top-button {
-    background: white;
+    background: $bg-white;
     border: 3px solid transparent;
     background-clip: padding-box;
     position: relative;
@@ -170,15 +164,15 @@
       left: -3px;
       right: -3px;
       bottom: -3px;
-      background: linear-gradient(45deg, #f97316, #fb923c, #f97316);
-      border-radius: 50%;
+      background: linear-gradient(45deg, $primary-color, $primary-light, $primary-color);
+      border-radius: $radius-full;
       z-index: -1;
       background-size: 200% 200%;
       animation: gradientRotate 3s linear infinite;
     }
 
     .anticon {
-      color: #f97316;
+      color: $primary-color;
     }
   }
 }
@@ -195,18 +189,17 @@
   }
 }
 
-// Mobile responsive
-@media (max-width: 768px) {
+@include responsive($breakpoint-md) {
   .back-to-top {
-    bottom: 20px;
-    right: 20px;
+    bottom: $spacing-lg;
+    right: $spacing-lg;
 
     .back-to-top-button {
       width: 48px;
       height: 48px;
 
       .anticon {
-        font-size: 20px;
+        font-size: $font-size-2xl;
       }
     }
 
@@ -233,26 +226,22 @@
   }
 }
 
-// Tablet
-@media (max-width: 1024px) and (min-width: 769px) {
+@include responsive-range($breakpoint-md, $breakpoint-lg) {
   .back-to-top {
     bottom: 30px;
     right: 30px;
   }
 }
 
-// Dark mode support
 @media (prefers-color-scheme: dark) {
-  .back-to-top {
-    .back-to-top-button {
-      box-shadow: 0 4px 20px rgba(249, 115, 22, 0.6);
-    }
+  .back-to-top .back-to-top-button {
+    box-shadow: 0 4px 20px rgba($primary-color, 0.6);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .back-to-top {
-    transition: opacity 0.3s ease;
+    transition: opacity $transition-base ease;
 
     .back-to-top-button {
       animation: none !important;
@@ -265,7 +254,6 @@
   }
 }
 
-// Hide when footer is visible
 .back-to-top.hide-on-footer {
   &.visible {
     opacity: 0;

@@ -1,0 +1,72 @@
+@use '../base/base' as *;
+
+.skills-container {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px $spacing-lg;
+  scroll-margin-top: 50px;
+  justify-items: center;
+  align-items: center;
+
+  .skills-part {
+    @include container;
+
+    .skills-title {
+      @include section-title;
+    }
+
+    .skills-content {
+      align-items: center;
+
+      .skills-cards {
+        display: flex;
+        flex-direction: column;
+        gap: clamp($spacing-sm, 2vw, $spacing-lg);
+
+        .skill-card {
+          cursor: pointer;
+          @include scale-hover(1.03);
+
+          .skill-title {
+            @include flex-center;
+            gap: clamp(4px, 1vw, $spacing-xs);
+            @include responsive-text($font-size-xs, $spacing-md, $font-size-xs, 1.2vw);
+          }
+
+          &.active {
+            border: 2px solid $primary-light;
+            background-color: #faf7f4;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+      }
+
+      .chart-col {
+        @include flex-center;
+        padding: 0;
+        height: auto;
+
+        .chart-container {
+          margin: 0;
+          padding: 0;
+          @include flex-center;
+          width: 100%;
+          max-width: 500px;
+          max-height: 400px;
+          height: auto;
+
+          @include min-responsive($breakpoint-lg) {
+            max-width: 600px;
+            max-height: 400px;
+          }
+
+          @include responsive($breakpoint-md) {
+            max-width: 300px;
+            max-height: 200px;
+          }
+        }
+      }
+    }
+  }
+}

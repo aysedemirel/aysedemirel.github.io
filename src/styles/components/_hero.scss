@@ -1,9 +1,8 @@
+@use '../base/base' as *;
+
 .hero-container {
   min-height: 95vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex-column-center;
   padding: 0 4px;
   position: relative;
   overflow: hidden;
@@ -12,9 +11,7 @@
   scroll-margin-top: 100px;
 
   .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-between;
     padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
     margin: 0 auto;
     gap: clamp(0rem, 5vw, 5rem);
@@ -24,66 +21,65 @@
       max-width: 600px;
 
       .hello-text {
-        font-size: clamp(1.5rem, 4vw, 3rem);
+        @include responsive-text(1.5rem, 3rem);
       }
 
       .name-container {
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        @include responsive-text(1.5rem, 2.5rem);
         font-weight: 400;
 
         .name-txt {
-          font-size: clamp(1.7rem, 5vw, 3rem);
+          @include responsive-text(1.7rem, 3rem);
           font-weight: 700;
-          color: #ea580c;
+          color: $primary-dark;
         }
       }
 
       .into-container {
-        font-size: clamp(1.2rem, 3vw, 2rem);
+        @include responsive-text(1.2rem, 2rem);
         margin-bottom: clamp(1.5rem, 5vw, 3rem);
         min-height: 64px;
 
         .into-txt {
-          color: #fb923c;
+          color: $primary-light;
           font-weight: 600;
         }
       }
 
       .button-area {
         .about-me {
-          background: linear-gradient(45deg, #f97316, #fb923c);
+          @include gradient-bg($primary-color, $primary-light, 45deg);
+          @include button-hover;
           border: none;
           height: 48px;
-          padding: 0 clamp(16px, 5vw, 32px);
-          font-size: 16px;
-          border-radius: 24px;
-          color: #fff;
+          padding: 0 clamp($spacing-md, 5vw, $spacing-xl);
+          font-size: $font-size-md;
+          border-radius: $radius-2xl;
+          color: $bg-white;
           cursor: pointer;
-          transition: all 0.3s ease;
 
           &:hover {
             filter: brightness(1.15);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(249, 115, 22, 0.4);
+            box-shadow: 0 6px 12px rgba($primary-color, 0.4);
           }
         }
 
         .contact-me {
-          border: 2px solid #f97316;
-          color: #f97316;
+          border: 2px solid $primary-color;
+          color: $primary-color;
           height: 48px;
-          padding: 0 clamp(16px, 5vw, 32px);
-          font-size: 16px;
-          border-radius: 24px;
+          padding: 0 clamp($spacing-md, 5vw, $spacing-xl);
+          font-size: $font-size-md;
+          border-radius: $radius-2xl;
           background: transparent;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all $transition-base;
 
           &:hover {
             background: transparent;
-            color: #fb923c;
-            border-color: #fb923c;
-            box-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+            color: $primary-light;
+            border-color: $primary-light;
+            box-shadow: 0 0 12px rgba($primary-color, 0.4);
             transform: translateY(-2px);
           }
         }
@@ -92,10 +88,10 @@
 
     .hero-img-part {
       flex-shrink: 0;
-      border-radius: 50%;
+      border-radius: $radius-full;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all $transition-base;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
       img {
@@ -113,26 +109,24 @@
   }
 
   .down-btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 
     .down-btn {
-      color: #f97316;
+      color: $primary-color;
       font-size: 48px;
       cursor: pointer;
-      padding: 24px;
+      padding: $spacing-lg;
       animation: move-down 1.5s infinite;
       min-width: 48px;
       min-height: 48px;
+      @include flex-center;
       display: inline-flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 
   @keyframes move-down {
-    0% {
+    0%,
+    100% {
       transform: translateY(0);
       opacity: 1;
     }
@@ -140,35 +134,29 @@
       transform: translateY(10px);
       opacity: 0.7;
     }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 
-  /* Tablet */
-  @media (max-width: 1024px) {
+  @include responsive($breakpoint-lg) {
     .hero-img-part {
       width: 220px;
       height: 220px;
     }
   }
 
-  /* Mobile */
-  @media (max-width: 768px) {
+  @include responsive($breakpoint-md) {
     .hero-content {
       flex-direction: column-reverse;
       text-align: center;
-    }
 
-    .hero-text-part {
-      max-width: 100%;
-    }
+      .hero-text-part {
+        max-width: 100%;
+      }
 
-    .hero-img-part {
-      width: 160px;
-      height: 160px;
-      margin: 0 auto;
+      .hero-img-part {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+      }
     }
   }
 }

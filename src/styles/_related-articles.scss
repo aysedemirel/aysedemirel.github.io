@@ -1,0 +1,118 @@
+@use 'base/base' as *;
+
+.related-articles-section {
+  margin-top: 56px;
+  padding-top: $spacing-3xl;
+  border-top: 3px solid $border-light;
+
+  .related-title {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 800;
+    color: $text-primary;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+    letter-spacing: -0.02em;
+    position: relative;
+    padding-bottom: $spacing-md;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      @include gradient-bg($primary-color, $primary-light, to right);
+      border-radius: 2px;
+    }
+  }
+
+  .related-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: $spacing-lg;
+
+    .related-article-card {
+      border-radius: $radius-lg;
+      border: 2px solid $border-light;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: $bg-white;
+      padding: 20px;
+      box-shadow: $shadow-md;
+      @include card-hover;
+      @include focus-outline;
+
+      &:hover {
+        border-color: $primary-color;
+
+        .related-article-title {
+          color: $primary-color;
+        }
+      }
+
+      .related-tag {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: $spacing-md;
+        display: inline-block;
+        width: fit-content;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .related-article-title {
+        font-size: $font-size-xl;
+        font-weight: 700;
+        color: $text-primary;
+        margin-bottom: 14px;
+        line-height: 1.4;
+        transition: color $transition-base;
+        letter-spacing: -0.01em;
+      }
+
+      .related-article-description {
+        color: $text-secondary;
+        font-size: $font-size-base;
+        line-height: 1.7;
+        margin-bottom: $spacing-md;
+        flex-grow: 1;
+      }
+
+      .related-article-date {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        font-size: $font-size-sm;
+        padding-top: $spacing-md;
+        border-top: 2px solid $border-light;
+        color: $text-tertiary;
+
+        .anticon {
+          color: $primary-color;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include responsive($breakpoint-md) {
+    margin-top: $spacing-3xl;
+    padding-top: 36px;
+
+    .related-title {
+      font-size: 1.75rem;
+      margin-bottom: $spacing-lg;
+    }
+
+    .related-articles-grid {
+      grid-template-columns: 1fr;
+      gap: $font-size-lg;
+    }
+  }
+}
