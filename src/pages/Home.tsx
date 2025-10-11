@@ -10,6 +10,7 @@ import FooterComponent from '../components/FooterComponent';
 import EducationSection from '../components/sections/EducationSection';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import BackToTop from '../components/BackToTop';
 
 const { Content } = Layout;
 
@@ -45,6 +46,8 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
       </Content>
 
       <FooterComponent scrollToSection={scrollToSection} />
+
+      <BackToTop showProgress={false} scrollDuration={100} />
     </Layout>
   );
 };

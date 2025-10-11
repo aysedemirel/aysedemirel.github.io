@@ -6,6 +6,7 @@ import { useArticles } from '../hooks/useArticles';
 import BlogHero from '../components/blog/BlogHero';
 import BlogFilters from '../components/blog/BlogFilters';
 import ArticlesTimeline from '../components/blog/ArticlesTimeline';
+import BackToTop from '../components/BackToTop';
 
 const { Content } = Layout;
 
@@ -50,7 +51,10 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
 
         <ArticlesTimeline articlesByYear={articlesByYear} onArticleClick={handleArticleClick} />
       </Content>
+
       <FooterComponent scrollToSection={scrollToSection} />
+
+      <BackToTop showProgress={false} scrollDuration={100} />
     </div>
   );
 };

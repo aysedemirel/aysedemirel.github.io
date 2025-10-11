@@ -19,6 +19,7 @@ import {
 } from '@ant-design/icons';
 import { getTopicColor } from '../utils/blogHelper';
 import type { Article } from '../types/blog.types';
+import BackToTop from '../components/BackToTop';
 
 const { Title, Paragraph, Text } = Typography;
 const { Content } = Layout;
@@ -432,12 +433,7 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
                         className="related-article-card"
                         onClick={() => navigateToRelatedArticle(relatedArticle.contentFile)}
                         tabIndex={0}
-                        role="article"
-                        onKeyPress={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            navigateToRelatedArticle(relatedArticle.contentFile);
-                          }
-                        }}>
+                        role="article">
                         <Tag color={getTopicColor(relatedArticle.topic)} className="related-tag">
                           {relatedArticle.topic}
                         </Tag>
@@ -468,6 +464,8 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
       </Content>
 
       <FooterComponent scrollToSection={scrollToSection} />
+
+      <BackToTop showProgress={false} scrollDuration={100} />
     </div>
   );
 };
