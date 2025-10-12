@@ -46,24 +46,38 @@
         @include flex-center;
         padding: 0;
         height: auto;
+        width: 100%;
 
         .chart-container {
           margin: 0;
           padding: 0;
           @include flex-center;
           width: 100%;
-          max-width: 500px;
-          max-height: 400px;
+          max-width: 100%;
           height: auto;
 
-          @include min-responsive($breakpoint-lg) {
-            max-width: 600px;
-            max-height: 400px;
+          @media (max-width: 768px) {
+            max-width: 100%;
+            padding: 0 10px;
           }
 
-          @include responsive($breakpoint-md) {
-            max-width: 300px;
-            max-height: 200px;
+          @include min-responsive($breakpoint-md) {
+            max-width: 350px;
+          }
+
+          @include min-responsive($breakpoint-lg) {
+            max-width: 450px;
+          }
+
+          > div {
+            width: 100% !important;
+            height: auto !important;
+
+            canvas {
+              width: 100% !important;
+              height: auto !important;
+              max-width: 100%;
+            }
           }
         }
       }
