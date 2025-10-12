@@ -32,14 +32,14 @@
 
       .article-container {
         display: grid;
-        grid-template-columns: 260px minmax(0, 820px);
+        grid-template-columns: 260px minmax(0, 1000px);
         gap: 40px;
         align-items: start;
         justify-content: center;
 
         @include responsive($breakpoint-lg) {
           grid-template-columns: 1fr;
-          max-width: 820px;
+          max-width: 1000px;
           margin: 0 auto;
         }
       }
