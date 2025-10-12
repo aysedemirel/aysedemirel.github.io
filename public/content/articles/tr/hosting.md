@@ -1,4 +1,4 @@
-![internet](/img/hosting.png)
+![Hosting](/img/hosting.png)
 
 Bir web sitesinin içeriğine erişmek, istemcinin (kullanıcının) sunucuya bir istek (request) göndermesiyle başlar. Sunucu bu isteğe yanıt (response) vererek talep edilen içeriği kullanıcıya iletir. IP adresleri, bu iletişimin nereye yönlendirileceğini belirleyen adreslerdir. Ancak burada temel bir soru ortaya çıkar: Gerçekte bu içerik nerede barındırılmaktadır?
 
@@ -24,7 +24,7 @@ Günümüzde çeşitli hosting seçenekleri bulunmaktadır. Bunlar;
 
 Bu seçenekler; maliyet, performans, yönetim zorluğu, kullanıcı kontrolü, esneklik ve güvenilirlik açısından farklı avantajlar ve dezavantajlar sunar.
 
-![internet](/img/hosting-method.png)
+![Hosting Yöntemleri](/img/hosting-method.png)
 
 ## Hosting Türlerinin Ayrıntılı İncelemesi
 

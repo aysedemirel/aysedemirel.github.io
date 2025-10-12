@@ -1,4 +1,4 @@
-![internet](/img/internet2.png)
+![İnternet](/img/internet2.png)
 
 İnternet üzerinde çalışan her cihazın, ağ üzerinde onu tanımlayan benzersiz bir adresi bulunur. Bu adresler, cihazların kimliği niteliğindedir ve iletişimin doğru hedefe yönlendirilmesini sağlar.
 

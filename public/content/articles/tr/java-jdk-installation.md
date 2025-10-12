@@ -1,4 +1,4 @@
-![Java](../../img/java.png)
+![Java JDK](../../img/java.png)
 
 Java Development Kit (JDK), Java programlarının geliştirilmesi için gerekli olan araçları içeren bir yazılım paketidir. Bu paket, Java Runtime Environment (JRE) ve Java Virtual Machine (JVM) bileşenlerini kapsar.
 

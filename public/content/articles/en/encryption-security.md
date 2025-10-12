@@ -1,4 +1,4 @@
-![internet](/img/encryption.png)
+![Encryption](/img/encryption.png)
 
 We share vast amounts of data on the Internet every day: our credit card information, bank account details, passwords, and personal data are all part of this communication. But how are these sensitive details protected?
 
@@ -8,7 +8,7 @@ If data were transmitted without encryption, an intermediary attacker (known as 
 
 One of the earliest known encryption techniques in history is the **Caesar Cipher**. In this method, the sender and receiver agree on a shared “key number.” Each letter in the message is shifted along the alphabet by this number. For instance, if the key is 3, the transformation follows the pattern `A → D, B → E`, and so on.
 
-![internet](/img/ceasar-cipher.png)
+![Ceasar Cipher](/img/ceasar-cipher.png)
 
 While simple, this method is also highly vulnerable. Since the alphabet contains a limited number of characters, an attacker can easily try every possible key through brute force. Increasing the key complexity—such as using a different shift value for each character—makes decryption harder but not impossible. Modern computers can still break such ciphers in a matter of seconds.
 

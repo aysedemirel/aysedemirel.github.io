@@ -1,4 +1,4 @@
-![internet](/img/encryption.png)
+![Şifreleme](/img/encryption.png)
 
 İnternet üzerinde her gün büyük miktarda veri paylaşırız: kredi kartı bilgilerimiz, banka hesaplarımız, parolalarımız ve kişisel verilerimiz bu iletişimin bir parçasıdır. Peki bu bilgiler nasıl korunur?
 
@@ -8,7 +8,7 @@ Veri, şifrelenmeden gönderilseydi, araya giren bir saldırgan **_(man-in-the-m
 
 Tarihte bilinen en eski şifreleme tekniklerinden biri **Sezar Şifrelemesi (Caesar Cipher)**’dir. Bu yöntemde alıcı ve gönderici ortak bir “anahtar sayı” belirler; mesajdaki her harf bu sayı kadar alfabede kaydırılır. Örneğin anahtar 3 ise, `A → D, B → E` şeklinde bir dönüşüm uygulanır.
 
-![internet](/img/ceasar-cipher.png)
+![Sezar Şifresi](/img/ceasar-cipher.png)
 
 Bu yöntem basit olduğu kadar kırılması da kolaydır. Çünkü alfabe uzunluğu kadar olası anahtar vardır; bir saldırgan tüm kombinasyonları deneyerek kısa sürede şifreyi çözebilir. Anahtar karmaşıklığını artırmak —örneğin her harf için farklı bir kaydırma değeri belirlemek— saldırıyı zorlaştırabilir, ancak modern bilgisayarlar bu şifreleri yine de saniyeler içinde kırabilir.
 

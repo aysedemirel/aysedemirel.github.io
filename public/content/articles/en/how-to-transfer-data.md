@@ -1,4 +1,4 @@
-![internet](/img/tcp.png)
+![TCP](/img/tcp.png)
 
 In previous articles, we explained data transfer as though it occurs directly from one device to another. In practice, however, Internet traffic is more complex. A useful analogy is a congested road network, where multiple route options exist and the fastest path is preferred. On the Internet, data is transmitted as bits organized into **packets**, and these packets select routes that allow them to reach their destination most efficiently.
 
@@ -8,7 +8,7 @@ Network devices that manage data traffic are called **routers**. Routers monitor
 
 > The availability of multiple route options makes the system fault-tolerant and more reliable.
 
-![internet](/img/ip-router.png)
+![IP Router](/img/ip-router.png)
 
 ## TCP (Transmission Control Protocol)
 

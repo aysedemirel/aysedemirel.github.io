@@ -1,4 +1,4 @@
-![internet](/img/ip.png)
+![IP](/img/ip.png)
 
 If you know the domain name of a website but want to find out its IP address, you can easily do this through the command line. To open the command line, press **“Windows + R”** or type **“Run”** into the search bar. In the window that appears, type "`cmd`" and press _Enter_ to launch the Command Prompt.
 
@@ -12,7 +12,7 @@ nslookup www.google.com
 
 Press Enter, and you will see the IP address of the Google server to which your system is connected.
 
-![internet](/img/how-to-find-ip/3.png)
+![Terminal](/img/how-to-find-ip/3.png)
 
 In the output, the **“Server”** line shows the address of the DNS server your computer is currently using. You can confirm this information by typing "`ipconfig`" in the command line.
 
@@ -28,19 +28,15 @@ ping 172.217.169.196
 
 This sends test packets to the target IP to see if a response is received.
 
-![internet](/img/how-to-find-ip/4.png)
+![Terminal](/img/how-to-find-ip/4.png)
 
 Sending a ping request to the IP address found earlier
 
 If you receive a reply, it means the connection is successful. Now, open your browser and enter the IP address directly into the address bar. You can access the site using its IP instead of the domain name.
 
-![internet](/img/how-to-find-ip/5.png)
+![Entering the IP address in the browser’s address bar](/img/how-to-find-ip/5.png)
 
-Entering the IP address in the browser’s address bar
-
-![internet](/img/how-to-find-ip/6.png)
-
-Since the address belongs to Google, the redirection completes successfully
+![Since the address belongs to Google, the redirection completes successfully](/img/how-to-find-ip/6.png)
 
 ## Summary: Commands Used
 

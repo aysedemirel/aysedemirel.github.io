@@ -1,4 +1,4 @@
-![internet](/img/interface.png)
+![Interface](/img/interface.png)
 
 In Java, the interface construct allows the declaration of methods and variables, much like classes do. However, methods within an interface are purely declarative; they specify what should be done, not how it should be accomplished. This design defines the behaviors a class must exhibit, while leaving the implementation details to the class itself.
 

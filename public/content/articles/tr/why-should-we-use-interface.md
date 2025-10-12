@@ -1,4 +1,4 @@
-![internet](/img/interface.png)
+![interface](/img/interface.png)
 
 Java'da interface yapısı, sınıflar gibi metot ve değişken tanımlamalarına izin verir. Ancak burada metotlar yalnızca bildirim niteliğindedir; yani ne yapılacağı belirtilir, nasıl yapılacağı değil. Bu sayede bir sınıfın hangi davranışları sergilemesi gerektiği tanımlanır, fakat bu davranışların uygulanma şekli sınıfa bırakılır.
 

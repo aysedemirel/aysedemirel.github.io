@@ -1,14 +1,10 @@
-![internet](/img/ip.png)
+![IP](/img/ip.png)
 
 Bir web sitesinin alan adını biliyor, ancak IP adresini öğrenmek istiyorsanız, bunu komut satırı üzerinden kolayca yapabilirsiniz. Komut satırını açmak için **"Windows+R"** tuşlarına basarak veya arama çubuğuna **"Çalıştır"** yazarak başlayabilirsiniz. Gelen pencereye "`cmd`" yazın. Ardından _Enter_ tuşuna basarak komut satırını başlatın.
 
-![internet](/img/how-to-find-ip/1.png)
+![Çalıştır penceresine `cmd` yazıyoruz. Komut satırını açmanın kısa yolu.](/img/how-to-find-ip/1.png)
 
-Çalıştır penceresine `cmd` yazıyoruz. Komut satırını açmanın kısa yolu.
-
-![internet](/img/how-to-find-ip/2.png)
-
-Komut satırı (Command line)
+![Komut satırı (Command line)](/img/how-to-find-ip/2.png)
 
 ## `nslookup` Komutu ile IP Adresi Sorgulama
 
@@ -18,9 +14,7 @@ Bir web sitesinin IP adresini öğrenmek için `nslookup` komutunu kullanabilirs
 nslookup www.google.com
 ```
 
-Enter’a bastığınızda, bağlı olduğunuz Google sunucusunun IP adresi görüntülenecektir.
-
-![internet](/img/how-to-find-ip/3.png)
+![Enter’a bastığınızda, bağlı olduğunuz Google sunucusunun IP adresi görüntülenecektir.](/img/how-to-find-ip/3.png)
 
 Çıktının ilk kısmında **“Server”** satırında bilgisayarınızın bağlı olduğu DNS sunucusunun adresi yer alır. Komut satırında "`ipconfig`" yazarak bu bilgilerin doğruluğunu teyit edebilirsiniz.
 
@@ -30,19 +24,13 @@ Enter’a bastığınızda, bağlı olduğunuz Google sunucusunun IP adresi gör
 
 Bulunan IP adresiyle bağlantının gerçekten var olup olmadığını kontrol etmek için komut satırında "`ping 172.217.169.196`" yazarak bağlantıya cevap gelip gelmediğine bakalım.
 
-![internet](/img/how-to-find-ip/4.png)
-
-Bulduğum IP adresine ping komutu gönderiyorum
+![Bulduğum IP adresine ping komutu gönderiyorum](/img/how-to-find-ip/4.png)
 
 Eğer yanıt alıyorsanız, bağlantı başarılı demektir. Şimdi tarayıcınızı açın ve adres çubuğuna bu IP adresini yazın. Alan adı yerine doğrudan IP ile erişim sağlayabilirsiniz.
 
-![internet](/img/how-to-find-ip/5.png)
+![Adres çubuğuna IP adresini yazıyorum](/img/how-to-find-ip/5.png)
 
-Adres çubuğuna IP adresini yazıyorum
-
-![internet](/img/how-to-find-ip/6.png)
-
-Adres Google'a ait olduğu için yönlendirme başarıyla gerçekleşiyor
+![Adres Google'a ait olduğu için yönlendirme başarıyla gerçekleşiyor](/img/how-to-find-ip/6.png)
 
 ## Özet: Kullanılan Komutlar
 
