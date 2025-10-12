@@ -24,8 +24,13 @@ const ProjectsSection: React.FC = () => {
           <Col xs={24} lg={8} key={project.title} className="project-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: idx * 0.02,
+                ease: 'easeOut'
+              }}
+              viewport={{ once: true, margin: '-50px' }}
               className="project-motion">
               <ProjectCard project={project} />
             </motion.div>
