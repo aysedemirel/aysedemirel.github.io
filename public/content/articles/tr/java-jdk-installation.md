@@ -123,7 +123,7 @@ Ortam değişkenleri yapılandırıldıktan sonra kurulumun doğrulanması gerek
 2. `cmd` yazarak komut satırını başlatın.
 3. Sistemin Java'yı tanıyıp tanımadığını test etmek için şu komutu girin:
 
-```
+```bash
  javac -version
 ```
 
@@ -135,7 +135,7 @@ Ortam değişkenleri yapılandırıldıktan sonra kurulumun doğrulanması gerek
 
 5. JDK'nın kurulu olduğu dizini kontrol etmek için aşağıdaki komutu kullanabilirsiniz. Bu komut, kurulu dizinlerin listesini gösterecektir:
 
-```
+```bash
    where javac
 ```
 

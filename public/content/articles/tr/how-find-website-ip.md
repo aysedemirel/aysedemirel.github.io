@@ -10,7 +10,7 @@ Bir web sitesinin alan adını biliyor, ancak IP adresini öğrenmek istiyorsan�
 
 Bir web sitesinin IP adresini öğrenmek için `nslookup` komutunu kullanabilirsiniz. Örneğin, Google’ın IP adresini bulmak için komut satırına şu komutu yazın:
 
-```
+```bash
 nslookup www.google.com
 ```
 

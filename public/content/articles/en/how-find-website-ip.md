@@ -6,7 +6,7 @@ If you know the domain name of a website but want to find out its IP address, yo
 
 You can use the `nslookup` command to find the IP address of any website. For example, to look up Google’s IP address, type the following command in the terminal:
 
-```
+```bash
 nslookup www.google.com
 ```
 
@@ -22,7 +22,7 @@ The **“Name”** and **“Addresses”** fields display the domain name (for e
 
 To verify that the IP address you found is active and reachable, use the command:
 
-```
+```bash
 ping 172.217.169.196
 ```
 

@@ -150,8 +150,7 @@
   }
 
   pre {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    color: #f1f5f9;
+    background: #282c34;
     padding: $spacing-lg;
     border-radius: 14px;
     overflow-x: auto;
@@ -168,20 +167,25 @@
       left: 0;
       right: 0;
       height: 40px;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(0, 0, 0, 0.2);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 14px 14px 0 0;
     }
 
     code {
       background: transparent;
-      color: #f1f5f9;
       padding: 0;
       border: none;
       font-size: $font-size-base;
-      line-height: 1.7;
+      line-height: 1.8;
       display: block;
       padding-top: 20px;
+      font-family: $font-family-mono;
+
+      .hljs {
+        display: block;
+        overflow-x: auto;
+      }
     }
   }
 

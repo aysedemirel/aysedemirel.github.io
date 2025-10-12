@@ -20,7 +20,7 @@ Interface yapıları özellikle **Dependency Rule ve Dependency Inversion Princi
 
 ## Interface Tanımlama
 
-```
+```java
 interface <interface_name> {
     // Ortak metot bildirimi
     // Ortak değişken tanımı
@@ -30,7 +30,7 @@ interface <interface_name> {
 
 Interface’leri uygulamak için sınıf içerisinde `implements` anahtar kelimesi kullanılır:
 
-```
+```java
 public class OrnekSinif implements IOrnekArayuz {
      @Override
      public void ornekMetod()
@@ -58,7 +58,7 @@ Bu sebeplerle, interface ile genel kuralları koyarken net çizgiler sunmasında
 
 Interface’ler de tıpkı sınıflar gibi birbirlerinden kalıtım alabilirler (inheritance). Hatta sınıflar gibi bir tane miras almak zorunda da değildir. Birden çok interface'i extend edebilir. Kendi metodlarının yanında extend ettiği interface'lerin metodlarına da sahip olur.
 
-```
+```java
 public interface ISuperOrnek extends ISubOrnek1,ISubOrnek2 {
    public void ornekMethod();
 }
@@ -66,7 +66,7 @@ public interface ISuperOrnek extends ISubOrnek1,ISubOrnek2 {
 
 Ancak burada önemli bir fark vardır: interface kalıtımı yalnızca davranış sözleşmesinin (contract) aktarımını sağlar, uygulama (implementation) aktarımı yapmaz. Bu sayede bir interface, başka bir interface’in yeteneklerini genişleterek daha kapsamlı bir yapı oluşturabilir. Bu durum, özellikle modüler mimarilerde ortak davranışları düzenli biçimde yönetmeyi kolaylaştırır.
 
-```
+```java
 interface Hayvan {
     void sesCikar();
 }
@@ -96,7 +96,7 @@ Bir sınıf birden fazla interface’i eşzamanlı olarak uygulayabilir (multipl
 
 Çünkü Java, sınıflar arasında çoklu kalıtıma izin vermez; ancak interface’lerde bu durumun getirdiği risk (örneğin “diamond problem”) bulunmadığı için güvenlidir.
 
-```
+```java
 interface A {
     void yaz();
 }
@@ -126,7 +126,7 @@ Interface'ler, **Loose coupling** uygulamamızı sağlar. Örneğin bir resim fo
 
 Boyadığımız sabit rengi ve boyama metodumuzu interface içinde tanımlayalım:
 
-```
+```java
 interface IResimFormat
 {
  static final Color = Color.RED;
@@ -136,7 +136,7 @@ interface IResimFormat
 
 PNG formatında işlem yaparken interface'i implements ile ekleyelim:
 
-```
+```java
 public class PngBoyama implements IResimFormat
 {
     @Override
@@ -149,7 +149,7 @@ public class PngBoyama implements IResimFormat
 
 Doğrudan interface'in uygulandığı sınıfı kullanabileceğimiz gibi, interface ile tanımlama yaparak uygulandığı tüm sınıfları olaya dahil edebiliriz. Aşağıdaki örnekte IResimFormat interface'ini kim implements ediyorsa ResimFormatci sınıfına değişken olarak gelebilir.
 
-```
+```java
 public class ResimFormatcisi{
   private IResimFormat formatci;
   public ResimFormatci(IResimFormat formatci)
@@ -170,7 +170,7 @@ Java 8 itibarıyla interface’lerde default ve static metot tanımlamaları da 
 
 `default` metotlar, interface içerisinde varsayılan bir method içerir. Bu özellik, mevcut interface’lere yeni davranışlar eklerken geriye dönük uyumluluğu (backward compatibility) korumak için getirilmiştir.
 
-```
+```java
 interface Loggable {
     default void log(String mesaj) {
         System.out.println("Log: " + mesaj);
@@ -182,7 +182,7 @@ interface Loggable {
 
 `static` metotlar ise interface seviyesinde çağrılır ve sınıf örneği oluşturmadan kullanılabilir. Bu, yardımcı (utility) işlemler için kullanışlıdır.
 
-```
+```java
 interface Matematik {
     static int topla(int a, int b) {
         return a + b;
@@ -192,7 +192,7 @@ interface Matematik {
 
 Yukarıdaki metodu aşağıdaki şekilde çağırabiliriz:
 
-```
+```java
 Matematik.topla(2,3);
 ```
 
@@ -203,7 +203,7 @@ Interface’ler, **polimorfizmin (çok biçimlilik)** temel araçlarından birid
 Bu yaklaşım, **bağımlılık tersine çevirme (Dependency Inversion)** prensibinin de temelini oluşturur:
 Üst seviye modüller, alt seviye modüllere değil, **soyutlamalara (interface’lere)** bağımlı olmalıdır.
 
-```
+```java
 interface Bildirim {
     void gonder(String mesaj);
 }
@@ -225,7 +225,7 @@ class SmsBildirim implements Bildirim {
 
 Bu yapı sayesinde BildirimServisi, hangi tür bildirimin kullanılacağını bilmeden çalışabilir:
 
-```
+```java
 class BildirimServisi {
     private final Bildirim bildirim;
 
@@ -257,7 +257,7 @@ Kısa bir örnekle kullanımını görmek isterseniz aşağıdaki projeye göz a
 
 Generic interface dediğimiz, bir tipe özgü interface'ler de oluşturabiliriz. Belirttiğimiz tipe özgü çalışırlar. Bunun için bir örnek oluşturmaya çalışalım. Bir fabrika için ürün listeleri çıkarıyoruz diyelim. İlk görevimiz araba ürün hattında listeleme yapmak, daha sonra da fabrikadaki diğer ürünler üzerine çalışma yapacağız. Başka ürünler de geleceği için aşağıdaki gibi bir interface oluşturduk:
 
-```
+```java
 public interface IFabrika{
     public Araba uret();
 }
@@ -265,7 +265,7 @@ public interface IFabrika{
 
 Implement aşaması:
 
-```
+```java
 public class ArabaUretim implements IFabrika{
   public Araba uret()
   {
@@ -276,7 +276,7 @@ public class ArabaUretim implements IFabrika{
 
 Kullanırken:
 
-```
+```java
 IFabrika arabaUretim = new ArabaUretim();
 Araba araba = (Araba) arabaUretim.uret();
 ```
@@ -285,7 +285,7 @@ Araba araba = (Araba) arabaUretim.uret();
 
 Interface'de küçük bir değişiklik yapalım:
 
-```
+```java
 public interface IFabrika <T>{
     public T uret();
 }
@@ -293,7 +293,7 @@ public interface IFabrika <T>{
 
 Interface üzerindeki araba bağımlılığını kopardık. Peki implement ederken ne değişecek?
 
-```
+```java
 public class ArabaUretim implements IFabrika<Araba>{
   public Araba uret()
   {
@@ -310,7 +310,7 @@ public class KamyonUretim implements IFabrika<Kamyon>{
 
 İki farklı tür üretim yaptık ve sonuçlarını aldık. İkisinde de interface'den gelen uret() metodunu kullandığımıza dikkat edin. İkisinde de farklı tiplerde dönüş sağlandı. Böylelikle tek bir üretim hattı için değil, birden çok üretim hattı için interface elde etmiş olduk. Sınıfı da aşağıdaki gibi çağırıyoruz:
 
-```
+```java
 IFabrika<Araba> arabaUretim = new ArabaUretim();
 Araba araba = arabaUretim.uret();
 IFabrika<Kamyon> kamyonUretim = new KamyonUretim();
