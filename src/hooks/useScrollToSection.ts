@@ -40,10 +40,6 @@ const useScrollToSection = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(
-            `Section: ${entry.target.id}, Visible: ${entry.isIntersecting}, Ratio: ${entry.intersectionRatio}`
-          );
-
           if (entry.isIntersecting) {
             const sectionId = entry.target.id;
             setActiveSection(sectionId);
