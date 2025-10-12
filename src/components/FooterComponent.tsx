@@ -1,6 +1,7 @@
 import { Layout, Typography, Row, Col, Space } from 'antd';
 import {
   AndroidOutlined,
+  AppleOutlined,
   CoffeeOutlined,
   GithubOutlined,
   HeartFilled,
@@ -128,6 +129,13 @@ const FooterComponent = ({ scrollToSection }: Props) => {
                 rel="noopener noreferrer"
                 className="social-icon">
                 <AndroidOutlined />
+              </a>
+              <a
+                href="https://apps.apple.com/tr/developer/ayse-demirel-deniz/id1844827279"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon">
+                <AppleOutlined />
               </a>
             </Space>
           </Space>
