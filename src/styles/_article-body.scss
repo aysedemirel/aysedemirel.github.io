@@ -233,19 +233,28 @@
     margin: 40px 0;
   }
 
-  table {
+  .table-wrapper {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
+    overflow-x: auto;
     margin: $spacing-xl 0;
-    background: $bg-white;
     border-radius: $radius-lg;
-    overflow: hidden;
     box-shadow: $shadow-md;
     border: 2px solid $border-light;
+    @include custom-scrollbar(8px, rgba($primary-color, 0.1), rgba($primary-color, 0.3));
+  }
+
+  table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: $bg-white;
 
     thead {
       @include gradient-bg($primary-color, $primary-light);
+      position: sticky;
+      top: 0;
+      z-index: 10;
 
       tr th {
         padding: $font-size-lg 20px;
@@ -255,6 +264,7 @@
         color: white;
         text-transform: uppercase;
         letter-spacing: 0.8px;
+        white-space: nowrap;
       }
     }
 
@@ -312,9 +322,14 @@
       }
     }
 
-    table {
-      font-size: 14px;
+    .table-wrapper {
       margin: 28px -12px;
+      border-radius: $radius-md;
+    }
+
+    table {
+      min-width: 500px;
+      font-size: 14px;
 
       thead tr th {
         padding: 14px $spacing-sm;
@@ -343,6 +358,26 @@
     ul,
     ol {
       padding-left: $spacing-lg;
+    }
+
+    .table-wrapper {
+      margin: $spacing-lg -10px;
+      border-radius: $radius-sm;
+    }
+
+    table {
+      min-width: 450px;
+      font-size: 13px;
+
+      thead tr th {
+        padding: 12px 10px;
+        font-size: 11px;
+      }
+
+      tbody tr td {
+        padding: 12px 10px;
+        font-size: 13px;
+      }
     }
   }
 }

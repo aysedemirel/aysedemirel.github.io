@@ -34,6 +34,11 @@ const ArticleBody = ({ content, contentRef }: ArticleBodyProps) => {
               </h3>
             );
           },
+          table: ({ node, ...props }) => (
+            <div className="table-wrapper">
+              <table {...props} />
+            </div>
+          ),
           a: ({ node, href, children, ...props }) => {
             const isExternal = href?.startsWith('http');
             return (
