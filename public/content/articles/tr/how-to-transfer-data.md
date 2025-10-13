@@ -1,4 +1,4 @@
-![internet](/img/tcp.png)
+![TCP](/img/tcp.png)
 
 Önceki yazılarda bir cihazdan diğerine veri iletişiminin doğrudan gerçekleştiğini anlatmıştık. Ancak gerçek hayatta, internet trafiği daha karmaşıktır. Bunu, trafikle dolu bir yolda farklı güzergâh seçenekleri arasından en hızlısını tercih etmeye benzetebiliriz. İnternette veri, bitler halinde paketler şeklinde iletilir ve bu paketler varış noktasına en hızlı şekilde ulaşacak yolları seçer.
 
@@ -8,7 +8,7 @@ Veri trafiğini yöneten cihazlar **router** olarak adlandırılır Router’lar
 
 > Birden fazla yol seçeneği olması, sistemi arızaya dayanıklı ve güvenilir kılar.
 
-![internet](/img/ip-router.png)
+![IP Router](/img/ip-router.png)
 
 ## TCP (Transmission Control Protocol)
 

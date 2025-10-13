@@ -1,11 +1,13 @@
+@use '../base/base' as *;
+
 #footer {
-  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  @include gradient-bg(#1c1c1c, $bg-dark-secondary);
   backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #9ca3af;
+  border-top: 1px solid $border-white-transparent;
+  color: $text-tertiary;
 
   .name {
-    color: #ff7a29;
+    color: $primary-color;
 
     .name-icon {
       margin: 0 5px;
@@ -14,11 +16,11 @@
 
   .name-desc {
     color: #ececec;
-    font-size: 16px;
+    font-size: $spacing-md;
   }
 
   .title {
-    color: #ff7a29;
+    color: $primary-color;
 
     .title-icon {
       margin: 0 5px;
@@ -26,17 +28,14 @@
   }
 
   .link {
+    @include link-hover($primary-color);
     color: #ececec;
-    font-size: 16px;
-
-    &:hover {
-      color: #ff7a29;
-    }
+    font-size: $spacing-md;
   }
 
   .contact-txt {
     color: #ececec;
-    font-size: 16px;
+    font-size: $spacing-md;
     padding-left: 10px;
   }
 
@@ -59,27 +58,25 @@
     }
 
     .copyright-icon {
-      color: #ec4899;
+      color: $secondary-color;
       padding: 0 5px;
     }
   }
 
   .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #2a2a2a;
+    @include flex-center;
+    border-radius: $radius-full;
+    background: $bg-dark-secondary;
     color: #ccc;
-    transition: all 0.3s ease;
+    transition: all $transition-base;
     width: 36px;
     height: 36px;
-    font-size: 18px;
+    font-size: $font-size-lg;
     margin: 2px;
 
     &:hover {
-      background: #ff7a29;
-      color: #fff;
+      background: $primary-color;
+      color: $bg-white;
     }
   }
 

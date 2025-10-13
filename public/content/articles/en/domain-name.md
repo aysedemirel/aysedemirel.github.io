@@ -1,4 +1,4 @@
-![internet](/img/domain-name.png)
+![Domain Name](/img/domain-name.png)
 
 When accessing a website, we typically enter an address such as “www.example.com”. The “www” portion is common to most websites, so the key part to remember is “example.com”. This expression, “example.com”, is called the **domain name**.
 
@@ -10,7 +10,7 @@ This is similar to how people save contact names instead of memorizing phone num
 
 ## Structure of a Domain Name
 
-![internet](/img/wikipedia.png)
+![Wikipedia](/img/wikipedia.png)
 
 Let’s analyze the structure of the domain name **“en.wikipedia.org”**: The “org” at the far right indicates the type or purpose of the site. Before that is “wikipedia”; this is the site's unique identifier. The prefix “en” specifies the language or country code of the site. However, the country code does not always appear at the beginning; in some cases, it is appended to the end, as in the domain extension “.com.tr”
 

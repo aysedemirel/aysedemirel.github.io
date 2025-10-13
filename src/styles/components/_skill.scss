@@ -1,0 +1,86 @@
+@use '../base/base' as *;
+
+.skills-container {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px $spacing-lg;
+  scroll-margin-top: 50px;
+  justify-items: center;
+  align-items: center;
+
+  .skills-part {
+    @include container;
+
+    .skills-title {
+      @include section-title;
+    }
+
+    .skills-content {
+      align-items: center;
+
+      .skills-cards {
+        display: flex;
+        flex-direction: column;
+        gap: clamp($spacing-sm, 2vw, $spacing-lg);
+
+        .skill-card {
+          cursor: pointer;
+          @include scale-hover(1.03);
+
+          .skill-title {
+            @include flex-center;
+            gap: clamp(4px, 1vw, $spacing-xs);
+            @include responsive-text($font-size-xs, $spacing-md, $font-size-xs, 1.2vw);
+          }
+
+          &.active {
+            border: 2px solid $primary-light;
+            background-color: #faf7f4;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+      }
+
+      .chart-col {
+        @include flex-center;
+        padding: 0;
+        height: auto;
+        width: 100%;
+
+        .chart-container {
+          margin: 0;
+          padding: 0;
+          @include flex-center;
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+
+          @media (max-width: 768px) {
+            max-width: 100%;
+            padding: 0 10px;
+          }
+
+          @include min-responsive($breakpoint-md) {
+            max-width: 350px;
+          }
+
+          @include min-responsive($breakpoint-lg) {
+            max-width: 450px;
+          }
+
+          > div {
+            width: 100% !important;
+            height: auto !important;
+
+            canvas {
+              width: 100% !important;
+              height: auto !important;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use '../base/base' as *;
+
+#education {
+  @include container;
+  min-height: 95vh;
+  padding: $spacing-lg $spacing-lg;
+  scroll-margin-top: 50px;
+
+  .education-title {
+    @include section-title;
+  }
+
+  .educations {
+    .education-card {
+      @include base-card;
+      height: 100%;
+      @include card-hover(-4px);
+
+      .education-header {
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+
+        .logo {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+
+        .sub {
+          color: #666;
+          margin: 0;
+        }
+
+        .date {
+          color: #999;
+          font-size: 14px;
+        }
+      }
+
+      .education-body {
+        ul {
+          margin: 0;
+          padding-left: 20px;
+
+          li {
+            margin-bottom: $spacing-xs;
+          }
+        }
+      }
+    }
+  }
+
+  .certificate-card {
+    @include base-card;
+    padding: $spacing-md;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .tags {
+      margin-top: $spacing-sm;
+
+      .ant-tag {
+        padding: 4px 10px;
+        border-radius: $radius-md;
+        margin-bottom: 5px;
+
+        a {
+          @include link-hover;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

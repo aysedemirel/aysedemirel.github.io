@@ -1,0 +1,73 @@
+@use 'base/base' as *;
+
+.article-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: $spacing-lg;
+  flex-wrap: wrap;
+
+  .back-button {
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $text-secondary;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $radius-md;
+    transition: all $transition-base;
+    border: none;
+
+    &:hover {
+      color: $primary-color;
+      background: rgba($primary-color, 0.08);
+      transform: translateX(-3px);
+
+      .anticon {
+        transform: translateX(-2px);
+      }
+    }
+
+    .anticon {
+      font-size: $spacing-md;
+      transition: transform $transition-base;
+    }
+  }
+
+  .article-breadcrumb {
+    font-size: $font-size-sm;
+    margin: 0;
+
+    .ant-breadcrumb-link {
+      color: $text-tertiary;
+      transition: color $transition-base;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .ant-breadcrumb-separator {
+      color: $text-tertiary;
+      margin: 0 $spacing-xs;
+    }
+
+    li:last-child .ant-breadcrumb-link {
+      color: $text-secondary;
+      font-weight: 500;
+    }
+  }
+
+  @include responsive($breakpoint-md) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-sm;
+  }
+}

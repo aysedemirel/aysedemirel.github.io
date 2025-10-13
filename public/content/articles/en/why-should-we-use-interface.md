@@ -1,4 +1,4 @@
-![internet](/img/interface.png)
+![Interface](/img/interface.png)
 
 In Java, the interface construct allows the declaration of methods and variables, much like classes do. However, methods within an interface are purely declarative; they specify what should be done, not how it should be accomplished. This design defines the behaviors a class must exhibit, while leaving the implementation details to the class itself.
 
@@ -20,7 +20,7 @@ Interfaces are particularly important within the context of the **Dependency Rul
 
 ## Defining an Interface
 
-```
+```java
 interface <interface_name> {
     // Common method declarations
     // Common variable declarations
@@ -30,7 +30,7 @@ interface <interface_name> {
 
 To implement an interface, the `implements` keyword is used within a class:
 
-```
+```java
 public class ExampleClass implements IExampleInterface {
      @Override
      public void exampleMethod() {
@@ -57,7 +57,7 @@ For these reasons, interfaces are highly functional when establishing clear, gen
 
 Interfaces, like classes, can inherit from each other. In fact, they are not limited to inheriting from just one interface. They can extend multiple interfaces. In addition to their own methods, they also possess the methods of the interfaces they extend.
 
-```
+```java
 public interface ISuperOrnek extends ISubOrnek1,ISubOrnek2 {
    public void ornekMethod();
 }
@@ -65,7 +65,7 @@ public interface ISuperOrnek extends ISubOrnek1,ISubOrnek2 {
 
 This distinction is crucial: interface inheritance transfers the behavioral contract only — not the implementation. This allows an interface to extend the capabilities of another interface, creating a more comprehensive structure. This makes it easier to manage common behaviors in a structured way, especially in modular architectures.
 
-```
+```java
 interface Animal {
     void makeSound();
 }
@@ -95,7 +95,7 @@ A class can implement multiple interfaces simultaneously, which provides a safe 
 
 Because Java disallows multiple class inheritance, interfaces serve as a reliable alternative without introducing issues such as the “diamond problem.”
 
-```
+```java
 interface A {
     void write();
 }
@@ -125,7 +125,7 @@ Interfaces enable **loose coupling**. Suppose we are developing a painting featu
 
 Let's define the fixed color we painted and our painting method within the interface:
 
-```
+```java
 interface IImageFormat {
     static final Color COLOR = Color.RED;
     void paint();
@@ -134,7 +134,7 @@ interface IImageFormat {
 
 When working with the PNG format, let's add the interface using implements:
 
-```
+```java
 public class PngPainter implements IImageFormat {
     @Override
     public void paint() {
@@ -145,7 +145,7 @@ public class PngPainter implements IImageFormat {
 
 We can use the class that directly implements the interface, or we can include all classes that implement the interface by defining it. In the following example, whatever implements the IResimFormat interface can be passed as a variable to the ResimFormatci class.
 
-```
+```java
 public class ImageProcessor {
   private IImageFormat painter;
   public ImageProcessor(IImageFormat painter) {
@@ -165,7 +165,7 @@ Since Java 8, interfaces can also include default and static methods. This enabl
 
 `default` methods contain a predefined implementation. They were introduced to allow adding new behaviors to existing interfaces while maintaining backward compatibility.
 
-```
+```java
 interface Loggable {
     default void log(String message) {
         System.out.println("Log: " + message);
@@ -177,7 +177,7 @@ interface Loggable {
 
 `static` methods belong to the interface itself and can be invoked without an instance. They are typically used for utility functions.
 
-```
+```java
 interface MathUtil {
     static int add(int a, int b) {
         return a + b;
@@ -187,7 +187,7 @@ interface MathUtil {
 
 Usage of the above method:
 
-```
+```java
 MathUtil.add(2, 3);
 ```
 
@@ -197,7 +197,7 @@ Interfaces are a cornerstone of **polymorphism** — the concept that an object 
 
 This principle supports **Dependency Inversion**, which states that high-level modules should depend on abstractions, not concrete implementations.
 
-```
+```java
 interface Notification {
     void send(String message);
 }
@@ -219,7 +219,7 @@ class SmsNotification implements Notification {
 
 Thanks to this structure, NotificationService can operate without knowing what type of notification will be used:
 
-```
+```java
 class NotificationService {
     private final Notification notification;
 
@@ -253,7 +253,7 @@ If you'd like to see how it's used with a short example, you can take a look at 
 
 A generic interface allows for type-safe abstraction. Let's try to create an example for this. Let's say we are generating product lists for a factory. Our first task is to list the car product line, and then we will work on other products in the factory. Since other products will come later, we created an interface like the following:
 
-```
+```java
 public interface IFactory {
     public Car produce();
 }
@@ -261,7 +261,7 @@ public interface IFactory {
 
 Implementation:
 
-```
+```java
 public class CarFactory implements IFactory {
   public Car produce() {
     return new Car();
@@ -271,14 +271,14 @@ public class CarFactory implements IFactory {
 
 Usage:
 
-```
+```java
 IFactory carFactory = new CarFactory();
 Car car = (Car) carFactory.produce();
 ```
 
 However, this ties the interface directly to Car. To decouple it, we can use generics:
 
-```
+```java
 public interface IFactory<T> {
     public T produce();
 }
@@ -286,7 +286,7 @@ public interface IFactory<T> {
 
 Now, each product type can define its own factory:
 
-```
+```java
 public class CarFactory implements IFactory<Car> {
   public Car produce() {
     return new Car();
@@ -302,7 +302,7 @@ public class TruckFactory implements IFactory<Truck> {
 
 We created two different types of production and obtained the results. Note that in both cases, we used the produce() method from the interface. In both cases, different types of returns were obtained. Thus, we obtained an interface not for a single production line, but for multiple production lines. We call the class as follows:
 
-```
+```java
 IFactory<Car> carFactory = new CarFactory();
 Car car = carFactory.produce();
 

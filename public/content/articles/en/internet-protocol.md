@@ -1,4 +1,4 @@
-![internet](/img/ip-2.png)
+![IP](/img/ip-2.png)
 
 When data is transmitted from one point to another, the system that enables this journey is known as a **network**. Yet, a fundamental question arises: how does data determine its destination?
 
@@ -6,7 +6,7 @@ When data is transmitted from one point to another, the system that enables this
 
 If only two devices were directly connected via a cable, data would travel straight to the other device without the need for routing. However, once a third device is introduced into the system, determining the correct destination becomes more complex. This is where **routers** come into play.
 
-![internet](/img/data.png)
+![Data](/img/data.png)
 
 ## Routers and Network Communication
 
@@ -14,17 +14,17 @@ Modern networks can consist of thousands or even millions of interconnected devi
 
 When we connect to the Internet, we do not communicate directly with the target website. Instead, our data first reaches a router within the local network. From there, data packets are forwarded step by step through multiple interconnected routers until they reach their final destination.
 
-![internet](/img/internet-broadcasting.png)
+![Internet](/img/internet-broadcasting.png)
 
 Routers perform this process using a **routing table**, which specifies the most appropriate route for each target address.
 
-![internet](/img/routing.png)
+![Routing](/img/routing.png)
 
 In the diagrams above, routers’ routing decisions and the data flow paths are illustrated. Square symbols represent routers, circles represent end devices, and the arrows indicate possible directions for data transmission. The numbers on the arrows correspond to routing information used to determine the target path. If a number is followed by an exclamation mark (“!”), it indicates that all routes except that number are considered viable.
 
 ## Example: Data Routing Scenario
 
-![internet](/img/routing-1-en.png)
+![Data Routing Scenario](/img/routing-1-en.png)
 
 In the simple example above, data is being sent from device number 1 to device number 5:
 

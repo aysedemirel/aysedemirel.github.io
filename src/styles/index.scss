@@ -1,24 +1,27 @@
-@use './about.scss';
-@use './article-detail.scss';
-@use './back-to-top.scss';
-@use './blog.scss';
-@use './contact.scss';
-@use './education.scss';
-@use './experience.scss';
-@use './footer.scss';
-@use './header.scss';
-@use './hero.scss';
-@use './notfound.scss';
-@use './projects.scss';
-@use './skill.scss';
-
-//* {  outline: 1px solid red; /* Frames every element on the page */}
+@use 'components/header';
+@use 'components/hero';
+@use 'components/about';
+@use 'components/skill';
+@use 'components/experience';
+@use 'components/projects';
+@use 'components/education';
+@use 'components/contact';
+@use 'pages/blog';
+@use 'pages/article-detail';
+@use 'components/back-to-top';
+@use 'components/footer';
+@use 'pages/notfound';
+@import 'components/social-sidebar';
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+// Debug (uncomment to see layout)
+// * { outline: 1px solid red; }

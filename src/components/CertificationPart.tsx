@@ -3,6 +3,7 @@ import { certifications } from '../constants/certifications';
 import { motion } from 'framer-motion';
 
 const { Title, Paragraph, Link } = Typography;
+
 const CertificationPart = () => {
   return (
     <div className="certificates">
@@ -10,12 +11,16 @@ const CertificationPart = () => {
       <Row gutter={[24, 24]} className="certificates-container">
         {certifications.map((cert, index) => (
           <Col xs={24} sm={12} md={8} key={index}>
-            <Card hoverable className="certificate-card">
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.25 }}
-                viewport={{ once: true }}>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.05,
+                ease: 'easeOut'
+              }}
+              viewport={{ once: true, margin: '-50px' }}>
+              <Card hoverable className="certificate-card">
                 <Title level={5}>{cert.title}</Title>
                 <Paragraph>
                   {cert.issuer} • {cert.year}
@@ -36,8 +41,8 @@ const CertificationPart = () => {
                     ))}
                   </div>
                 )}
-              </motion.div>
-            </Card>
+              </Card>
+            </motion.div>
           </Col>
         ))}
       </Row>

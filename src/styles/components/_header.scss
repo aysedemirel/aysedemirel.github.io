@@ -1,21 +1,18 @@
+@use '../base/base' as *;
+
 .layout-header {
-  display: flex;
-  align-items: center;
+  @include flex-between;
   padding: 0 5%;
-  background: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(236, 236, 236, 0.8);
+  background: rgba($bg-white, 0.5);
+  border-bottom: 1px solid rgba($border-color, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
-  z-index: 1000;
-  justify-content: space-between;
+  z-index: $z-index-sticky;
 
   .header-title {
-    background: linear-gradient(45deg, #f97316, #ec4899);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    @include gradient-text($primary-color, $secondary-color);
     cursor: pointer;
     margin: 0;
     flex: 1;
@@ -41,23 +38,23 @@
     background: transparent;
   }
 
-  @media screen and (max-width: 768px) {
-    .layout-header {
-      padding: 0 16px;
-    }
+  @include responsive($breakpoint-md) {
+    padding: 0 $spacing-md;
   }
 }
 
 .ant-menu-light .ant-menu-item-selected {
-  color: #fff !important;
+  color: $bg-white !important;
   background-color: #f5924a !important;
 }
 
-.ant-menu-item:hover {
-  color: #f97316 !important;
-  border-bottom: none !important;
-}
+.ant-menu-item {
+  &:hover {
+    color: $primary-color !important;
+    border-bottom: none !important;
+  }
 
-.ant-menu-item-selected::after {
-  border-bottom: none !important;
+  &-selected::after {
+    border-bottom: none !important;
+  }
 }

@@ -117,7 +117,7 @@ After configuring environment variables, verify that the installation was succes
 
 3. To test whether the system recognizes Java, enter the following command:
 
-```
+```bash
  javac -version
 ```
 
@@ -129,7 +129,7 @@ After configuring environment variables, verify that the installation was succes
 
 5. To check the installation directory of the Java compiler, run:
 
-```
+```bash
    where javac
 ```
 

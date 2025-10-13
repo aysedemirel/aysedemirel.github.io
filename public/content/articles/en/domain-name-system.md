@@ -1,4 +1,4 @@
-![internet](/img/dns.png)
+![DNS](/img/dns.png)
 
 Devices connected to the Internet communicate through **IP (Internet Protocol) addresses**. An IP address functions as a unique identifier for each device. When data is transferred from one device to another, the path it follows is determined based on these IP addresses. Therefore, whether communication occurs over the Internet or through a local network (Ethernet), an IP address is required for data transmission.
 
@@ -22,7 +22,7 @@ DNS servers establish a mapping between domain names and their corresponding IP 
 
 > Domain name (entered by user) → Browser (e.g., Chrome, Firefox) → DNS (resolves to IP address) → Browser (sends request to target IP) → Server (returns data)
 
-![internet](/img/url.png)
+![URL](/img/url.png)
 
 ## Hierarchy of DNS Servers
 
@@ -53,7 +53,7 @@ The TLD server points to the **authoritative DNS server** responsible for the do
 
 > Browser → Root DNS → TLD Servers → Authoritative DNS → IP Address
 
-![internet](/img/dns-servers.png)
+![DNS Servers](/img/dns-servers.png)
 
 ---
 

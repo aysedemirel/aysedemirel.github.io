@@ -82,6 +82,8 @@ const SkillsSection: React.FC = () => {
             <div className="chart-container">
               <Pie
                 {...PieConfig}
+                autoFit={true}
+                height={300}
                 onReady={(plot) => {
                   PlotMaps.rightPie = plot;
                   plot.chart.on('interval:pointerover', (evt: any) => {

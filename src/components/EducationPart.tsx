@@ -11,12 +11,16 @@ const EducationPart = () => {
       <Row gutter={[24, 24]} className="cards-container">
         {educationData.map((edu, index) => (
           <Col xs={24} md={12} key={index}>
-            <Card hoverable className="education-card">
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.25 }}
-                viewport={{ once: true }}>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.08,
+                ease: 'easeOut'
+              }}
+              viewport={{ once: true, margin: '-50px' }}>
+              <Card hoverable className="education-card">
                 {edu.type === 'summary' && (
                   <div className="education-header">
                     <img
@@ -54,8 +58,8 @@ const EducationPart = () => {
                     </Paragraph>
                   </div>
                 )}
-              </motion.div>
-            </Card>
+              </Card>
+            </motion.div>
           </Col>
         ))}
       </Row>

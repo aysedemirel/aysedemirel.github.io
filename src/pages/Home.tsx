@@ -8,9 +8,10 @@ import ExperienceSection from '../components/sections/ExperienceSection';
 import ContactSection from '../components/sections/ContactSection';
 import FooterComponent from '../components/FooterComponent';
 import EducationSection from '../components/sections/EducationSection';
+import BackToTop from '../components/BackToTop';
+import SocialSidebar from '../components/SocialSidebar';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import BackToTop from '../components/BackToTop';
 
 const { Content } = Layout;
 
@@ -48,6 +49,7 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
       <FooterComponent scrollToSection={scrollToSection} />
 
       <BackToTop showProgress={false} scrollDuration={100} />
+      <SocialSidebar />
     </Layout>
   );
 };

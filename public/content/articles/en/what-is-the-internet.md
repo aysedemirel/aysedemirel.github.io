@@ -1,10 +1,10 @@
-![internet](../../img/internet.png)
+![Internet](../../img/internet.png)
 
 Today, a significant portion of the world’s population are internet users. In the field of software development, a large proportion of developers are engaged in web programming. Whether you are working on frontend or backend development, the internet architecture remains central to the tasks being performed.
 
 To better understand internet architecture, I plan to create a series titled “Internet 101”. The starting point of this series addresses the question: “How does the Internet work?”
 
-![internet](../../img/many-nodes.png)
+![Many nodes](../../img/many-nodes.png)
 
 ## The Origins of the Internet
 

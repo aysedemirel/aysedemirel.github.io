@@ -27,8 +27,12 @@ const ExperienceSection: React.FC = () => {
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.25 }}
-                  viewport={{ once: true }}>
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.08,
+                    ease: 'easeOut'
+                  }}
+                  viewport={{ once: true, margin: '-50px' }}>
                   {item.label}
                   {item.children}
                 </motion.div>
@@ -43,8 +47,12 @@ const ExperienceSection: React.FC = () => {
                 <motion.div
                   initial={{ x: -30, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.2 }}
-                  viewport={{ once: true }}>
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.06,
+                    ease: 'easeOut'
+                  }}
+                  viewport={{ once: true, margin: '-50px' }}>
                   {item.label}
                 </motion.div>
               ),
@@ -52,8 +60,12 @@ const ExperienceSection: React.FC = () => {
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.25 }}
-                  viewport={{ once: true }}>
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.08,
+                    ease: 'easeOut'
+                  }}
+                  viewport={{ once: true, margin: '-50px' }}>
                   {item.children}
                 </motion.div>
               )

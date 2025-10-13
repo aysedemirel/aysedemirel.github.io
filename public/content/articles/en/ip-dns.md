@@ -1,4 +1,4 @@
-![internet](/img/internet2.png)
+![IP-DNS](/img/internet2.png)
 
 Every device operating on the Internet possesses a unique address that identifies it within the network. These addresses serve as the device’s identity and ensure that communication is accurately directed to its intended destination.
 

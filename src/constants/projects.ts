@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: 'CounterMate',
     description:
       'A mobile app with a minimalist interface, unlimited counters, and dark mode, allowing users to easily track daily habits and goals.',
-    tech: ['React Native', 'TypeScript', 'Zustand', 'Mmkv'],
+    tech: ['React Native', 'TypeScript', 'Zustand', 'Mmkv', 'Firebase'],
     github: '#',
     demo: 'https://www.allroundmate.com/countermate'
   },
@@ -13,7 +13,7 @@ export const projects: Project[] = [
     title: 'StyleMate',
     description:
       'An AI-powered smart styling app that digitizes your wardrobe and provides daily outfit suggestions, eliminating the stress of getting dressed.',
-    tech: ['React Native', 'TypeScript', 'Zustand', 'SQLite'],
+    tech: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'Firebase'],
     github: '#',
     demo: 'https://www.allroundmate.com/stylemate'
   },
@@ -21,9 +21,17 @@ export const projects: Project[] = [
     title: 'VegMate',
     description:
       'A meal tracking app that supports plant-based nutrition, helps manage calories and meals, and tracks 30 different vegetables weekly to promote a healthy and motivating diet.',
-    tech: ['React Native', 'TypeScript', 'Zustand', 'SQLite'],
+    tech: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'Firebase'],
     github: '#',
     demo: 'https://www.allroundmate.com/vegmate'
+  },
+  {
+    title: 'MirrorHabit',
+    description:
+      'A habit-tracking app that integrates a video journal feature, enabling users to document daily reflections, monitor progress, and build lasting habits.',
+    tech: ['React Native', 'TypeScript', 'Zustand', 'Mmkv', 'Firebase'],
+    github: '#',
+    demo: 'https://www.allroundmate.com/mirrorhabit'
   },
   {
     title: 'AllroundMate',
@@ -64,6 +72,30 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Mapillary', 'ReactLeaflet'],
     github: 'https://github.com/aysedemirel/find-on-map',
     demo: 'https://findonmap.netlify.app/'
+  },
+  {
+    title: 'Brain Tumor Detection Analysis',
+    description:
+      'A deep learning project that applies transfer learning and fine-tuned CNN models to detect brain tumors from MRI scans using limited and augmented data',
+    tech: ['Deep Learning', 'CNN', 'Python'],
+    github: 'https://github.com/aysedemirel/brain-tumor-detection-analysis',
+    demo: 'https://www.kaggle.com/code/aysedemirel/brain-tumor-detection'
+  },
+  {
+    title: 'Machine Learning',
+    description:
+      'A collection of machine learning example projects and notebooks demonstrating core techniques implemented in Python',
+    tech: ['Python'],
+    github: 'https://github.com/aysedemirel/machine-learning',
+    demo: '#'
+  },
+  {
+    title: 'Deep Learning',
+    description:
+      'A collection of deep learning examples and experiments implemented in Python, covering various architectures and techniques',
+    tech: ['Python'],
+    github: 'https://github.com/aysedemirel/deep-learning',
+    demo: '#'
   },
   {
     title: 'Todo List',
