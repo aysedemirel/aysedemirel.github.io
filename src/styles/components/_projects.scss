@@ -1,87 +1,61 @@
 @use '../base/base' as *;
 
 #projects {
-  @include container;
-  min-height: 95vh;
-  padding: $spacing-lg $spacing-lg;
+  min-height: 100vh;
+  padding: 60px 20px;
   scroll-margin-top: 50px;
 
   .projects-title {
     @include section-title;
+    margin-bottom: 40px;
   }
 
-  .projects-part {
-    display: flex;
-    flex-wrap: wrap;
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 
-    .project-col {
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1025px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-grid-item {
+      height: 100%;
       display: flex;
-
-      .project-motion {
-        display: flex;
-        flex: 1;
-      }
     }
   }
 
   .load-div {
-    text-align: center;
-    margin-top: $spacing-lg;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 
     .load-btn {
-      background-color: $primary-color;
-      border-color: $primary-color;
-      color: $bg-white;
-      font-weight: 600;
-    }
-  }
-}
+      padding: 12px 40px;
+      height: auto;
+      font-size: 16px;
+      border-radius: 8px;
+      background: #fb923c;
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
 
-.project-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
-
-    .card-title {
-      color: $text-primary;
-      margin-bottom: $spacing-md;
-      margin-top: 0;
-    }
-
-    .card-desc {
-      color: #4b5563;
-      margin-bottom: $spacing-md;
-    }
-
-    .card-buttons {
-      border-top: 1px solid rgb(240 240 240);
-      padding-top: $spacing-sm;
-      @include flex-center;
-      gap: $spacing-sm;
-      margin-top: $spacing-sm;
-
-      .btn {
-        color: #c24e00;
-        font-weight: 600;
-        transition: all 0.2s ease;
-
-        &:hover {
-          background-color: rgba($primary-color, 0.1);
-          border-radius: $radius-sm;
-          color: #c24e00;
-        }
-      }
-
-      .btn-divider {
-        height: 24px;
-        align-self: center;
+      &:hover {
+        background: #f97316;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(251, 146, 60, 0.4);
       }
     }
   }
