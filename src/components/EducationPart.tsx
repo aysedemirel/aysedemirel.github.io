@@ -1,4 +1,4 @@
-import { Card, Col, Row, Typography } from 'antd';
+import { Card, Typography } from 'antd';
 import { educationData } from '../constants/education';
 import { motion } from 'framer-motion';
 
@@ -8,61 +8,57 @@ const EducationPart = () => {
   return (
     <div className="educations">
       <Title level={2}>Education</Title>
-      <Row gutter={[24, 24]} className="cards-container">
+      <div className="education-grid">
         {educationData.map((edu, index) => (
-          <Col xs={24} md={12} key={index}>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{
-                duration: 0.3,
-                delay: index * 0.08,
-                ease: 'easeOut'
-              }}
-              viewport={{ once: true, margin: '-50px' }}>
-              <Card hoverable className="education-card">
-                {edu.type === 'summary' && (
-                  <div className="education-header">
-                    <img
-                      src={edu.logo}
-                      alt={`${edu.school} Logo`}
-                      className="logo"
-                      loading="lazy"
-                    />
-                    <div>
-                      <Title level={3}>{edu.degree}</Title>
-                      <Paragraph className="sub">
-                        {edu.school} • {edu.program}
-                      </Paragraph>
-                      <Paragraph className="date">{edu.date}</Paragraph>
-                    </div>
-                  </div>
-                )}
-
-                {edu.type === 'details' && (
-                  <div className="education-body">
-                    <Paragraph strong>Key Highlights:</Paragraph>
-                    <ul>
-                      {edu.highlights?.map((item, i) => (
-                        <li key={i}>
-                          <b>{item.title}:</b> {item.description}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Paragraph>
-                      <b>Relevant coursework:</b> {edu.coursework}
+          <motion.div
+            key={index}
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 0.3,
+              delay: index * 0.08,
+              ease: 'easeOut'
+            }}
+            viewport={{ once: true, margin: '-50px' }}
+            className="education-grid-item"
+            style={{ height: '100%' }}>
+            <Card hoverable className="education-card">
+              {edu.type === 'summary' && (
+                <div className="education-header">
+                  <img src={edu.logo} alt={`${edu.school} Logo`} className="logo" loading="lazy" />
+                  <div>
+                    <Title level={3}>{edu.degree}</Title>
+                    <Paragraph className="sub">
+                      {edu.school} • {edu.program}
                     </Paragraph>
-                    <Paragraph>
-                      <b>GPA:</b> {edu.gpa}
-                    </Paragraph>
+                    <Paragraph className="date">{edu.date}</Paragraph>
                   </div>
-                )}
-              </Card>
-            </motion.div>
-          </Col>
+                </div>
+              )}
+
+              {edu.type === 'details' && (
+                <div className="education-body">
+                  <Paragraph strong>Key Highlights:</Paragraph>
+                  <ul>
+                    {edu.highlights?.map((item, i) => (
+                      <li key={i}>
+                        <b>{item.title}:</b> {item.description}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Paragraph>
+                    <b>Relevant coursework:</b> {edu.coursework}
+                  </Paragraph>
+                  <Paragraph>
+                    <b>GPA:</b> {edu.gpa}
+                  </Paragraph>
+                </div>
+              )}
+            </Card>
+          </motion.div>
         ))}
-      </Row>
+      </div>
     </div>
   );
 };
