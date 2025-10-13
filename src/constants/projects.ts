@@ -6,7 +6,6 @@ export const projects: Project[] = [
     description:
       'A mobile app with a minimalist interface, unlimited counters, and dark mode, allowing users to easily track daily habits and goals.',
     tech: ['React Native', 'TypeScript', 'Zustand', 'Mmkv', 'Firebase'],
-    github: '#',
     demo: 'https://www.allroundmate.com/countermate'
   },
   {
@@ -14,7 +13,6 @@ export const projects: Project[] = [
     description:
       'An AI-powered smart styling app that digitizes your wardrobe and provides daily outfit suggestions, eliminating the stress of getting dressed.',
     tech: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'Firebase'],
-    github: '#',
     demo: 'https://www.allroundmate.com/stylemate'
   },
   {
@@ -22,7 +20,6 @@ export const projects: Project[] = [
     description:
       'A meal tracking app that supports plant-based nutrition, helps manage calories and meals, and tracks 30 different vegetables weekly to promote a healthy and motivating diet.',
     tech: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'Firebase'],
-    github: '#',
     demo: 'https://www.allroundmate.com/vegmate'
   },
   {
@@ -30,7 +27,6 @@ export const projects: Project[] = [
     description:
       'A habit-tracking app that integrates a video journal feature, enabling users to document daily reflections, monitor progress, and build lasting habits.',
     tech: ['React Native', 'TypeScript', 'Zustand', 'Mmkv', 'Firebase'],
-    github: '#',
     demo: 'https://www.allroundmate.com/mirrorhabit'
   },
   {
@@ -38,7 +34,6 @@ export const projects: Project[] = [
     description:
       'A cross-platform portfolio of mobile and web solutions, featuring innovative apps like CounterMate, StyleMate, and VegMate to enhance everyday digital experiences.',
     tech: ['React', 'TypeScript', 'Zustand', 'Node.js'],
-    github: '#',
     demo: 'https://www.allroundmate.com/'
   },
   {
