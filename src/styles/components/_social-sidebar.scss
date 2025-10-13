@@ -11,9 +11,23 @@
   backdrop-filter: blur(10px);
   border-radius: 24px 0 0 24px;
   box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 
   @media (max-width: 1024px) {
     display: none;
+  }
+
+  &.collapsed {
+    padding: 12px 8px;
+
+    .social-sidebar-content {
+      gap: 0;
+    }
+
+    &::before,
+    &::after {
+      opacity: 0;
+    }
   }
 
   .social-sidebar-content {
@@ -21,6 +35,22 @@
     flex-direction: column;
     gap: 12px;
     align-items: center;
+    transition: gap 0.3s ease;
+
+    .toggle-btn {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+      border-radius: 50% !important;
+      width: 48px;
+      height: 48px;
+
+      &:hover {
+        background: rgba(251, 146, 60, 0.1) !important;
+        color: $primary-light !important;
+        transform: scale(1.1);
+      }
+    }
 
     .social-sidebar-btn {
       width: 48px;
@@ -63,6 +93,7 @@
     width: 2px;
     height: 20px;
     background: linear-gradient(to bottom, transparent, $primary-light);
+    transition: opacity 0.3s ease;
   }
 
   &::after {
@@ -74,6 +105,7 @@
     width: 2px;
     height: 20px;
     background: linear-gradient(to top, transparent, $primary-light);
+    transition: opacity 0.3s ease;
   }
 }
 
