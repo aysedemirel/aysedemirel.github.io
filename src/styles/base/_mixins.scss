@@ -132,7 +132,11 @@
 // SCROLLBAR MIXINS
 // =============================================================================
 
-@mixin custom-scrollbar($width: 6px, $track-color: $border-light, $thumb-color: $text-tertiary) {
+@mixin custom-scrollbar(
+  $width: 6px,
+  $track-color: var(--border-light),
+  $thumb-color: var(--text-tertiary)
+) {
   &::-webkit-scrollbar {
     width: $width;
     height: $width;
@@ -148,7 +152,7 @@
     border-radius: calc($width / 2);
 
     &:hover {
-      background: $text-secondary;
+      background: var(--text-secondary);
     }
   }
 }
@@ -233,7 +237,7 @@
 // =============================================================================
 
 @mixin base-card {
-  background: $bg-white;
+  background: var(--bg-white);
   border-radius: $radius-lg;
   padding: $spacing-lg;
   transition: all $transition-base;

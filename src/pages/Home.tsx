@@ -9,11 +9,11 @@ import ContactSection from '../components/sections/ContactSection';
 import FooterComponent from '../components/FooterComponent';
 import EducationSection from '../components/sections/EducationSection';
 import BackToTop from '../components/BackToTop';
-import SocialSidebar from '../components/SocialSidebar';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import { useTheme } from '../contexts/ThemeContext';
 
 const { Content } = Layout;
 
@@ -24,6 +24,7 @@ interface Props {
 
 const Home = ({ activeSection, scrollToSection }: Props) => {
   const location = useLocation();
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (location.hash) {
@@ -45,7 +46,13 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
         image="https://aysedemirel.github.io/og-image.png"
       />
       <StructuredData />
-      <Layout style={{ background: 'linear-gradient(135deg, #ffffff, #fff8f3)' }}>
+      <Layout
+        style={{
+          background:
+            theme === 'light'
+              ? 'linear-gradient(135deg, #ffffff, #fff8f3)'
+              : 'linear-gradient(135deg, #2a2a2a, #1c1c1c)'
+        }}>
         <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
         <Content>
           <HeroSection scrollToSection={scrollToSection} />
@@ -60,7 +67,6 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
         <FooterComponent scrollToSection={scrollToSection} />
 
         <BackToTop showProgress={false} scrollDuration={100} />
-        <SocialSidebar />
       </Layout>
     </>
   );

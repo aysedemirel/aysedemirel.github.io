@@ -2,6 +2,8 @@ import { MenuOutlined } from '@ant-design/icons';
 import { Button, Drawer, Layout, Menu, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../contexts/ThemeContext';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
@@ -27,6 +29,7 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= MOBILE_WIDTH_THRESHOLD);
   const [drawerVisible, setDrawerVisible] = useState(false);
   const navigate = useNavigate();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleResize = () => {
@@ -53,7 +56,7 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
         type="text"
         icon={<MenuOutlined />}
         onClick={() => setDrawerVisible(true)}
-        style={{ color: '#000', marginLeft: 'auto' }}
+        style={{ color: theme === 'light' ? '#000' : '#FFF', marginLeft: 'auto' }}
       />
       <Drawer placement="right" onClose={() => setDrawerVisible(false)} open={drawerVisible}>
         <Menu
@@ -88,6 +91,7 @@ const HeaderComponent = ({ activeSection, scrollToSection }: Props) => {
         Ayşe Demirel Deniz
       </Title>
       {isMobile ? renderMobile() : renderDesktop()}
+      <ThemeToggle />
     </AntHeader>
   );
 };

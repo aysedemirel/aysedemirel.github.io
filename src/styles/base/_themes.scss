@@ -1,0 +1,51 @@
+@use './variables' as *;
+
+// Light Theme (Default)
+:root {
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --footer-text: #ececec;
+
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --bg-container: #ffffff;
+  --bg-secondary: #f9fafb;
+
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --border-tag: #fed7aa;
+
+  --active-card: #faf7f4;
+  --pre-article: #282c34;
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  --primary-color: #{$primary-color};
+  --primary-light: #{$primary-light};
+  --primary-dark: #{$primary-dark};
+}
+
+// Dark Theme
+[data-theme='dark'] {
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --footer-text: #9ca3af;
+
+  --bg-light: #1c1c1c;
+  --bg-white: #2a2a2a;
+  --bg-container: #2a2a2a;
+  --bg-secondary: #1c1c1c;
+
+  --border-color: #374151;
+  --border-light: #4b5563;
+  --border-tag: #92400e;
+
+  --active-card: #374151;
+  --pre-article: #1a1a1a;
+  --shadow: rgba(0, 0, 0, 0.5);
+
+  --primary-color: #{$primary-light};
+  --primary-light: #{$primary-soft};
+  --primary-dark: #{$primary-dark};
+}

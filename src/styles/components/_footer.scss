@@ -1,10 +1,10 @@
 @use '../base/base' as *;
 
 #footer {
-  @include gradient-bg(#1c1c1c, $bg-dark-secondary);
+  @include gradient-bg($bg-dark, $bg-dark-secondary);
   backdrop-filter: blur(10px);
-  border-top: 1px solid $border-white-transparent;
-  color: $text-tertiary;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-tertiary);
 
   .name {
     color: $primary-color;
@@ -15,7 +15,7 @@
   }
 
   .name-desc {
-    color: #ececec;
+    color: var(--footer-text);
     font-size: $spacing-md;
   }
 
@@ -29,12 +29,12 @@
 
   .link {
     @include link-hover($primary-color);
-    color: #ececec;
+    color: var(--footer-text);
     font-size: $spacing-md;
   }
 
   .contact-txt {
-    color: #ececec;
+    color: var(--footer-text);
     font-size: $spacing-md;
     padding-left: 10px;
   }
@@ -49,11 +49,11 @@
     text-align: center;
 
     .copyright-txt {
-      color: #ccc;
+      color: var(--text-tertiary);
     }
 
     .copyright-name-txt {
-      color: #ccc;
+      color: var(--text-tertiary);
       font-weight: bold;
     }
 
@@ -67,7 +67,7 @@
     @include flex-center;
     border-radius: $radius-full;
     background: $bg-dark-secondary;
-    color: #ccc;
+    color: var(--text-tertiary);
     transition: all $transition-base;
     width: 36px;
     height: 36px;
@@ -76,7 +76,7 @@
 
     &:hover {
       background: $primary-color;
-      color: $bg-white;
+      color: var(--bg-white);
     }
   }
 

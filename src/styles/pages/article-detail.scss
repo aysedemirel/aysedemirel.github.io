@@ -22,7 +22,7 @@
 
   .article-detail-content {
     min-height: 100vh;
-    background: $bg-light;
+    background: var(--bg-light);
     padding: 0;
 
     .article-wrapper {
@@ -50,15 +50,15 @@
 
         .article-card {
           border-radius: $radius-xl;
-          border: 2px solid $border-light;
+          border: 2px solid var(--border-light);
           box-shadow: $shadow-lg;
           margin-bottom: 56px;
-          background: $bg-white;
+          background: var(--bg-white);
           overflow: hidden;
 
           .content-divider {
             margin: 0;
-            border-top: 2px solid $border-light;
+            border-top: 2px solid var(--border-light);
           }
         }
       }

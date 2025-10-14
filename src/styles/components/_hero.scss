@@ -55,7 +55,7 @@
           padding: 0 clamp($spacing-md, 5vw, $spacing-xl);
           font-size: $font-size-md;
           border-radius: $radius-2xl;
-          color: $bg-white;
+          color: var(--bg-white);
           cursor: pointer;
 
           &:hover {

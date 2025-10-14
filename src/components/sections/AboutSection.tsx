@@ -8,10 +8,13 @@ import {
   UserOutlined
 } from '@ant-design/icons';
 import profilePicture from '../../assets/img/me.jpeg';
+import { useTheme } from '../../contexts/ThemeContext';
 
 const { Title, Paragraph, Link } = Typography;
 
 const AboutSection: React.FC = () => {
+  const { theme } = useTheme();
+
   return (
     <div id="about" className="about-section">
       <div className="about-title">
@@ -74,7 +77,7 @@ const AboutSection: React.FC = () => {
                 icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="#000000"
+                    fill={theme === 'light' ? '#3a434f' : '#dadbdc'}
                     width="1em"
                     height="1em"
                     viewBox="0 0 32 32">
@@ -91,7 +94,7 @@ const AboutSection: React.FC = () => {
                 icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="#000000"
+                    fill={theme === 'light' ? '#3a434f' : '#dadbdc'}
                     width="1em"
                     height="1em"
                     viewBox="0 0 32 32">

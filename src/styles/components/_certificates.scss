@@ -10,7 +10,7 @@
   > h2 {
     font-size: 32px !important;
     font-weight: 700 !important;
-    color: #1a1a1a !important;
+    color: var(--text-primary) !important;
     margin-bottom: 32px !important;
   }
 
@@ -46,13 +46,13 @@
   .certificate-card {
     height: 100%;
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 
     &:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      border-color: #fb923c;
+      border-color: $primary-light;
     }
 
     .ant-card-body {
@@ -64,23 +64,23 @@
 
     h5 {
       margin: 0 0 8px 0 !important;
-      color: #1a1a1a !important;
+      color: var(--text-primary) !important;
       line-height: 1.4 !important;
     }
 
     .issuer-year {
-      color: #4a4a4a !important;
+      color: var(--text-secondary) !important;
     }
 
     a:not(.ant-tag a) {
-      color: #fb923c !important;
+      color: $primary-light !important;
       transition: color 0.3s ease;
       text-decoration: none;
       display: inline-block;
       margin: 4px 0 8px 0;
 
       &:hover {
-        color: #ea580c !important;
+        color: $primary-dark !important;
         text-decoration: underline;
       }
     }

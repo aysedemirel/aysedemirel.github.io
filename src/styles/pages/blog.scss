@@ -55,7 +55,7 @@
 
       .hero-subtitle {
         @include responsive-text(0.95rem, 1.25rem, 0.95rem, 2vw);
-        color: $text-secondary;
+        color: var(--text-secondary);
         max-width: 600px;
         margin: 0 auto $spacing-2xl;
         line-height: 1.6;
@@ -84,7 +84,7 @@
 
           .stat-label {
             @include responsive-text($font-size-xs, 14px, $font-size-xs, 2vw);
-            color: $text-secondary;
+            color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             white-space: nowrap;
@@ -158,7 +158,7 @@
       .no-results {
         text-align: center;
         padding: 80px 20px;
-        background: $bg-light;
+        background: var(--bg-light);
         border-radius: $radius-xl;
       }
 
@@ -180,7 +180,7 @@
             align-items: center;
             gap: $spacing-sm;
             @include gradient-bg($primary-color, $primary-light);
-            color: $bg-white;
+            color: var(--bg-white);
             padding: $spacing-sm $spacing-lg;
             border-radius: 50px;
             font-size: clamp(20px, 4vw, 24px);
@@ -224,7 +224,7 @@
 
           .article-card {
             border-radius: $radius-xl;
-            border: 2px solid $border-color;
+            border: 2px solid var(--border-color);
             box-shadow: $shadow-sm;
             transition: all $transition-base;
             position: relative;
@@ -241,10 +241,10 @@
               left: calc(-1 * clamp(16px, 5vw, 40px));
               width: 16px;
               height: 16px;
-              background: $bg-white;
+              background: var(--bg-white);
               border: 3px solid $primary-color;
               border-radius: $radius-full;
-              box-shadow: 0 0 0 4px $bg-white;
+              box-shadow: 0 0 0 4px var(--bg-white);
               z-index: 2;
             }
 
@@ -295,7 +295,7 @@
                   align-items: center;
                   gap: 6px;
                   font-size: 14px;
-                  color: $text-secondary;
+                  color: var(--text-secondary);
 
                   .anticon {
                     font-size: 14px;
@@ -306,14 +306,14 @@
               .article-title {
                 @include responsive-text(1.1rem, 1.5rem);
                 font-weight: 700;
-                color: $text-primary;
+                color: var(--text-primary);
                 margin-bottom: $spacing-sm;
                 line-height: 1.3;
                 transition: color $transition-base;
               }
 
               .article-description {
-                color: $text-secondary;
+                color: var(--text-secondary);
                 @include responsive-text(14px, $font-size-base, 14px, 2vw);
                 line-height: 1.6;
                 margin-bottom: $spacing-lg;

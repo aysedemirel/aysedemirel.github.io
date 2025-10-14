@@ -2,7 +2,7 @@
 
 .not-found-container {
   @include flex-center;
-  background-color: $bg-white;
+  background-color: var(--bg-white);
   padding: 5%;
   gap: 10%;
   flex-grow: 1;
@@ -12,8 +12,8 @@
 
     .not-found-btn {
       padding: $spacing-lg;
-      background: #ffc803;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      background: $not-found-btn;
+      box-shadow: 2px 2px 5px var(--shadow);
     }
   }
 

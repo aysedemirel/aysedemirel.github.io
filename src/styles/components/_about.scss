@@ -36,7 +36,7 @@
         @include responsive-text(20px, 30px, 20px, 2vw);
         font-weight: 600;
         line-height: 1.6;
-        color: $text-primary;
+        color: var(--text-primary);
         margin-bottom: $spacing-md;
       }
 
@@ -44,14 +44,14 @@
         @include responsive-text(18px, 24px, 18px, 1.8vw);
         font-weight: 500;
         line-height: 1.6;
-        color: $text-primary;
+        color: var(--text-primary);
         margin-bottom: $spacing-md;
       }
 
       .about-me {
         @include responsive-text(14px, 20px, 14px, 1.6vw);
         line-height: 1.8;
-        color: $text-primary;
+        color: var(--text-primary);
         margin-bottom: clamp(14px, 1.6vw, $font-size-lg);
       }
 
@@ -73,7 +73,7 @@
             transition: color $transition-base, transform 0.2s ease;
 
             &:hover {
-              color: #823d0c;
+              color: $primary-darker;
               text-decoration: underline;
             }
           }
