@@ -8,6 +8,8 @@ import BlogFilters from '../components/blog/BlogFilters';
 import ArticlesTimeline from '../components/blog/ArticlesTimeline';
 import BackToTop from '../components/BackToTop';
 import { useEffect } from 'react';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const { Content } = Layout;
 
@@ -33,34 +35,44 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
   }, []);
 
   const handleArticleClick = (articleName: string) => {
-    navigate(`/article/${articleName}`);
+    navigate(`/blog/${articleName}`);
   };
 
   return (
-    <div id="blog" className="blog-container">
-      <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
-      <Content className="blog-content">
-        <BlogHero
-          totalArticles={totalArticles}
-          topicsCount={topicData.length}
-          yearsCount={articlesByYear.length}
-        />
+    <>
+      <SEO
+        title="Blog - Ayşe Demirel Deniz | Tech Articles & Tutorials"
+        description="Read articles about Java, Spring Boot, Javascript, Typescript, React, React Native, and web development. Learn from real-world experiences and tutorials."
+        keywords="React tutorials, Spring Boot guide, Java tips, React Native, Web Development, Programming Blog"
+        url="https://aysedemirel.github.io/#/blog"
+        image="https://aysedemirel.github.io/og-image.png"
+      />
+      <StructuredData />
+      <div id="blog" className="blog-container">
+        <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
+        <Content className="blog-content">
+          <BlogHero
+            totalArticles={totalArticles}
+            topicsCount={topicData.length}
+            yearsCount={articlesByYear.length}
+          />
 
-        <BlogFilters
-          searchTerm={searchTerm}
-          selectedTopic={selectedTopic}
-          topicData={topicData}
-          onSearchChange={setSearchTerm}
-          onTopicSelect={setSelectedTopic}
-        />
+          <BlogFilters
+            searchTerm={searchTerm}
+            selectedTopic={selectedTopic}
+            topicData={topicData}
+            onSearchChange={setSearchTerm}
+            onTopicSelect={setSelectedTopic}
+          />
 
-        <ArticlesTimeline articlesByYear={articlesByYear} onArticleClick={handleArticleClick} />
-      </Content>
+          <ArticlesTimeline articlesByYear={articlesByYear} onArticleClick={handleArticleClick} />
+        </Content>
 
-      <FooterComponent scrollToSection={scrollToSection} />
+        <FooterComponent scrollToSection={scrollToSection} />
 
-      <BackToTop showProgress={false} scrollDuration={100} />
-    </div>
+        <BackToTop showProgress={false} scrollDuration={100} />
+      </div>
+    </>
   );
 };
 

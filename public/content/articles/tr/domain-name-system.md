@@ -61,11 +61,11 @@ DNS, internetin görünmeyen ama en hayati bileşenlerinden biridir. Kullanıcı
 
 İnternetin teknik altyapısı ve güvenlik prensiplerini daha derinlemesine anlamak istiyorsanız, serinin devam yazılarını takip edebilirsiniz. Daha kapsamlı bilgi için aşağıdaki yazılara göz atabilirsiniz:
 
-- [İnternet nedir, nasıl çalışır? Sahibi kimdir?](https://aysedemirel.github.io/#/article/what-is-the-internet)
-- [İnternet 101 — IP ve DNS](https://aysedemirel.github.io/#/article/ip-dns)
-- [İnternet 101- Veri nasıl iletilir?](https://aysedemirel.github.io/#/article/how-to-transfer-data)
-- [İnternet 101 — Şifreleme ve Güvenlik](https://aysedemirel.github.io/#/article/encryption-security)
-- [Bir web sitesinin IP adresi nasıl bulunur?](https://aysedemirel.github.io/#/article/how-find-website-ip)
+- [İnternet nedir, nasıl çalışır? Sahibi kimdir?](https://aysedemirel.github.io/#/blog/what-is-the-internet)
+- [İnternet 101 — IP ve DNS](https://aysedemirel.github.io/#/blog/ip-dns)
+- [İnternet 101- Veri nasıl iletilir?](https://aysedemirel.github.io/#/blog/how-to-transfer-data)
+- [İnternet 101 — Şifreleme ve Güvenlik](https://aysedemirel.github.io/#/blog/encryption-security)
+- [Bir web sitesinin IP adresi nasıl bulunur?](https://aysedemirel.github.io/#/blog/how-find-website-ip)
 
 Ayrıca DNS sürecinin görsel ve mizahi biçimde anlatıldığı şu kaynak oldukça öğreticidir:
 

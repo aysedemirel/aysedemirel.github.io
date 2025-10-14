@@ -48,4 +48,4 @@ Sonraki yazılarda görüşmek üzere 👋
 
 **_Daha fazla bilgi için şu yazıya göz atabilirsiniz:_**
 
-- [İnternet 101: IP ve DNS Nedir, Nasıl Çalışır?](https://aysedemirel.github.io/#/article/ip-dns)
+- [İnternet 101: IP ve DNS Nedir, Nasıl Çalışır?](https://aysedemirel.github.io/#/blog/ip-dns)

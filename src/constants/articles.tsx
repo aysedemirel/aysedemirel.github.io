@@ -1,4 +1,6 @@
-export const ARTICLE_LIST = [
+import type { Article } from '../types/blog.types';
+
+export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
   /*{
     year: 2024,
     articles: [
@@ -60,6 +62,7 @@ export const ARTICLE_LIST = [
         year: 2021,
         date: '2021-05-22',
         description: 'A detailed look at the concept of IP...',
+        image: '/img/ip-2.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/ip-internet-protocol?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -71,6 +74,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-22',
         description:
           'What is hosting? Why is it used? What are the hosting options and what are their differences? We will seek answers to these questions in our article.',
+        image: '/img/hosting.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/hosting?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -82,6 +86,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-22',
         description:
           'Why do domain names exist? What is their relationship with IP addresses? Are they absolutely necessary for creating a website? What do the extensions in domain names mean? We will answer these questions in our article...',
+        image: '/img/domain-name.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/domain-name?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -93,6 +98,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-11',
         description:
           'We will examine how we can browse the internet without memorizing IP addresses.',
+        image: '/img/dns.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/dns-domain-name-system?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -104,6 +110,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-11',
         description:
           'In this article, we will examine the concept of interfaces in Java. We will seek answers to the questions: What are they? What are they not? Why should we use them?',
+        image: '/img/interface.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/why-should-we-use-interface?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -115,6 +122,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-10',
         description:
           "If you know the domain name of the website, let's quickly see how to find the IP address from the command line...",
+        image: '/img/ip.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/how-do-you-find-a-websites-ip-address?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false'
       },
@@ -126,6 +134,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-08',
         description:
           'The concepts of symmetric and asymmetric encryption, the most common cybercrimes...',
+        image: '/img/encryption.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/internet-101-encryption-and-security?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -137,6 +146,7 @@ export const ARTICLE_LIST = [
         date: '2021-05-08',
         description:
           'A summary of concepts such as routers, HTML, HTTP, TCP, and how requests are sent...',
+        image: '/img/tcp.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/internet-101-how-is-data-transmitted?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -147,6 +157,7 @@ export const ARTICLE_LIST = [
         year: 2021,
         date: '2021-05-08',
         description: 'What is IP? What is DNS? A brief summary of the relationship between them...',
+        image: '/img/internet2.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/internet-101-ip-and-dns?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       },
@@ -157,6 +168,7 @@ export const ARTICLE_LIST = [
         year: 2021,
         date: '2021-05-03',
         description: 'A summary about the internet...',
+        image: '/img/internet.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/what-is-the-internet-how-does-it?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       }
@@ -172,6 +184,7 @@ export const ARTICLE_LIST = [
         year: 2020,
         date: '2020-11-09',
         description: 'What is JDK and Why Should It Be Installed? How to Install It?',
+        image: '/img/java.png',
         substackLink:
           'https://open.substack.com/pub/aysedemireldeniz/p/java-development-kit-jdk-installation?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       }

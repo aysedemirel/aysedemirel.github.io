@@ -42,7 +42,7 @@ Every device on the Internet is assigned a unique identifier called an **IP (Int
 - **IPv4 Example:** `192.168.1.1`
 - **IPv6 Example:** `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
 
-To find your computer’s IP address, open a command prompt (press Windows + R and type cmd), then execute the command `ipconfig`. For detailed instructions, see [How to find a website’s IP address](https://aysedemirel.github.io/#/article/how-find-website-ip).
+To find your computer’s IP address, open a command prompt (press Windows + R and type cmd), then execute the command `ipconfig`. For detailed instructions, see [How to find a website’s IP address](https://aysedemirel.github.io/#/blog/how-find-website-ip).
 
 ## Characteristics of the IP Protocol
 
@@ -64,8 +64,8 @@ In conclusion, the IP protocol is one of the foundational components of the Inte
 
 If you want to understand the technical infrastructure and security principles of the internet in greater depth, you can follow the rest of the series. Other articles related to IP:
 
-- [How do you find a website's IP address?](https://aysedemirel.github.io/#/article/how-find-website-ip)
-- [Internet 101 — IP and DNS](https://aysedemirel.github.io/#/article/ip-dns)
+- [How do you find a website's IP address?](https://aysedemirel.github.io/#/blog/how-find-website-ip)
+- [Internet 101 — IP and DNS](https://aysedemirel.github.io/#/blog/ip-dns)
 
 See you in the next posts 👋
 

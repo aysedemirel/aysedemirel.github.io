@@ -17,6 +17,8 @@ import { useReadingProgress } from '../hooks/useReadingProgress';
 import { useTableOfContents } from '../hooks/useTableOfContents';
 
 import { shareArticle } from '../utils/share';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const { Content } = Layout;
 
@@ -47,7 +49,7 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
 
   const handleNavigateToRelated = useCallback(
     (contentFile: string) => {
-      navigate(`/article/${contentFile}`);
+      navigate(`/blog/${contentFile}`);
     },
     [navigate]
   );
@@ -81,46 +83,66 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
   }
 
   return (
-    <div className="article-detail-container">
-      <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
+    <>
+      <SEO
+        title={`${article.name} - Ayşe Demirel Deniz`}
+        description={article.description}
+        keywords={article.topic}
+        url={`https://aysedemirel.github.io/#/blog/${articleName}`}
+        type="article"
+        image={`https://aysedemirel.github.io${article.image}`}
+        publishedTime={article.date}
+      />
+      <StructuredData
+        type="article"
+        headline={article.name}
+        description={article.description}
+        image={article.image}
+        datePublished={article.date}
+        author="Ayşe Demirel Deniz"
+        url={`https://aysedemirel.github.io/#/blog/${articleName}`}
+      />
+      <div className="article-detail-container">
+        <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
 
-      <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
+        <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
 
-      <Content className="article-detail-content">
-        <div className="article-wrapper">
-          <ArticleNavigation article={article} onBack={handleBack} />
+        <Content className="article-detail-content">
+          <div className="article-wrapper">
+            <ArticleNavigation article={article} onBack={handleBack} />
 
-          <div className="article-container">
-            {tableOfContents.length > 0 && <TableOfContents items={tableOfContents} />}
+            <div className="article-container">
+              {tableOfContents.length > 0 && <TableOfContents items={tableOfContents} />}
 
-            <article className="article-main">
-              {tableOfContents.length > 0 && (
-                <MobileTableOfContents
-                  items={tableOfContents}
-                  show={showTOC}
-                  onToggle={() => setShowTOC(!showTOC)}
-                />
-              )}
+              <article className="article-main">
+                {tableOfContents.length > 0 && (
+                  <MobileTableOfContents
+                    items={tableOfContents}
+                    show={showTOC}
+                    onToggle={() => setShowTOC(!showTOC)}
+                  />
+                )}
 
-              <Card className="article-card">
-                <ArticleHeader
-                  article={article}
-                  onShare={handleShare}
-                  estimatedReadTime={estimatedReadTime}
-                />
-                <Divider className="content-divider" />
-                <ArticleBody content={markdownContent} contentRef={contentRef} />
-              </Card>
+                <Card className="article-card">
+                  <ArticleHeader
+                    article={article}
+                    onShare={handleShare}
+                    estimatedReadTime={estimatedReadTime}
+                  />
+                  <Divider className="content-divider" />
+                  <ArticleBody content={markdownContent} contentRef={contentRef} />
+                </Card>
 
-              <RelatedArticles articles={relatedArticles} onNavigate={handleNavigateToRelated} />
-            </article>
+                <RelatedArticles articles={relatedArticles} onNavigate={handleNavigateToRelated} />
+              </article>
+            </div>
           </div>
-        </div>
-      </Content>
+        </Content>
 
-      <FooterComponent scrollToSection={scrollToSection} />
-      <BackToTop showProgress={false} scrollDuration={100} />
-    </div>
+        <FooterComponent scrollToSection={scrollToSection} />
+        <BackToTop showProgress={false} scrollDuration={100} />
+      </div>
+    </>
   );
 };
 
