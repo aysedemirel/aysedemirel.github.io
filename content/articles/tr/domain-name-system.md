@@ -1,4 +1,4 @@
-![internet](/img/dns.png)
+![DNS](/img/dns.png)
 
 İnternet üzerindeki cihazlar, iletişimi IP (Internet Protocol) adresleri aracılığıyla gerçekleştirir. IP adresi, her cihaz için benzersiz bir kimlik işlevi görür. Bir cihazdan diğerine veri aktarılırken, verinin izleyeceği yol bu IP adresleri temel alınarak belirlenir. Dolayısıyla ister internet üzerinden ister yerel ağ (Ethernet) aracılığıyla iletişim kurulsun, veri aktarımı için IP adresi gereklidir.
 
@@ -22,7 +22,7 @@ DNS sunucuları, alan adları ile IP adresleri arasında bir eşleştirme sağla
 
 > Alan adı (URL girilir) → Tarayıcı (Chrome, Firefox vb.) → DNS (alan adını IP adresine çevirir) → Tarayıcı (hedef IP’ye istek gönderir) → Sunucu (veriyi yanıtlar)
 
-![internet](/img/url.png)
+![URL](/img/url.png)
 
 ## DNS Sunucularının Hiyerarşisi
 
@@ -53,7 +53,7 @@ TLD sunucusu, istenen alan adına ait yetkili (authoritative) DNS sunucusunu iş
 
 > Tarayıcı → Root DNS → TLD Sunucuları → Yetkili DNS → IP Adresi
 
-![internet](/img/dns-servers.png)
+![DNS Sunucuları](/img/dns-servers.png)
 
 ---
 

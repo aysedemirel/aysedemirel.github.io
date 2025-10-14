@@ -1,10 +1,10 @@
-![internet](../../img/internet.png)
+![İnternet](../../img/internet.png)
 
 Günümüzde dünya nüfusunun büyük bir kısmı internet kullanıcısıdır. Yazılım geliştirme alanına baktığımızda, geliştiricilerin önemli bir bölümünün web programlama ile ilgilendiğini görüyoruz. Frontend veya backend geliştirme yapıyor olun, internet mimarisi yaptığımız işlerin merkezinde yer alıyor.
 
 İnternet mimarisini daha iyi anlamak için çıktığım bu yolda “İnternet 101” şeklinde bir yazı dizisi hazırlamayı planlıyorum. Serimizin başlangıç noktası ise “İnternet nasıl çalışır?” konusu.
 
-![internet](../../img/many-nodes.png)
+![Birden çok node](../../img/many-nodes.png)
 
 ## İnternet Nasıl Ortaya Çıktı?
 
@@ -58,7 +58,7 @@ Wi-Fi bağlantısı kurulurken öncelikle bir **internet servis sağlayıcısın
 
 Özetle veri iletim yöntemlerinin avantaj ve dezavantajları aşağıdaki tabloda sunulmuştur:
 
-![internet](../../img/data-translation-methods.png)
+![Veri İletim Yöntemleri](../../img/data-translation-methods.png)
 
 > İnternet, temelde bir **tasarım felsefesi**dir ve bir dizi **protokolle ifade edilen mimari bir yapı**dır. Bu tasarım, protokoller aracılığıyla hayata geçer. Protokol, tüm tarafların kullanmaya izin verdiği ve sorunsuz iletişim sağlayan bir dizi kural ve standart bütünüdür.
 

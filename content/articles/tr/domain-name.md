@@ -1,4 +1,4 @@
-![internet](/img/domain-name.png)
+![Alan Adı](/img/domain-name.png)
 
 Bir web sitesine erişmek istediğimizde genellikle “www.ornek.com” gibi bir adres yazarız. Burada “www” bölümü çoğu web sitesinde ortak olduğundan, asıl hatırlanması gereken kısım “ornek.com”dur. Bu ifade, yani “ornek.com”, **alan adı (domain name)** olarak adlandırılır.
 
@@ -10,7 +10,7 @@ Alan adını bir telefon rehberine benzetebiliriz. Artık çoğu kişi telefon n
 
 ## Alan Adı Yapısı
 
-![internet](/img/wikipedia.png)
+![Wikipedia Yapısı](/img/wikipedia.png)
 
 **“en.wikipedia.org”** örneği üzerinden alan adı yapısını inceleyelim: En sağdaki “org” ifadesi, sitenin türünü veya amacını belirtir. Öncesinde “wikipedia” yer alır; bu, siteye özgü tanımlayıcı addır. En baştaki “en” ise sitenin dilini veya ülke kodunu temsil eder. Ancak ülke kodunun daima başta yer alması gerekmez; örneğin “.com.tr” gibi uzantılarda ülke kodu sona eklenir.
 

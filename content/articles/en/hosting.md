@@ -1,4 +1,4 @@
-![internet](/img/hosting.png)
+![Hosting](/img/hosting.png)
 
 Accessing the content of a website begins when a **client (the user)** sends a request to a **server**. The server then sends a response, delivering the requested content back to the user. IP addresses determine where this communication is directed. However, this raises an important question: where is this content actually stored?
 

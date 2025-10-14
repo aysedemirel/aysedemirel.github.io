@@ -1,4 +1,4 @@
-![internet](/img/ip-2.png)
+![IP](/img/ip-2.png)
 
 Bir noktadan diğerine veri iletimi sağlanırken, bu verinin yolculuğunu mümkün kılan sistemler bütününe **ağ (network)** adı verilir. Ancak burada temel bir soru ortaya çıkar: Veri, hedef noktasını nasıl bulur?
 
@@ -6,7 +6,7 @@ Bir noktadan diğerine veri iletimi sağlanırken, bu verinin yolculuğunu mümk
 
 Eğer yalnızca iki cihazı doğrudan bir kabloyla birbirine bağlasaydık, veri doğrudan karşı cihaza ulaşırdı ve yönlendirme gereksinimi ortaya çıkmazdı. Ancak sisteme üçüncü bir cihaz eklendiğinde, verinin hangi cihaza gitmesi gerektiğini belirlemek karmaşık bir hale gelir. Bu noktada **yönlendiriciler (routers)** devreye girer.
 
-![internet](/img/data-tr.png)
+![Veri](/img/data-tr.png)
 
 ## Yönlendiriciler (Routers) ve Ağ İletişimi
 
@@ -14,17 +14,17 @@ Modern ağlarda binlerce, hatta milyonlarca cihaz bulunabilir. Tüm cihazları d
 
 İnternete bağlandığımızda aslında doğrudan hedef siteye ulaşmayız. Önce bulunduğumuz yerel ağa bağlı bir yönlendiriciye erişiriz; ardından veri paketleri, birbirine bağlı çok sayıda yönlendirici üzerinden adım adım hedef noktaya taşınır.
 
-![internet](/img/internet-broadcasting.png)
+![İnternet](/img/internet-broadcasting.png)
 
 Yönlendiriciler bu işlemi gerçekleştirirken bir **yönlendirme tablosu (routing table)** kullanır. Bu tablo, her hedef adres için en uygun yönü (rota) belirler.
 
-![internet](/img/routing.png)
+![Yönlendirici](/img/routing.png)
 
 Yukarıdaki şemalarda, yönlendiricilerin hangi yolları tercih ettiğini ve verinin hangi rotayı izlediğini görebiliriz. Kare semboller yönlendiricileri, daireler ise uç cihazları temsil eder. Okların yönü gidilecek ilerlenebilecek yönleri, üstündeki sayılar ise hedefin adresine karar vermek için yönlendirme bilgileridir. Sayıların yanında "!" işareti varsa, o sayı hariç diğer router'lar gidilebilir olarak kabul edilir.
 
 ## Örnek: Veri Yönlendirme Senaryosu
 
-![internet](/img/routing-1.png)
+![Veri Yönlendirme Senaryosu](/img/routing-1.png)
 
 Yukarıdaki basit örnekte, 1 numaralı cihazdan 5 numaralı cihaza veri gönderimi yapılmaktadır:
 
