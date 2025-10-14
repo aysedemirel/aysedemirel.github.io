@@ -9,7 +9,6 @@ import ContactSection from '../components/sections/ContactSection';
 import FooterComponent from '../components/FooterComponent';
 import EducationSection from '../components/sections/EducationSection';
 import BackToTop from '../components/BackToTop';
-import SocialSidebar from '../components/SocialSidebar';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -60,7 +59,6 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
         <FooterComponent scrollToSection={scrollToSection} />
 
         <BackToTop showProgress={false} scrollDuration={100} />
-        <SocialSidebar />
       </Layout>
     </>
   );
