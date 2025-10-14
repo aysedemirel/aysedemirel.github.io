@@ -1,5 +1,7 @@
-export const ARTICLE_LIST_TR = [
-  {
+import type { Article } from '../types/blog.types';
+
+export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
+  /*{
     year: 2024,
     articles: [
       {
@@ -49,7 +51,7 @@ export const ARTICLE_LIST_TR = [
         description: 'Optimize your Node.js applications for better performance'
       }
     ]
-  },
+  },*/
   {
     year: 2021,
     articles: [
@@ -60,6 +62,7 @@ export const ARTICLE_LIST_TR = [
         year: 2021,
         date: '2021-05-22',
         description: 'IP kavramına detaylı bir bakış…',
+        image: '/img/ip-2.png',
         mediumLink: 'https://aysedemirel.medium.com/ip-internet-protocol-8417d9f2ea5b'
       },
       {
@@ -70,6 +73,7 @@ export const ARTICLE_LIST_TR = [
         date: '2021-05-22',
         description:
           'Hosting nedir? Neden kullanılır? Hosting seçenekleri nedir ve farkları nedir? Yazımızda bu sorulara cevap arayacağız.',
+        image: '/img/hosting.png',
         mediumLink: 'https://aysedemirel.medium.com/hosting-ce4d5fa5a20d'
       },
       {
@@ -80,6 +84,7 @@ export const ARTICLE_LIST_TR = [
         date: '2021-05-22',
         description:
           'Alan adları neden var ? IP adres ile ilişkisi ne? Web sitesi oluşturmak için illa gerekli bir şey mi? Alan adında yer alan uzantıların anlamları neler? Yazımızda bu sorulara cevap vereceğiz…',
+        image: '/img/domain-name.png',
         mediumLink: 'https://aysedemirel.medium.com/domain-name-alan-ad%C4%B1-56a1746871f6'
       },
       {
@@ -89,6 +94,7 @@ export const ARTICLE_LIST_TR = [
         year: 2021,
         date: '2021-05-11',
         description: 'IP adres ezberlemeden nasıl internette gezinebildiğimizi inceleyeceğiz.',
+        image: '/img/dns.png',
         mediumLink: 'https://aysedemirel.medium.com/dns-domain-name-system-c0818a0777af'
       },
       {
@@ -99,6 +105,7 @@ export const ARTICLE_LIST_TR = [
         date: '2021-05-11',
         description:
           'Bu yazımızda Java’da interface kavramını inceleyeceğiz. Nedir, ne değildir, neden kullanmalıyız sorularına cevap arayacağız.',
+        image: '/img/interface.png',
         mediumLink: 'https://aysedemirel.medium.com/neden-interface-kullanal%C4%B1m-2852b276bae4'
       },
       {
@@ -109,6 +116,7 @@ export const ARTICLE_LIST_TR = [
         date: '2021-05-10',
         description:
           'Web sitesinin alan adını biliyorsanız, komut satırından IP adres nasıl bulunur hızlıca bakalım…',
+        image: '/img/ip.png',
         mediumLink:
           'https://aysedemirel.medium.com/bir-web-sitesinin-ip-adresi-nas%C4%B1l-bulunur-8f23611ddd2b'
       },
@@ -119,6 +127,7 @@ export const ARTICLE_LIST_TR = [
         year: 2021,
         date: '2021-05-08',
         description: 'Simetrik ve asimetrik şifreleme kavramları, en bilinen siber suçlar…',
+        image: '/img/encryption.png',
         mediumLink:
           'https://aysedemirel.medium.com/i%CC%87nternet-101-%C5%9Fifreleme-ve-g%C3%BCvenlik-c5d79b6acbd9'
       },
@@ -130,6 +139,7 @@ export const ARTICLE_LIST_TR = [
         date: '2021-05-08',
         description:
           'Yönlendiriciler, HTML, HTTP, TCP, isteklerin gönderilme şekilleri gibi kavramların özeti…',
+        image: '/img/tcp.png',
         mediumLink:
           'https://aysedemirel.medium.com/i%CC%87nternet-101-veri-nas%C4%B1l-iletilir-5553f1103e40'
       },
@@ -140,6 +150,7 @@ export const ARTICLE_LIST_TR = [
         year: 2021,
         date: '2021-05-08',
         description: 'IP nedir, DNS nedir ? Aralarında ilişkinin kısaca özeti…',
+        image: '/img/internet2.png',
         mediumLink: 'https://aysedemirel.medium.com/i%CC%87nternet-101-ip-ve-dns-b3610244f4ed'
       },
       {
@@ -149,6 +160,7 @@ export const ARTICLE_LIST_TR = [
         year: 2021,
         date: '2021-05-03',
         description: 'İnternet hakkında bir özet…',
+        image: '/img/internet.png',
         mediumLink:
           'https://aysedemirel.medium.com/i%CC%87nternet-nedir-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-sahibi-kimdir-eb2431a5f3ca'
       }
@@ -164,6 +176,7 @@ export const ARTICLE_LIST_TR = [
         year: 2020,
         date: '2020-11-09',
         description: 'JDK Nedir ve Neden Kurulması Gerekir? Nasıl Kurulum Yapılır?',
+        image: '/img/java.png',
         mediumLink: 'https://aysedemirel.medium.com/jdk-15-kurulumu-c02680d7d9ea'
       }
     ]

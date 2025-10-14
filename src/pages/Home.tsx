@@ -12,6 +12,7 @@ import BackToTop from '../components/BackToTop';
 import SocialSidebar from '../components/SocialSidebar';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const { Content } = Layout;
 
@@ -34,23 +35,32 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
   }, [location]);
 
   return (
-    <Layout style={{ background: 'linear-gradient(135deg, #ffffff, #fff8f3)' }}>
-      <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
-      <Content>
-        <HeroSection scrollToSection={scrollToSection} />
-        <AboutSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <EducationSection />
-        <ProjectsSection />
-        <ContactSection />
-      </Content>
+    <>
+      <SEO
+        title="Ayşe Demirel Deniz - Software engineer"
+        description="Software Engineer based in Ankara, Turkey. Specializing in Spring Boot, Java, React, and React Native. Building mobile, web, and desktop applications that solve real problems."
+        keywords="Ayşe Demirel, Ayşe Demirel Deniz, Full Stack Developer, React Developer, React Native, Spring Boot, Java, Software Engineer, Ankara, Turkey"
+        url="https://aysedemirel.github.io/"
+        image="https://aysedemirel.github.io/og-image.png"
+      />
+      <Layout style={{ background: 'linear-gradient(135deg, #ffffff, #fff8f3)' }}>
+        <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
+        <Content>
+          <HeroSection scrollToSection={scrollToSection} />
+          <AboutSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <EducationSection />
+          <ProjectsSection />
+          <ContactSection />
+        </Content>
 
-      <FooterComponent scrollToSection={scrollToSection} />
+        <FooterComponent scrollToSection={scrollToSection} />
 
-      <BackToTop showProgress={false} scrollDuration={100} />
-      <SocialSidebar />
-    </Layout>
+        <BackToTop showProgress={false} scrollDuration={100} />
+        <SocialSidebar />
+      </Layout>
+    </>
   );
 };
 
