@@ -30,7 +30,7 @@
 
     .email-link {
       @include link-hover($primary-light);
-      color: #333;
+      color: var(--text-primary);
     }
 
     .social-icon {

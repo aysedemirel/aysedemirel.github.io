@@ -52,11 +52,11 @@
       margin-left: $spacing-md;
 
       .location-icon {
-        color: $text-tertiary;
+        color: var(--text-tertiary);
       }
 
       .location {
-        color: $text-tertiary;
+        color: var(--text-tertiary);
         @include responsive-text(10px, 14px, 10px, 1.2vw);
         white-space: nowrap;
         margin-left: 5px;

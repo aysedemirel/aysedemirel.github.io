@@ -47,13 +47,13 @@
       height: auto;
       font-size: 16px;
       border-radius: 8px;
-      background: #fb923c;
+      background: $primary-light;
       color: white;
       border: none;
       transition: all 0.3s ease;
 
       &:hover {
-        background: #f97316;
+        background: $primary-color;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(251, 146, 60, 0.4);
       }

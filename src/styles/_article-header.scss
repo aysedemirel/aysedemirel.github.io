@@ -2,7 +2,7 @@
 
 .article-header {
   padding: 36px 40px 32px;
-  background: linear-gradient(to bottom, $bg-white 0%, rgba($bg-light, 0.3) 100%);
+  background: linear-gradient(to bottom, var(--bg-white) 0%, rgba(var(--bg-light), 0.3) 100%);
 
   .article-meta-top {
     display: flex;
@@ -44,7 +44,7 @@
           text-decoration: none;
           transition: all $transition-base;
           border: 2px solid;
-          background: $bg-white;
+          background: var(--bg-white);
 
           svg {
             flex-shrink: 0;
@@ -63,24 +63,24 @@
         }
 
         .medium-badge {
-          border-color: $text-secondary;
-          color: $text-secondary;
+          border-color: var(--text-secondary);
+          color: var(--text-secondary);
 
           &:hover {
-            border-color: $text-primary;
-            color: $text-primary;
-            background: $bg-light;
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+            background: var(--bg-light);
           }
         }
 
         .substack-badge {
-          border-color: $text-secondary;
-          color: $text-secondary;
+          border-color: var(--text-secondary);
+          color: var(--text-secondary);
 
           &:hover {
-            border-color: #ff6719;
-            color: #ff6719;
-            background: rgba(#ff6719, 0.05);
+            border-color: $substack;
+            color: $substack;
+            background: rgba($substack, 0.05);
           }
         }
       }
@@ -101,7 +101,7 @@
   .article-title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
-    color: $text-primary;
+    color: var(--text-primary);
     margin-bottom: 20px;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -109,7 +109,7 @@
 
   .article-description {
     font-size: clamp(1.1rem, 2vw, 1.25rem);
-    color: $text-secondary;
+    color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 28px;
     font-weight: 400;
@@ -125,7 +125,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: $text-secondary;
+      color: var(--text-secondary);
       font-size: $font-size-base;
       font-weight: 500;
 

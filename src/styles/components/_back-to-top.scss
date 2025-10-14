@@ -20,7 +20,7 @@
     width: 56px;
     height: 56px;
     background: linear-gradient(135deg, $primary-color, $primary-light) !important;
-    border: 2px solid $bg-white !important;
+    border: 2px solid var(--bg-white) !important;
     box-shadow: 0 4px 20px rgba($primary-color, 0.4);
     cursor: pointer;
     @include flex-center;
@@ -30,7 +30,7 @@
 
     .anticon {
       font-size: $spacing-lg;
-      color: $bg-white !important;
+      color: var(--bg-white) !important;
     }
 
     &:hover,
@@ -38,17 +38,17 @@
       transform: translateY(-4px) !important;
       box-shadow: 0 8px 30px rgba($primary-color, 0.8) !important;
       background: linear-gradient(135deg, $primary-dark, $primary-color) !important;
-      border-color: $bg-white !important;
+      border-color: var(--bg-white) !important;
 
       .anticon {
-        color: $bg-white !important;
+        color: var(--bg-white) !important;
       }
     }
 
     &:active {
       transform: translateY(-2px) !important;
       box-shadow: 0 4px 15px rgba($primary-color, 0.4) !important;
-      background: linear-gradient(135deg, #c2410c, $primary-dark) !important;
+      background: linear-gradient(135deg, $primary-darker, $primary-dark) !important;
     }
   }
 
@@ -90,7 +90,7 @@
     &::after {
       content: 'Top';
       margin-left: $spacing-xs;
-      color: $bg-white;
+      color: var(--bg-white);
       font-weight: 600;
       font-size: 14px;
     }
@@ -152,7 +152,7 @@
 
 .back-to-top.gradient-border-style {
   .back-to-top-button {
-    background: $bg-white;
+    background: var(--bg-white);
     border: 3px solid transparent;
     background-clip: padding-box;
     position: relative;

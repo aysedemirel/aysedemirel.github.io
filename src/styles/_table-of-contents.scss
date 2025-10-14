@@ -3,11 +3,11 @@
 .table-of-contents {
   position: sticky;
   top: 100px;
-  background: $bg-white;
+  background: var(--bg-white);
   border-radius: $radius-lg;
   padding: 20px;
   box-shadow: $shadow-md;
-  border: 2px solid $border-light;
+  border: 2px solid var(--border-light);
   max-height: calc(100vh - 120px);
   overflow-y: auto;
   @include custom-scrollbar;
@@ -24,8 +24,8 @@
     gap: $spacing-xs;
     margin-bottom: $spacing-md;
     padding-bottom: $spacing-sm;
-    border-bottom: 2px solid $border-light;
-    color: $text-primary;
+    border-bottom: 2px solid var(--border-light);
+    color: var(--text-primary);
     font-size: $font-size-base;
     font-weight: 600;
 
@@ -48,7 +48,7 @@
       }
 
       .ant-anchor-link-title {
-        color: $text-secondary;
+        color: var(--text-secondary);
         font-size: $font-size-sm;
         line-height: 1.5;
         transition: color $transition-base;
@@ -78,12 +78,12 @@
   display: none;
   width: 100%;
   margin-bottom: $spacing-md;
-  background: $bg-white;
-  border: 2px solid $border-light;
+  background: var(--bg-white);
+  border: 2px solid var(--border-light);
   border-radius: 10px;
   padding: 12px 18px;
   font-weight: 500;
-  color: $text-primary;
+  color: var(--text-primary);
   transition: all $transition-base;
 
   @include responsive($breakpoint-lg) {

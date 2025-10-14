@@ -11,7 +11,7 @@
   .back-button {
     font-size: $font-size-base;
     font-weight: 500;
-    color: $text-secondary;
+    color: var(--text-secondary);
     display: inline-flex;
     align-items: center;
     gap: $spacing-xs;
@@ -41,7 +41,7 @@
     margin: 0;
 
     .ant-breadcrumb-link {
-      color: $text-tertiary;
+      color: var(--text-tertiary);
       transition: color $transition-base;
 
       a {
@@ -55,12 +55,12 @@
     }
 
     .ant-breadcrumb-separator {
-      color: $text-tertiary;
+      color: var(--text-tertiary);
       margin: 0 $spacing-xs;
     }
 
     li:last-child .ant-breadcrumb-link {
-      color: $text-secondary;
+      color: var(--text-secondary);
       font-weight: 500;
     }
   }

@@ -5,14 +5,14 @@
   padding: 36px 40px 40px;
   font-size: $font-size-lg;
   line-height: 1.8;
-  color: $text-primary;
+  color: var(--text-primary);
   font-family: $font-family-base;
   scroll-behavior: smooth;
 
   h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
-    color: $text-primary;
+    color: var(--text-primary);
     margin-top: $spacing-3xl;
     margin-bottom: 20px;
     padding-bottom: 14px;
@@ -39,7 +39,7 @@
   h3 {
     font-size: clamp(1.25rem, 2.5vw, 1.625rem);
     font-weight: 600;
-    color: $text-primary;
+    color: var(--text-primary);
     margin-top: 36px;
     margin-bottom: $font-size-lg;
     scroll-margin-top: 100px;
@@ -59,7 +59,7 @@
 
   p {
     margin-bottom: 20px;
-    color: $text-secondary;
+    color: var(--);
     font-weight: 400;
     line-height: 1.8;
 
@@ -70,12 +70,12 @@
 
   strong {
     font-weight: 700;
-    color: $text-primary;
+    color: var(--text-primary);
   }
 
   em {
     font-style: italic;
-    color: $text-primary;
+    color: var(--text-primary);
   }
 
   ul,
@@ -85,7 +85,7 @@
 
     li {
       margin-bottom: $spacing-sm;
-      color: $text-secondary;
+      color: var(--);
       line-height: 1.8;
       padding-left: 6px;
 
@@ -113,7 +113,7 @@
     margin: $spacing-xl 0;
     border-radius: 0 $radius-lg $radius-lg 0;
     font-style: italic;
-    color: $text-primary;
+    color: var(--text-primary);
     position: relative;
     box-shadow: $shadow-sm;
 
@@ -151,7 +151,7 @@
   }
 
   pre {
-    background: #282c34;
+    background: var(--pre-article);
     padding: $spacing-lg;
     border-radius: 14px;
     overflow-x: auto;
@@ -222,7 +222,7 @@
       border-radius: $radius-xl;
       box-shadow: $shadow-xl;
       transition: transform $transition-slow;
-      border: 1px solid $border-light;
+      border: 1px solid var(--border-light);
 
       &:hover {
         transform: scale(1.02);
@@ -232,7 +232,7 @@
     figcaption {
       margin-top: 14px;
       font-size: 14px;
-      color: $text-tertiary;
+      color: var(--text-tertiary);
       font-style: italic;
       line-height: 1.6;
     }
@@ -257,7 +257,7 @@
     margin: $spacing-xl 0;
     border-radius: $radius-lg;
     box-shadow: $shadow-md;
-    border: 2px solid $border-light;
+    border: 2px solid var(--border-light);
     @include custom-scrollbar(8px, rgba($primary-color, 0.1), rgba($primary-color, 0.3));
   }
 
@@ -266,7 +266,7 @@
     min-width: 600px;
     border-collapse: separate;
     border-spacing: 0;
-    background: $bg-white;
+    background: var(--bg-white);
 
     thead {
       background: linear-gradient(135deg, rgba($primary-color, 0.85), rgba($primary-color, 0.7));
@@ -285,7 +285,7 @@
 
     tbody {
       tr {
-        border-bottom: 1px solid $border-light;
+        border-bottom: 1px solid var(--border-light);
         transition: background-color $transition-base;
 
         &:hover {
@@ -298,13 +298,13 @@
 
         td {
           padding: $font-size-lg 20px;
-          color: $text-secondary;
+          color: var(--);
           font-size: $font-size-base;
           line-height: 1.7;
 
           &:first-child {
             font-weight: 600;
-            color: $text-primary;
+            color: var(--text-primary);
           }
         }
       }

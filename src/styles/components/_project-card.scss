@@ -5,13 +5,13 @@
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    border-color: #fb923c;
+    border-color: $primary-light;
   }
 
   .card-content {
@@ -31,13 +31,13 @@
         margin: 0;
         font-size: 18px;
         font-weight: 600;
-        color: #1f2937;
+        color: var(--text-primary);
         line-height: 1.4;
       }
 
       .card-desc {
         margin: 0;
-        color: #6b7280;
+        color: var(--text-secondary);
         font-size: 14px;
         line-height: 1.6;
         flex: 1;
@@ -52,7 +52,7 @@
           border-radius: 6px;
           font-size: 12px;
           border: none;
-          border: 1px solid #fed7aa;
+          border: 1px solid var(--border-tag);
           color: $primary-dark;
         }
       }
@@ -63,7 +63,7 @@
       align-items: center;
       justify-content: space-around;
       padding-top: 12px;
-      border-top: 1px solid #f3f4f6;
+      border-top: 1px solid var(--border-light);
       margin-top: auto;
 
       .btn {
@@ -74,7 +74,7 @@
         align-items: center;
 
         &:hover {
-          color: #fb923c;
+          color: $primary-light;
           transform: scale(1.05);
         }
       }
@@ -82,7 +82,7 @@
       .btn-divider {
         height: 20px;
         margin: 0 8px;
-        background: #e5e7eb;
+        background: var(--border-color);
       }
     }
   }
