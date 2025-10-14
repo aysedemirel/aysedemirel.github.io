@@ -47,7 +47,7 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
         url="https://aysedemirel.github.io/#/blog"
         image="https://aysedemirel.github.io/og-image.png"
       />
-      <StructuredData />
+      <StructuredData description="Read my articles about React, Spring Boot, Java, React Native, and web development." />
       <div id="blog" className="blog-container">
         <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
         <Content className="blog-content">
