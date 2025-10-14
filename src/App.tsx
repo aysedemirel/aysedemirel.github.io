@@ -21,7 +21,7 @@ function AppContent() {
           element={<Blog activeSection={activeSection} scrollToSection={scrollToSection} />}
         />
         <Route
-          path="/article/:articleName"
+          path="/blog/:articleName"
           element={
             <ArticleDetail activeSection={activeSection} scrollToSection={scrollToSection} />
           }

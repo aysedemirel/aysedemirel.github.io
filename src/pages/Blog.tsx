@@ -33,7 +33,7 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
   }, []);
 
   const handleArticleClick = (articleName: string) => {
-    navigate(`/article/${articleName}`);
+    navigate(`/blog/${articleName}`);
   };
 
   return (

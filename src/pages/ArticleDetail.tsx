@@ -47,7 +47,7 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
 
   const handleNavigateToRelated = useCallback(
     (contentFile: string) => {
-      navigate(`/article/${contentFile}`);
+      navigate(`/blog/${contentFile}`);
     },
     [navigate]
   );
