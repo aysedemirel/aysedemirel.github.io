@@ -9,6 +9,7 @@ import ArticlesTimeline from '../components/blog/ArticlesTimeline';
 import BackToTop from '../components/BackToTop';
 import { useEffect } from 'react';
 import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const { Content } = Layout;
 
@@ -46,6 +47,7 @@ const Blog = ({ activeSection, scrollToSection }: Props) => {
         url="https://aysedemirel.github.io/#/blog"
         image="https://aysedemirel.github.io/og-image.png"
       />
+      <StructuredData />
       <div id="blog" className="blog-container">
         <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
         <Content className="blog-content">

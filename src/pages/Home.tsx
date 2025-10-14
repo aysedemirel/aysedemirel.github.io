@@ -13,6 +13,7 @@ import SocialSidebar from '../components/SocialSidebar';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const { Content } = Layout;
 
@@ -43,6 +44,7 @@ const Home = ({ activeSection, scrollToSection }: Props) => {
         url="https://aysedemirel.github.io/"
         image="https://aysedemirel.github.io/og-image.png"
       />
+      <StructuredData />
       <Layout style={{ background: 'linear-gradient(135deg, #ffffff, #fff8f3)' }}>
         <HeaderComponent activeSection={activeSection} scrollToSection={scrollToSection} />
         <Content>

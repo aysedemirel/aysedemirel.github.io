@@ -18,6 +18,7 @@ import { useTableOfContents } from '../hooks/useTableOfContents';
 
 import { shareArticle } from '../utils/share';
 import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const { Content } = Layout;
 
@@ -91,6 +92,15 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
         type="article"
         image={`https://aysedemirel.github.io${article.image}`}
         publishedTime={article.date}
+      />
+      <StructuredData
+        type="article"
+        headline={article.name}
+        description={article.description}
+        image={article.image}
+        datePublished={article.date}
+        author="Ayşe Demirel Deniz"
+        url={`https://aysedemirel.github.io/#/blog/${articleName}`}
       />
       <div className="article-detail-container">
         <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
