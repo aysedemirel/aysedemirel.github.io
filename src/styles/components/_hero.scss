@@ -47,7 +47,7 @@
       }
 
       .button-area {
-        .about-me {
+        .primary-btn {
           @include gradient-bg($primary-color, $primary-light, 45deg);
           @include button-hover;
           border: none;

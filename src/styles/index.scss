@@ -4,6 +4,8 @@
 @use 'components/skill';
 @use 'components/experience';
 @use 'components/projects';
+@use 'components/project-card';
+@use 'components/certificates';
 @use 'components/education';
 @use 'components/contact';
 @use 'pages/blog';
@@ -11,7 +13,7 @@
 @use 'components/back-to-top';
 @use 'components/footer';
 @use 'pages/notfound';
-@import 'components/social-sidebar';
+@use 'components/social-sidebar';
 
 body {
   margin: 0;

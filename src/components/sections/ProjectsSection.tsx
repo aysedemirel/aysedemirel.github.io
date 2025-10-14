@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Col, Row, Typography } from 'antd';
+import { Button, Typography } from 'antd';
 import { CodeOutlined } from '@ant-design/icons';
 import { projects } from '../../constants/projects';
 import ProjectCard from '../ProjectCard';
@@ -19,24 +19,23 @@ const ProjectsSection: React.FC = () => {
         </Title>
       </div>
 
-      <Row gutter={[32, 32]} className="projects-part">
+      <div className="projects-grid">
         {projects.slice(0, visibleCount).map((project, idx) => (
-          <Col xs={24} lg={8} key={project.title} className="project-col">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.3,
-                delay: idx * 0.02,
-                ease: 'easeOut'
-              }}
-              viewport={{ once: true, margin: '-50px' }}
-              className="project-motion">
-              <ProjectCard project={project} />
-            </motion.div>
-          </Col>
+          <motion.div
+            key={project.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.3,
+              delay: idx * 0.02,
+              ease: 'easeOut'
+            }}
+            viewport={{ once: true, margin: '-50px' }}
+            className="project-grid-item">
+            <ProjectCard project={project} />
+          </motion.div>
         ))}
-      </Row>
+      </div>
 
       {visibleCount < projects.length && (
         <div className="load-div">

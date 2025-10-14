@@ -1,78 +1,163 @@
 @use '../base/base' as *;
 
 #education {
-  @include container;
-  min-height: 95vh;
-  padding: $spacing-lg $spacing-lg;
+  min-height: 100vh;
+  padding: 60px 20px;
   scroll-margin-top: 50px;
 
   .education-title {
     @include section-title;
+    margin-bottom: 40px;
+  }
+}
+
+.educations {
+  margin-top: 40px;
+  padding: 0 20px;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+
+  > h2 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 32px !important;
   }
 
-  .educations {
-    .education-card {
-      @include base-card;
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .education-grid-item {
+      display: flex;
       height: 100%;
-      @include card-hover(-4px);
+      min-height: 100%;
 
-      .education-header {
-        display: flex;
-        align-items: center;
-        gap: $spacing-md;
-
-        .logo {
-          width: 60px;
-          height: 60px;
-          object-fit: contain;
-        }
-
-        .sub {
-          color: #666;
-          margin: 0;
-        }
-
-        .date {
-          color: #999;
-          font-size: 14px;
-        }
-      }
-
-      .education-body {
-        ul {
-          margin: 0;
-          padding-left: 20px;
-
-          li {
-            margin-bottom: $spacing-xs;
-          }
-        }
+      > div {
+        width: 100%;
+        height: 100%;
       }
     }
   }
 
-  .certificate-card {
-    @include base-card;
-    padding: $spacing-md;
+  .education-card {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
 
-    .tags {
-      margin-top: $spacing-sm;
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: #fb923c;
+    }
 
-      .ant-tag {
-        padding: 4px 10px;
-        border-radius: $radius-md;
-        margin-bottom: 5px;
+    .ant-card-body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+    }
 
-        a {
-          @include link-hover;
+    .education-header {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 16px;
 
-          &:hover {
-            text-decoration: underline;
+      .logo {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      > div {
+        flex: 1;
+      }
+
+      h3 {
+        margin: 0 0 8px 0 !important;
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        line-height: 1.3 !important;
+      }
+
+      .sub {
+        margin: 0 0 4px 0 !important;
+        color: #4a4a4a !important;
+        font-size: 15px !important;
+        font-weight: 400 !important;
+      }
+
+      .date {
+        margin: 0 !important;
+        color: #6b6b6b !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+      }
+    }
+
+    .education-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      > p:first-child {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 12px !important;
+      }
+
+      .ant-typography {
+        color: #2d2d2d !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        margin: 0 0 8px 0 !important;
+
+        &[strong] {
+          font-weight: 700 !important;
+          color: #1a1a1a !important;
+        }
+      }
+
+      ul {
+        margin: 8px 0 !important;
+        padding-left: 20px !important;
+
+        li {
+          color: #2d2d2d !important;
+          font-size: 15px !important;
+          line-height: 1.7 !important;
+          margin-bottom: 12px !important;
+
+          b {
+            color: #1a1a1a !important;
+            font-weight: 700 !important;
           }
+        }
+      }
+
+      > p {
+        margin: 8px 0 !important;
+        color: #2d2d2d !important;
+        font-size: 15px !important;
+
+        b {
+          font-weight: 700 !important;
+          color: #1a1a1a !important;
         }
       }
     }

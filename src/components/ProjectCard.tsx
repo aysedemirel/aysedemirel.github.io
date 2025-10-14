@@ -18,16 +18,18 @@ const ProjectCard = ({ project }: Props) => {
           padding: '24px',
           display: 'flex',
           flexDirection: 'column',
-          flex: 1
+          height: '100%'
         }
       }}>
       <div className="card-content">
-        <div>
+        <div className="card-info">
           <Title level={4} className="card-title">
             {project.title}
           </Title>
-          <Paragraph className="card-desc">{project.description}</Paragraph>
-          <Space wrap>
+          <Paragraph className="card-desc" ellipsis={{ rows: 3 }}>
+            {project.description}
+          </Paragraph>
+          <Space wrap className="card-tags">
             {project.tech.map((tech) => (
               <Tag key={tech} color="orange">
                 {tech}

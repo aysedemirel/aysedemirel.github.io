@@ -1,20 +1,21 @@
 import { Button, Space, Typography } from 'antd';
 import { useEffect, useState } from 'react';
-import { MailOutlined, DownOutlined, UserOutlined } from '@ant-design/icons';
+import { MailOutlined, DownOutlined, UserOutlined, GlobalOutlined } from '@ant-design/icons';
 import profilPicture from '../../assets/img/profile_img.png';
+import { useNavigate } from 'react-router-dom';
 
 const { Title, Text } = Typography;
 
 interface Props {
   scrollToSection: (sectionId: string) => void;
 }
+const roles = ['Full Stack Developer', 'Mobile App Developer', 'Desktop App Developer'];
 
 const HeroSection = ({ scrollToSection }: Props) => {
+  const navigate = useNavigate();
   const [typedText, setTypedText] = useState('');
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-
-  const roles = ['Full Stack Developer', 'Mobile App Developer', 'Desktop App Developer'];
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
@@ -70,10 +71,18 @@ const HeroSection = ({ scrollToSection }: Props) => {
             <Button
               type="primary"
               size="large"
-              className="about-me"
+              className="primary-btn"
               onClick={() => scrollToSection('about')}
               icon={<UserOutlined />}>
               About Me
+            </Button>
+            <Button
+              type="primary"
+              size="large"
+              className="primary-btn"
+              onClick={() => navigate('/blog')}
+              icon={<GlobalOutlined />}>
+              Blog
             </Button>
             <Button
               size="large"
