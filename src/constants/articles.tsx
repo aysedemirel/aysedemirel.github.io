@@ -56,6 +56,30 @@ export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'TCP(Transmission Control Protocol)',
+        contentFile: 'tcp',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-23',
+        description:
+          'How does TCP (Transmission Control Protocol) ensure reliable data transmission? Connection establishment and basic mechanisms are covered in this article',
+        image: '/img/tcp.png',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/tcptransmission-control-protocol?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
+        name: 'What is HTTP?',
+        contentFile: 'what-is-http',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-23',
+        description:
+          'Learn how HTTP works, the request-response structure, and what goes on behind the scenes of web traffic',
+        image: '/img/http.png',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/what-is-http?utm_campaign=post-expanded-share&utm_medium=web'
+      },
+      {
         name: 'IP (Internet Protocol)',
         contentFile: 'internet-protocol',
         topic: 'Internet',

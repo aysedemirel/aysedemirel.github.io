@@ -56,6 +56,28 @@ export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'TCP(Transmission Control Protocol)',
+        contentFile: 'tcp',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-23',
+        description:
+          'TCP (Transmission Control Protocol), güvenilir veri iletimini nasıl sağlar? Bağlantı kurulumu ve temel mekanizmalar bu yazıda',
+        image: '/img/tcp.png',
+        mediumLink: 'https://aysedemirel.medium.com/tcp-transmission-control-protocol-f9f4c3db0641'
+      },
+      {
+        name: 'HTTP Nedir?',
+        contentFile: 'what-is-http',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-23',
+        description:
+          'HTTP’nin nasıl çalıştığını, istek–cevap yapısını ve web trafiğinin perde arkasında neler döndüğünü öğrenin',
+        image: '/img/http.png',
+        mediumLink: 'https://aysedemirel.medium.com/http-nedir-bcf2cc9b3a25'
+      },
+      {
         name: 'IP(Internet Protocol)',
         contentFile: 'internet-protocol',
         topic: 'Internet',
