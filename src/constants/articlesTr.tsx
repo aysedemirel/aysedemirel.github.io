@@ -56,6 +56,16 @@ export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'URL-URN -URI',
+        contentFile: 'url-urn-uri',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-23',
+        description: 'URL, URN ve URN ifadelerinin ne olduğuna dair kısa bir özet',
+        image: '/img/url-uri-urn.png',
+        mediumLink: 'https://aysedemirel.medium.com/url-urn-uri-12c21ad0dc20'
+      },
+      {
         name: 'TCP(Transmission Control Protocol)',
         contentFile: 'tcp',
         topic: 'Internet',

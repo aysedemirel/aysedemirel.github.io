@@ -111,7 +111,7 @@ const ArticleDetail = ({ activeSection, scrollToSection }: Props) => {
           <div className="article-wrapper">
             <ArticleNavigation article={article} onBack={handleBack} />
 
-            <div className="article-container">
+            <div className={`article-container${tableOfContents.length === 0 ? ' no-toc' : ''}`}>
               {tableOfContents.length > 0 && <TableOfContents items={tableOfContents} />}
 
               <article className="article-main">

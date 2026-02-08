@@ -56,6 +56,17 @@ export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'URL-URN -URI',
+        contentFile: 'url-urn-uri',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-23',
+        description: 'Brief summary of what URL, URN, and URI mean',
+        image: '/img/url-uri-urn.png',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/url-urn-uri?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
         name: 'TCP(Transmission Control Protocol)',
         contentFile: 'tcp',
         topic: 'Internet',

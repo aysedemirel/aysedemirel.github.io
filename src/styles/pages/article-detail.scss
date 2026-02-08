@@ -37,6 +37,10 @@
         align-items: start;
         justify-content: center;
 
+        &.no-toc {
+          grid-template-columns: minmax(0, 1000px);
+        }
+
         @include responsive($breakpoint-lg) {
           grid-template-columns: 1fr;
           max-width: 1000px;
