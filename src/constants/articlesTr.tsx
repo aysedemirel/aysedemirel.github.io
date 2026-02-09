@@ -56,6 +56,16 @@ export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: "HTTP'nin Evrimi: HTTP/0.9'dan HTTP/2'ye",
+        contentFile: 'http-journey',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-26',
+        description: 'HTTP Nedir? HTTP/1.0, HTTP/1.1 ve HTTP/2 Arasındaki Farklar',
+        image: '/img/http-https.png',
+        mediumLink: 'https://aysedemirel.medium.com/http-yolculu%C4%9Fu-49b0634c565f'
+      },
+      {
         name: 'URL-URN -URI',
         contentFile: 'url-urn-uri',
         topic: 'Internet',

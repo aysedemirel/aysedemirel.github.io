@@ -56,6 +56,17 @@ export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'The Evolution of HTTP: From HTTP/0.9 to HTTP/2',
+        contentFile: 'http-journey',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-26',
+        description: 'What is HTTP? Differences Between HTTP/1.0, HTTP/1.1, and HTTP/2',
+        image: '/img/http-https.png',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/the-evolution-of-http-from-http09?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
         name: 'URL-URN -URI',
         contentFile: 'url-urn-uri',
         topic: 'Internet',
