@@ -1,9 +1,10 @@
 import type { Article } from '../types/blog.types';
 
 export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
-  /*{
-    year: 2024,
+  {
+    year: 2026,
     articles: [
+      /*
       {
         name: 'Understanding React Hooks',
         contentFile: 'understanding-react-hooks',
@@ -28,9 +29,26 @@ export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
         year: 2024,
         date: '2024-01-10',
         description: 'Master CSS Grid and create complex layouts with ease'
+      }*/
+    ]
+  },
+  {
+    year: 2024,
+    articles: [
+      {
+        name: 'Adım Adım HackerRank Java Çözümleri ve Analizleri',
+        contentFile: 'hackerrank-java-content',
+        topic: 'Java',
+        year: 2024,
+        date: '2024-09-10',
+        description:
+          'Algoritmik Düşünce Yapısı Kazanma ve Java İle Sistematik Problem Çözme Yolculuğu',
+        image: '/img/hackerrank.png',
+        mediumLink: 'https://aysedemirel.medium.com/hackerrank-java-challenge-0bce4a52707a'
       }
     ]
   },
+  /*
   {
     year: 2023,
     articles: [

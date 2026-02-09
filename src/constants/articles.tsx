@@ -1,9 +1,10 @@
 import type { Article } from '../types/blog.types';
 
 export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
-  /*{
-    year: 2024,
+  {
+    year: 2026,
     articles: [
+      /*
       {
         name: 'Understanding React Hooks',
         contentFile: 'understanding-react-hooks',
@@ -28,9 +29,26 @@ export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
         year: 2024,
         date: '2024-01-10',
         description: 'Master CSS Grid and create complex layouts with ease'
+      }*/
+    ]
+  },
+  {
+    year: 2024,
+    articles: [
+      {
+        name: 'HackerRank Java: Step-by-Step Solutions & Analysis',
+        contentFile: 'hackerrank-java-content',
+        topic: 'Java',
+        year: 2024,
+        date: '2024-09-10',
+        description: 'Mastering Algorithmic Thinking through Systematic Problem Solving with Java',
+        image: '/img/hackerrank.png',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/hackerrank-java-step-by-step-solutions?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
       }
     ]
   },
+  /*
   {
     year: 2023,
     articles: [
