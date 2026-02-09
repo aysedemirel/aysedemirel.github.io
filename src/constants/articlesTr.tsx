@@ -56,6 +56,16 @@ export const ARTICLE_LIST_TR: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'HTTP/3 ve QUIC: Web Protokollerinde Yeni Bir Dönem',
+        contentFile: 'http3',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-26',
+        description: 'Head-of-Line Blocking Sorununa Veda ve Daha Hızlı Bir İnternet Deneyimi',
+        image: '/img/http3.png',
+        mediumLink: 'https://aysedemirel.medium.com/http-3-geçmi̇şi̇-şi̇mdi̇si̇-ve-geleceği̇-d1927ffebaa4'
+      },
+      {
         name: "HTTP'nin Evrimi: HTTP/0.9'dan HTTP/2'ye",
         contentFile: 'http-journey',
         topic: 'Internet',

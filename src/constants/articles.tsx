@@ -56,6 +56,17 @@ export const ARTICLE_LIST: { year: number; articles: Article[] }[] = [
     year: 2021,
     articles: [
       {
+        name: 'HTTP/3 and QUIC: A New Era in Web Protocols',
+        contentFile: 'http3',
+        topic: 'Internet',
+        year: 2021,
+        date: '2021-05-26',
+        description: 'Say Goodbye to Head-of-Line Blocking and Enjoy a Faster Internet Experience',
+        image: '/img/http3.png',
+        substackLink:
+          'https://open.substack.com/pub/aysedemireldeniz/p/http3-and-quic-a-new-era-in-web-protocols?r=1mqt9c&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'
+      },
+      {
         name: 'The Evolution of HTTP: From HTTP/0.9 to HTTP/2',
         contentFile: 'http-journey',
         topic: 'Internet',
